@@ -150,9 +150,6 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 3.1.4)
   shoulda
-<<<<<<< HEAD
   simple_form
-=======
   sqlite3
->>>>>>> cc0614e8b2d900163b2e09ab14a250ce7ad37197
   uglifier (>= 1.0.3)
