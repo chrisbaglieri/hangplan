@@ -4,6 +4,7 @@ gem 'rails', '3.1.1'
 gem 'jquery-rails'
 gem 'devise'
 gem 'pg'
+gem 'cancan'
 
 group :assets do
   gem 'sass-rails',   '~> 3.1.4'
