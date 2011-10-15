@@ -6,6 +6,18 @@
 @border: #ccc;
 @c2: #b4d6f1;
 
+p {
+	margin: 0;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
 @font-face {
     font-family: happykiller;
     src: url(HappyKiller.ttf);
@@ -86,4 +98,42 @@ input, textarea{
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, @c1l), color-stop(1.0, @c1));  
     text-decoration: none;  
     color: @textd;   
+}
+
+#calendarList {
+	padding: 0; margin: 0;
+}
+
+#calendarList li {
+	width: 100%;
+	list-style: none;
+	padding: 5px; margin: 0;
+}
+
+#calendarList li .avatar {
+	padding: 2px;
+	margin: 3px;
+	background-color: @border;
+	border: 1px solid @border;
+}
+
+#calendarList .calHeader {
+	background-color: @c2;
+	padding: 5px;
+}
+
+.clear:after{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.line{
+	/* The dividing line: */
+	height:1px;
+	background-color:@border;
+	border-bottom:1px solid @border;
+	overflow:hidden;
 }
