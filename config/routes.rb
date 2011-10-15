@@ -10,6 +10,6 @@ Hangplan::Application.routes.draw do
   match "team" => 'pages#team', :via => :get
   match "contact" => 'pages#contact', :via => :get
   
-  resources :plans
+  resources :plans, :except => [:index]
   
 end
