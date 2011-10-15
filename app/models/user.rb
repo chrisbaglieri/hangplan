@@ -35,4 +35,13 @@ class User < ActiveRecord::Base
     update_attribute :mobile_key, SecureRandom.hex(16)
   end
   
+  def friends_plans
+    
+  end
+  
+  def plans_near(lat, lon, distance)
+    plans = self.plans.near([lat, lon], distance)
+    render :json => plans
+  end
+  
 end
