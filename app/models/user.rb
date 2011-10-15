@@ -2,6 +2,10 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, 
     :trackable, :validatable, :omniauthable
   has_and_belongs_to_many :plans
+  has_many :subscriptions
+  has_many :followed_users, :through => :subscriptions
+  has_many :subscribers, :class_name => 'User', :finder_sql => proc { 
+    "SELECT u.* FROM users u INNER JOIN subscriptions s ON s.user_id = u.id WHERE s.followed_user_id = #{id}" }
   attr_accessible :email, :password, :password_confirmation, :remember_me
   validates_uniqueness_of :email
 
