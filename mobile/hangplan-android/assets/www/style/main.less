@@ -1,31 +1,9 @@
-@o: #f8b306; 
-@od: #f8b306;
-@ol: #f8e5b4;
-@pl: #d4a4f8;
-@p: #8c00f8; 
-@pd: #7d00dd;
-@border: #bbb;
-@borderLight: #ddd;
-@borderDark: #999;
-@bg: #eee;
-@hl: #fff;
-@hl2: #fae6ff;
-@text: #666;
-@textLight: #999;
-@textDark: #444;
-
-
-.box-shadow (@color: 70) {
-	-moz-box-shadow: 0px 3px 4px rgba(@color, @color, @color, .7);
-	-webkit-box-shadow: 0px 3px 4px rgba(@color, @color, @color,.7);
-	box-shadow: 0px 3px 4px rgba(@color, @color, @color, .7);	
-}
-
-.border-box{
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-    box-sizing: border-box;
-}   
+@c1: #f26532; 
+@c1l: #f2ac93; 
+@bg: #fff;
+@text: #777;
+@textd: #555;
+@border: #ccc;
 
 @font-face {
     font-family: happykiller;
@@ -39,27 +17,11 @@ body{
 	font-size: 12pt;
 	color: @text;
 	background-color: @bg;		
-	background-image: url(../images/bg.png);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: 100% 0%;
 }
 
-h1,h2,h3,h4,h5,h6,.h4{
-	font-family: happykiller, sans-serif;
-	margin: 0;
-	padding: 0;
-	text-transform: lowercase;
-	color: @pd;
-}
-
-.h4{
-	font-size: 14pt;	
-}
-
-a{
-	color: @pd;	
-}
 
 #container, .container{
 	height: 100%;
@@ -68,12 +30,11 @@ a{
 
 #header{
 	background: none;
-	background-color: @o;
-	.box-shadow;		
+	background-color: @c1;
 	h1{
 	    margin: 0 auto;
 	    font-size: 20pt;
-	    color: #777;  
+	    color: #fff;  
     }
 }
 
@@ -101,130 +62,8 @@ a{
 
 input, textarea{
 	color: @text;
-	border: 1px solid @borderDark;
+	border: 1px solid @border;
 	font-size: 12pt;
-}
-
-#qrimg{
-	float: left;
-	width: 200px;
-	height: 200px;
-	margin: 0 10px 20px 0;
-}
-
-#qrdata{
-	margin: 0 0 15px 0;
-	.title{
-	}
-	.body{
-		background-color: @hl;
-		padding: 5px;
-		margin: 0 0 5px 0;
-		word-wrap: break-word;
-		span{
-			font-size: 10pt;
-			display: block;	
-			margin: 5px 0 0 0;
-		}
-		a, a:vistied{
-			color: @p;
-		}
-	}
-	.link{
-		font-size: 10pt;
-		display: block;
-		margin: 5px 0 0 0;
-		padding: 0 0 0 15px;
-		color: @textLight;
-		background-image: url(../images/link.gif);
-		background-repeat: no-repeat;
-		background-position: 0px 1px;
-		text-decoration: none; 
-	}
-	.actions{
-		margin: 0;
-		#btnUnfollow{
-			display: none;	
-		}
-	}
-	
-}
-
-.messageBlock{
-	background-color: transparent;
-	margin: 10px 0 0px 0;
-	text-align: center;
-	padding: 5px;
-	p{
-		display: block;
-		padding: 0;
-		margin: 0;
-		input{
-			width: 100%;
-			display: block;	
-			.border-box;
-		}
-	}
-	div{
-		margin: 10px 0 10px 0;	
-	}
-}
-.messageBlock.orange{
-	background-color: transparent;
-}
-
-#qrcomments{
-	clear:both;
-	padding: 0 0 50px 0;
-	form{
-		margin: 0px 0px 10px 0px;
-		padding: 0px;
-		p{	
-			display: block;
-			padding: 0;
-			margin: 0 0 5px 0;
-			textarea{
-				display: block;
-				margin: 0 0 0 0;
-				width: 100%;
-				border: 1px solid @borderDark;
-				.border-box
-			}
-		}
-	}
-	.comment{
-		margin: 5px 0 0 0;
-		background-color: @hl;
-		padding: 5px;
-	}
-	#btnMore{
-		margin: 5px 0 0 0;
-		display: none;
-	}
-}
-
-.byline{
-	margin: 5px 0 0 0;
-	padding: 0px;
-	font-size: 8pt;
-	color: @textLight;
-	text-align: right;
-	a{
-		img{
-			vertical-align: middle;
-			margin: 0 5px 0 0;
-		}
-	}
-}
-
-ul.errors{
-	border: 1px solid @o;
-	margin: 2px 0 10px 0;
-	padding: 10px 10px 10px 30px;
-	li{
-		color: @o;
-		font-size: 12pt;
-	}
 }
 
 .page .content .button{
@@ -232,7 +71,7 @@ ul.errors{
     border: 1px solid @border;
     background-color: #eee;
     padding: 8px;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, @ol), color-stop(1.0, @o));
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, @c1l), color-stop(1.0, @c1));
     text-decoration: none;
     cursor: pointer;
     color: @text;
@@ -240,166 +79,7 @@ ul.errors{
     text-align: center;
 }
 .page .content .button:hover, .page .content .button.active{
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, @o), color-stop(1.0, @o));  
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, @c1l), color-stop(1.0, @c1));  
     text-decoration: none;  
-    color: @textDark;   
-}
-
-.page .content .button.purple{
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, @pl), color-stop(1.0, @p));
-	color: @textDark;
-	border: 1px solid @borderDark; 
-}
-
-.page .content .button.purple:hover, .page .content .button.purple.active{
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, @p), color-stop(1.0, @p));  
-	color: @textLight; 
-}
-
-.page .content .button.grey{
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, @bg), color-stop(1.0, @borderLight));
-	color: @text;
-	border: 1px solid @border; 
-}
-
-.page .content .button.grey:hover, .page .content .button.grey.active{
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, @borderLight), color-stop(1.0, @borderLight)); 
-	color: @textDark; 
-}
-
-.listing{
-	div{
-	}
-	ul{
-		list-style-type: none;
-		margin: 2px 0 15px 0;
-		padding: 0;			
-		li{
-		    border: 1px solid @border;
-		    border-top: 0px;
-		    padding: 10px;
-		    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, @bg), color-stop(1.0, @borderLight));
-		    text-decoration: none;
-		    cursor: pointer;
-		    color: @text;
-		    font-size: 12pt;
-		    text-align: left;
-		    span{
-		    	display: block;
-			    background-image: url(../images/nav.png);
-			    background-position: right center;
-			    background-repeat: no-repeat;
-		   	}
-		}
-		li:first-child{
-			border-top: 1px solid @border;	
-			border-top-left-radius: 5px;
-			border-top-right-radius: 5px;
-		}
-		li:last-child{	
-			border-bottom-left-radius: 5px;
-			border-bottom-right-radius: 5px;		
-		}
-		li:hover, li.active{
-		    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, @borderLight), color-stop(1.0, @borderLight));  
-		    text-decoration: none;  
-		    color: @textDark; 
-		}
-	}
-}
-.tiles{
-	width: 208px;
-	margin: 35px auto 0 auto;
-	a{
-		display: block;
-		width: 100px;
-		height: 100px;
-		text-align: center;
-		background-color: @p;
-		color: #fff;
-		margin: 2px;
-		float: left;
-		opacity: .7;
-		img{
-			display: block;
-			margin: 30px auto 10px auto;
-		}
-	}	
-	a:hover, a:active, a.active{
-		opacity: 1.0;	
-	}
-	a.orange{
-		background-color: @o;
-	}
-	a.grey{
-		background-color: @border;	
-	}
-	a.clear{
-		background-color: transparent;	
-	}	
-	a.double{
-		width: 204px;	
-	}
-}
-#profileData{
-	height: 120px;
-	img{
-		float: left;
-		margin: 0 5px 0 0;
-	}	
-	h3{
-		float: left;	
-		width: 180px;
-		margin: 0 0 10px 0;
-	}
-}
-#nonetMessage{
-	display: none;	
-}
-a.image[src]{
-	color: @p;
-	text-decoration: none;	
-	cursor: pointer;
-	padding: 0 0 0 13px;
-	background-image: url(../images/money.png);
-	background-repeat: no-repeat;
-	background-position: left center;
-}
-a.profile{
-	color: @p;	
-	cursor: pointer; 
-}
-.imageview{
-	text-align: center;
-	background-image: url(../images/loading.gif); 
-	background-repeat: no-repeat;
-	background-position: center center;	
-	img{
-		margin: 10px;
-		max-width: 280px;	
-	}
-}
-
-.actions{
-	height: 35px;
-	margin: 0 0 5px 0;
-	.button{
-		float: left;		
-		width: 75px;
-  		margin-right: 5px;
-	}
-	.button:last-child{
-		margin-right: 0px;
-	}
-	.right{
-		float: right;	
-	}
-}
-a.insert{
-	float: right;
-	display: block;
-	position: relative;
-	top: -7px;
-	left: 6px; 
-	font-size: 10pt !important;
+    color: @textd;   
 }
