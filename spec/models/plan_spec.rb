@@ -10,4 +10,5 @@ describe Plan do
   it { should allow_mass_assignment_of(:sponsored) }
   it { should allow_mass_assignment_of(:tentative) }
   it { should allow_mass_assignment_of(:link) }
+  it { should have_and_belong_to_many(:users) }
 end
