@@ -2,6 +2,9 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can :manage, Plan
+    if user
+      can [:read, :create], Plan
+      can [:update, :destroy], Plan, :owner => user
+    end
   end
 end
