@@ -21,11 +21,13 @@ ActiveRecord::Schema.define(:version => 20111015160248) do
     t.datetime "updated_at"
     t.float    "latitude"
     t.float    "longitude"
-    t.boolean  "sponsored"
-    t.boolean  "tentative"
+    t.boolean  "sponsored",  :default => false
+    t.boolean  "tentative",  :default => false
     t.string   "link"
     t.integer  "user_id"
   end
+
+  add_index "plans", ["user_id"], :name => "index_plans_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"

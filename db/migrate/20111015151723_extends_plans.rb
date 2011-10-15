@@ -3,8 +3,8 @@ class ExtendsPlans < ActiveRecord::Migration
     change_table :plans do |t|
       t.float :latitude
       t.float :longitude
-      t.boolean :sponsored
-      t.boolean :tentative
+      t.boolean :sponsored, :default => false
+      t.boolean :tentative, :default => false
     end
   end
 
