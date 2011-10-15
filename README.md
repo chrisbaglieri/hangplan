@@ -1,2 +1,2 @@
-Go go team Hangplan!
---------------------
+Hangplan!
+---------
