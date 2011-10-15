@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Hangplan</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <%= render :partial => "shared/head", :locals => { :render_photogallery => true } %>
 
-<div id="user_nav">
-  <% if user_signed_in? %>
-    Signed in as <%= current_user.email %>
-    <%= link_to "Log out", destroy_user_session_path, :method => :delete%>
-  <% else %>
-    <%= link_to "Sign up", new_user_registration_path %> or
-    <%= link_to "log in", new_user_session_path %>
-  <% end %>
-</div>
-
-<div>
-  <% if flash[:error] -%>
-    <p class='error'><%=h flash[:error] %></p>
-  <% end -%>
-  <% if flash[:notice] -%>
-    <p class='notice'><%=h flash[:notice] %></p>
-  <% end -%>  
-</div>
-
-<%= yield %>
-
-</body>
+  <body>
+    <div id="user_nav">
+      <% if user_signed_in? %>
+        Signed in as <%= current_user.email %>
+        <%= link_to "Log out", destroy_user_session_path, :method => :delete%>
+      <% else %>
+        <%= link_to "Sign up", new_user_registration_path %> or
+        <%= link_to "log in", new_user_session_path %>
+      <% end %>
+    </div>
+    <div>
+      <% if flash[:error] -%>
+        <p class='error'><%=h flash[:error] %></p>
+      <% end -%>
+      <% if flash[:notice] -%>
+        <p class='notice'><%=h flash[:notice] %></p>
+      <% end -%>  
+    </div>
+    <div id="header"><%= render :partial => "shared/header" %></div>
+    <div id="content"><%= render :partial => "shared/content" %></div>
+    <div id="footer"><%= render :partial => "shared/footer" %></div>
+  </body>
 </html>

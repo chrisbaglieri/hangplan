@@ -1,0 +1,7 @@
+body { font-family: "Helvetica Neue", Helvetica, Arial, default; height: 100%; background: white; color: #444444; }
+body a { color: #0395cc; }
+body a:hover { color: #0395cc; }
+
+#header { background: #c2def4; height: 75px; width: 100%; border-bottom: 3px solid #8bc7ee; }
+#header #main-header { background: white; background: url("../images/hangplan-logo.png") no-repeat 0 bottom; height: 55px; padding-top: 10px; float:left; }
+#header #main-header h1 { overflow: hidden; text-indent: -9999px; }
