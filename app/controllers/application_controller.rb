@@ -4,6 +4,10 @@ class ApplicationController < ActionController::Base
   
   respond_to :html, :json
   
+  def after_sign_in_path_for(resource)
+    plans_url
+  end
+  
   private
   
   def detect_mobile_key
