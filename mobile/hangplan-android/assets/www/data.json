@@ -1,0 +1,4 @@
+[{"created_at":"2011-10-15T17:53:47Z","id":1,"latitude":null,"link":"","location":"Bar","longitude":null,"name":"Foo","sponsored":false,"tentative":false,"time":"2011-10-15T17:53:00Z","updated_at":"2011-10-15T17:53:47Z","user_id":1},
+{"created_at":"2011-10-15T17:53:47Z","id":1,"latitude":null,"link":"","location":"Bar","longitude":null,"name":"Other name","sponsored":false,"tentative":false,"time":"2011-10-15T17:53:00Z","updated_at":"2011-10-15T17:53:47Z","user_id":1},
+{"created_at":"2011-10-15T17:53:47Z","id":1,"latitude":null,"link":"","location":"Bar","longitude":null,"name":"Foo","sponsored":false,"tentative":false,"time":"2011-10-15T17:53:00Z","updated_at":"2011-10-15T17:53:47Z","user_id":1},
+{"created_at":"2011-10-15T17:53:47Z","id":1,"latitude":null,"link":"","location":"Bar","longitude":null,"name":"Foo","sponsored":false,"tentative":false,"time":"2011-10-15T17:53:00Z","updated_at":"2011-10-15T17:53:47Z","user_id":1}]

@@ -19,13 +19,15 @@ body {
 }
 #header {
   background: none;
-  /*background-color: #f26532; */
-  background-color: #d6e8f7;
+  background-color: #b4d6f1;
 }
 #header h1 {
   margin: 0 auto;
-  font-size: 20pt;
-  color: #fff;
+  padding: 0;
+  line-height: 50px;
+}
+#header h1 img {
+  margin: 10px 0 0 0;
 }
 #worker {
   position: absolute;
@@ -69,8 +71,4 @@ input, textarea {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f2ac93), color-stop(1, #f26532));
   text-decoration: none;
   color: #555555;
-}
-
-#logo{
-	margin-bottom:15px;
 }

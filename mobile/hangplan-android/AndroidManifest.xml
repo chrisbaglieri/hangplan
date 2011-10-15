@@ -33,7 +33,7 @@ android:anyDensity="true"
                   android:label="@string/app_name"
                   android:configChanges="orientation|keyboardHidden"
                   >
-            <meta-data android:name="app_secret" android:value="7c3fe17b6f916815699a1fd670ea7230" />      
+            <meta-data android:name="app_secret" android:value="d7978db6783a1636333909168cc5618d" />      
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -41,7 +41,7 @@ android:anyDensity="true"
         </activity>
         
 		<activity android:name="com.phonegap.DroidGap" android:label="@string/app_name" android:configChanges="orientation|keyboardHidden"> <intent-filter> </intent-filter> 
-			<meta-data android:name="app_secret" android:value="7c3fe17b6f916815699a1fd670ea7230" />    
+			<meta-data android:name="app_secret" android:value="d7978db6783a1636333909168cc5618d" />    
 		</activity>        
 
     </application>

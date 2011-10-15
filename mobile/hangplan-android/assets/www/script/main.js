@@ -56,7 +56,7 @@ var hangplan = {};
     this.deviceReady = function(){
         hangplan.login();  
         
-        FB.init({ appId: "164904990262293", nativeInterface: PG.FB });
+        /*FB.init({ appId: "223798634351683", nativeInterface: PG.FB });
         console.log('bis');
         FB.Event.subscribe('auth.login', function(response) {
             console.log('auth.login event');
@@ -72,7 +72,7 @@ var hangplan = {};
         
         FB.Event.subscribe('auth.statusChange', function(response) {
             console.log('auth.statusChange event');
-        });
+        });*/
     };
     
     this.login = function(){
@@ -82,43 +82,19 @@ var hangplan = {};
     		hangplan.user.extend(userData);
     		hangplan.load();
     	}else{
-    		hangplan.view.container.pageTurner('reroot', 'loginPage');
+    		hangplan.view.container.pageTurner('navigate', 'loginPage');
     		
     		$('#btnLogin').live('click', function(){
-    			/*var data = {
-					email: $('#email').get(0).value,
-					pw: $('#pw').val()
-				};
-				
-				hangplan.ajax('POST', hangplan.secureServer + 'api/user/authenticate', data, function(data){
-					$('#pw').val('');					
-					window.localStorage.setItem('hangplan-user', JSON.stringify(data));
-					hangplan.user.extend(data);
-					hangplan.load();
-				});*/
-				
+    			hangplan.load();
+    			
+    			/*
 				FB.login(function(e) {
                         console.log(e);
                     },
                     { perms: "email" }
-                );
-    		});
-    		
-    		$('#btnLoginStatus').live('click', function(){
-    			hangplan.getLoginStatus();
-    			
+                );*/
     		});
     	}
-    }
-    
-    this.getLoginStatus = function(){
-    	FB.getLoginStatus(function(response) {
-	        if (response.session) {
-	            console.log('logged in');
-	        } else {
-	            console.log('not logged in');
-	        }
-        });
     }
     
     this.logout = function(){
@@ -128,10 +104,18 @@ var hangplan = {};
     }
     
     this.load = function(){
-        var me = this;
-        hangplan.view.container.pageTurner('reroot', 'homePage');      
-		
+        hangplan.view.container.pageTurner('navigate', 'homePage');        
+        hangplan.updateCalendar();
 		$('#btnLogout').click(function(){ hangplan.logout(); });
+	};
+	
+	this.updateCalendar = function(){
+		//determine if/when to do a refresh
+		hangplan.ajax('GET', 'data.json', null, function(data){
+			data = JSON.parse(data);
+			console.log(data);
+			$('#calItemTemplate').tmpl(data).appendTo($('#calendarList'));
+		});
 	};
 	
 	this.backbutton = function(){
@@ -142,7 +126,6 @@ var hangplan = {};
 		hangplan.view.container.pageTurner('root');
 	};
 		
-	
 	this.working = function(show, message, controls){
 		if (show){
 			if (message){
