@@ -3,7 +3,6 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.1'
 gem 'jquery-rails'
 gem 'devise'
-gem 'pg'
 
 group :assets do
   gem 'sass-rails',   '~> 3.1.4'
@@ -13,4 +12,12 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
+end
+
+group :production do
+  gem 'pg'
+end
+
+group :development, :test do
+  gem 'sqlite3'
 end
