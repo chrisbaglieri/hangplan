@@ -5,6 +5,7 @@ class Ability
     if user
       can [:read, :create], Plan
       can [:update, :destroy], Plan, :owner => user
+      can [:manage], Subscription
     end
   end
 end
