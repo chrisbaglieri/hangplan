@@ -1,0 +1,9 @@
+development:
+  adapter: postgresql
+  database: hangplan_development
+  host: localhost
+  
+test:
+  adapter: postgresql
+  database: hangplan_test
+  host: localhost
