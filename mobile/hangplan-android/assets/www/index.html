@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>biqr</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="style/pageTurner.css" />
+    <link rel="stylesheet" type="text/css" href="style/main.css" />
+</head>
+<body>
+    <script type="text/javascript" charset="utf-8" src="script/phonegap-android.js"></script>
+    <script type="text/javascript" charset="utf-8" src="script/barcodescanner.js"></script>
+    <script type="text/javascript" charset="utf-8" src="script/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="script/jquery.tmpl.js"></script>
+    <script type="text/javascript" charset="utf-8" src="script/pageTurner.js"></script>
+    <script type="text/javascript" charset="utf-8" src="script/sha1.js"></script>
+    <script type="text/javascript" charset="utf-8" src="script/dateformat.js"></script>
+    <script type="text/javascript" charset="utf-8" src="script/main.js"></script>
+    <script src="http://jsconsole.com/remote.js?1E02BEF7-E832-49BB-BFA2-015950D9F47A"></script>
+    
+    <div id="worker"><div>Loading...</div><img src="images/loading.gif" alt="Loading..."/></div>
+	<div id="header">
+		<div class="left">
+	    	<a page="..">&nbsp;</a>
+	    </div>
+	    <h1>biqr.net</h1>
+	    <div class="right">
+		    <a page="^">&nbsp;</a>
+		    <a page="/">&nbsp;</a>
+	    </div>
+	</div>
+		
+    <div class="container" id="container">  
+		<div class="page" id="nonetPage">
+			<div class="header" hide="home">biqr.net</div>
+			<div class="content">
+				<div class="messageBlock" id="nonetMessage">
+					A problem occurred trying to reach the Interent. Please check your connection and try again.
+					<div class="button purple" id="retry">Retry</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="page" id="loginPage">
+		    <div class="header" hide="home">biqr.net</div>
+		    <div class="content">
+		    	<div class="messageBlock orange">
+		    		<h4>Please Login:</h4>
+		    		<input type="email" id="email" placeholder="email" autocapitalize="off" autocorrect = "off"/><br/>
+		    		<input type="password" id="pw" placeholder="password"/>
+		    		<div class="button" id="btnLogin">Login</div>
+		    		<div>
+		    			<a href="http://biqr.net/register">Register</a>
+		    		</div>
+		    	</div>	 
+		    </div>
+		</div>
+		<div class="page" id="homePage">
+		    <div class="header" hide="home">biqr.net</div>
+		    <div class="content">	    	
+		    	<div class="tiles">
+		    		<a id="btnScan"><img src="images/camera.png" alt="scan" />Scan</a>
+		    		<a page="followingPage" class="orange"><img src="images/following.png" alt="following" />Following</a>
+		    		<a page="profilePage" class="orange"><img src="images/user.png" alt="profile" />Profile</a>	
+		    		<a id="btnLogout" class="grey"><img src="images/logout.png" alt="logout" />Logout</a>
+		    		<a page="//http://biqr.net/helpcontent.html#aboutPage" class="double grey"><img src="images/info.png" alt="about" />Help and Feedback</a>
+		    	</div>		    		    	
+		    </div>
+		</div>		
+		<div class="page" id="followingPage">
+		    <div class="header">following</div>
+		    <div class="content">	    	
+		    	<div class="listing" id="following">
+			    	<ul></ul>
+		    	</div>		    		    	
+		    </div>
+		</div>
+		<div class="page" id="profilePage">
+		    <div class="header">profile</div>
+		    <div class="content">	
+		    	<div id="profileData">
+			    	<img src="" alt="profile" /> 
+			    	<h3></h3>
+		    	</div>
+		    	<div class="listing" id="created">
+		    		<h5>codes i've created</h5>
+			    	<ul></ul>
+			    	<div class="button">Load More</div>
+		    	</div>			    		    	
+		    </div>
+		</div>			
+		<div class="page" id="gifdexPage">
+		    <div class="header">gifdex</div>
+		    <div class="content listing">	
+		    	<ul class="uilist"></ul>		    		    	
+		    </div>
+		</div>					
+		<script id="detailTemplate" type="text/x-jquery-tmpl-page">
+		    <div class="header" hide="home">details</div>		    
+		    <div class="content">
+		    	<div id="qrdata">
+					<h3 class="title">${title}</h3>
+					<div class="body">
+						{{html biqr.formatBody(body)}}
+						{{if description}}<span>{{html biqr.formatBody(description)}}</span>{{/if}}
+						{{if link}}<a class="link" href="${link}">${link}</a>{{/if}}
+						<div class="byline"><a class="profile">${user_display}</a> - ${dateFormat(biqr.fromISO(date), 'mmm d, yyyy, h:MM:ss TT')}</div>
+					</div>
+					<div class="actions">
+						<div id="btnFollow" class="button purple right">Follow</div>
+						<div id="btnUnfollow" class="button grey right">Unfollow</div>
+					</div>
+				</div>
+				<div id="qrcomments">
+					<form id="frmComment">
+						<p><textarea pattern="[\w\.\&\%\*\#\@\!\,\?\+\=\'\"\[\]\\\/]+" name="comment" id="comment" placeholder="Add a new comment" autocorrect = "off"></textarea></p>
+						<div class="actions">
+							<div class="button grey" page="gifdexPage">Gifdex</div>
+							<div id="btnComment" class="button right">Comment</div>
+						</div>
+						<img src="images/loading.gif" alt="Working..." id="working" style="display: none;" />
+					</form>		
+					<div id="btnMore" class="button">
+						Load More Comments
+					</div>	
+					<br/>			
+				</div>		
+		    </div>
+		</script>
+		<script id="noooTemplate" type="text/x-jquery-tmpl-page">
+		    <div class="header" hide="home">details</div>		    
+		    <div class="content">
+		    	<div id="qrdata">
+					<h3 class="title">contents:</h3>
+					<div class="body">
+						${body}
+					</div>
+					<div class="messageBlock">
+						If you'd like to register and start commenting on this code, just fill in a title and click register.
+						
+						<p>
+							<input type="text" id="register-title" placeholder="Title" autocorrect = "off"/>
+							<input type="hidden" id="register-hash" value="${hash}"/>
+							<input type="hidden" id="register-body" value="${body}"/>
+						</p>
+					</div>
+					<div class="actions">
+						<div id="btnRegister" class="button purple right">Register</div>
+					</div>
+				</div>
+		    </div>
+		</script>	
+		
+		<script id="imageTemplate" type="text/x-jquery-tmpl-page">
+		    <div class="header" hide="home">${name}</div>		    
+		    <div class="content imageview">
+		    	<img src="${src}" alt="image"/>
+		    </div>
+		</script>							
+    </div>
+    
+    <script id="commentTemplate" type="text/x-jquery-tmpl">
+		<div class="comment">
+			<div>
+				{{if body}}
+					{{html biqr.formatBody(body)}}
+				{{/if}}
+			</div>
+			<div class="byline">
+				<a class="profile">${user_display}</a>&nbsp;-&nbsp;${dateFormat(biqr.fromISO(date), 'mmm d, yyyy, h:MM:ss TT')}
+			</div>
+		</div>
+	</script>
+	
+    <script id="listingTemplate" type="text/x-jquery-tmpl">
+		<li qrcode="${qrcode}"><span>${title}</span></li>
+	</script>	
+	
+    <script id="gifTemplate" type="text/x-jquery-tmpl">
+    	{{each lib}}
+			<li>
+				<a class="image" src="${biqr.gifs}${$value}.gif">${$value}</a>
+				<a page=".." class="button insert" gif="$${$value}">Insert</a>
+			</li>
+		{{/each}}
+	</script>	
+</body>
+</html>
