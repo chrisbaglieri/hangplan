@@ -3,7 +3,6 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.1'
 gem 'jquery-rails'
 gem 'devise'
-gem 'pg'
 gem 'cancan'
 gem 'simple_form'
 
@@ -18,4 +17,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'shoulda'
+end
+
+group :production do
+  gem 'pg'
 end
