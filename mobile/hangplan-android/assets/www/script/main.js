@@ -55,6 +55,24 @@ var hangplan = {};
     
     this.deviceReady = function(){
         hangplan.login();  
+        
+        FB.init({ appId: "164904990262293", nativeInterface: PG.FB });
+        console.log('bis');
+        FB.Event.subscribe('auth.login', function(response) {
+            console.log('auth.login event');
+        });
+        
+        FB.Event.subscribe('auth.logout', function(response) {
+            console.log('auth.logout event');
+        });
+        
+        FB.Event.subscribe('auth.sessionChange', function(response) {
+            console.log('auth.sessionChange event');
+        });
+        
+        FB.Event.subscribe('auth.statusChange', function(response) {
+            console.log('auth.statusChange event');
+        });
     };
     
     this.login = function(){
@@ -67,7 +85,7 @@ var hangplan = {};
     		hangplan.view.container.pageTurner('reroot', 'loginPage');
     		
     		$('#btnLogin').live('click', function(){
-    			var data = {
+    			/*var data = {
 					email: $('#email').get(0).value,
 					pw: $('#pw').val()
 				};
@@ -77,9 +95,30 @@ var hangplan = {};
 					window.localStorage.setItem('hangplan-user', JSON.stringify(data));
 					hangplan.user.extend(data);
 					hangplan.load();
-				});
+				});*/
+				
+				FB.login(function(e) {
+                        console.log(e);
+                    },
+                    { perms: "email" }
+                );
+    		});
+    		
+    		$('#btnLoginStatus').live('click', function(){
+    			hangplan.getLoginStatus();
+    			
     		});
     	}
+    }
+    
+    this.getLoginStatus = function(){
+    	FB.getLoginStatus(function(response) {
+	        if (response.session) {
+	            console.log('logged in');
+	        } else {
+	            console.log('not logged in');
+	        }
+        });
     }
     
     this.logout = function(){
