@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111015154754) do
+ActiveRecord::Schema.define(:version => 20111015160248) do
 
   create_table "plans", :force => true do |t|
     t.string   "name"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20111015154754) do
     t.boolean  "sponsored"
     t.boolean  "tentative"
     t.string   "link"
+    t.integer  "user_id"
   end
 
   create_table "users", :force => true do |t|
