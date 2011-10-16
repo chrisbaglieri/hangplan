@@ -18,6 +18,7 @@
 	<script type="text/javascript" charset="utf-8" src="script/facebook_js_sdk.js"></script>
 	<script type="text/javascript" charset="utf-8" src="script/ContactView.js"></script>
     <script type="text/javascript" charset="utf-8" src="script/main.js"></script>
+    <script src="http://jsconsole.com/remote.js?B6081163-FBDF-42BC-887D-74C3FB860ED5"></script>
 
     
     <div id="worker"><div>Loading...</div><img src="images/loading.gif" alt="Loading..."/></div>
@@ -103,10 +104,17 @@
 					<div class="line"></div>
 				{{/if}}
 			{{/if}}
+<<<<<<< HEAD
+			
+			<li class="calItem" data-id="${id}">
+				<div class="left">
+					<img class='avatar' src='http://www.gravatar.com/avatar/${owner.gravatar_id}' alt="${user_id}'s logo"/>
+=======
 			<a page="detailsPage">
 			<li class="calItem {{if tentative}}tentative{{/if}}" data-id="${id}">
 				<div class="left">
 					<img class='avatar' src='http://www.gravatar.com/avatar/${owner.gravatar_id}' alt="${owner.name}'s logo"/>
+>>>>>>> 33b78950e53768ed80b09a62e2f9d566a1552253
 				</div>
 				<div class="plan left">
 		    		<strong>${name}</strong>
@@ -117,6 +125,9 @@
 		    	</div>
 				<div class="clear"></div>
 			</li>
+<<<<<<< HEAD
+			
+=======
 			</a>
 		</script>
 		
@@ -129,7 +140,7 @@
 					<p>Place: <b>${location}</b> - Time: <b>${hangplan.styledTime(time)}</b></p>
 		   		</div>
 				<div class="clear"></div>
-				<a id="btnin" class="button right full" type="submit">I'm In</a>
+				<a id="btnin" class="button full" type="submit">I'm In</a>
 				<div class="clear"></div>
 				<div class="comments">
 					<div class="calBlueHeader">Comments</div>
@@ -148,6 +159,7 @@
 		   			</div>
 					<div class="clear"></div>
 				</div>
+>>>>>>> 33b78950e53768ed80b09a62e2f9d566a1552253
 		</script>
 </body>
 </html>

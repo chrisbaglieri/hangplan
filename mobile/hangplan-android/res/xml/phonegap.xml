@@ -6,5 +6,7 @@
     <access origin="http://m.facebook.com*"/>
     <access origin="http://www.facebook.com*"/>
     <access origin="http://static.ak.fbcdn.net*"/>    
+    <access origin="https://hangplan.herokuapp.com*"/>    
+    <access origin="http://hangplan.herokuapp.com*"/>    
     <log level="DEBUG"/>
 </phonegap>

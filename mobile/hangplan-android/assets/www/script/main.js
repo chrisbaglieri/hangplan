@@ -31,6 +31,7 @@ var hangplan = {};
 			hangplan.handleError(err);
 		});
     	
+    	
     	if (window.location.hash != '#m'){
 	       	document.addEventListener('deviceready', hangplan.deviceReady, false);       
 	       	document.addEventListener("backbutton", hangplan.backbutton, false);
@@ -52,7 +53,8 @@ var hangplan = {};
     		hangplan.user.extend(userData);
     		hangplan.load();
     	}else{
-    		hangplan.view.container.pageTurner('reroot', 'loginPage');    		
+    		hangplan.view.container.pageTurner('reroot', 'homePage'); 
+    		hangplan.load();   		
     		$('#btnLogin').live('click', function(){ 			
 				/*FB.login(function(response) {
 					if (response.session) {
@@ -111,7 +113,9 @@ var hangplan = {};
 		//determine if/when to do a refresh
 		$('#calendarList').html('');
 		
+
 		hangplan.ajax('GET', hangplan.secureServer + 'plans.json', null, function(data){
+
 			$('#calItemTemplate').tmpl(data).appendTo($('#calendarList'));
 		});
 	};
@@ -154,6 +158,7 @@ var hangplan = {};
 		return dayName+", "+monthName+" "+this.fromISO(string).getDate();
 	}
 	
+
 	this.styledTime = function(string) {
 		var h = this.fromISO(string).getHours();
 		var m = this.fromISO(string).getMinutes();
