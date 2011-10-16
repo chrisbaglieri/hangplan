@@ -1,3 +1,4 @@
 <% if user_signed_in? %>
+	<li><%= link_to 'Create Plan', new_plan_path %></li>
   <li><%= link_to 'Plans', plans_path %></li>
 <% end %>

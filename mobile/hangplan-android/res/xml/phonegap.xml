@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phonegap>
+    <access origin="http://127.0.0.1*"/>
+    <access origin="http://graph.facebook.com*"/>
+    <access origin="http://hangplan.com*"/>
+    <access origin="http://m.facebook.com*"/>
+    <access origin="http://www.facebook.com*"/>
+    <access origin="http://static.ak.fbcdn.net*"/>    
+    <log level="DEBUG"/>
+</phonegap>

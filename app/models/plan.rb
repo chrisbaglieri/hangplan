@@ -3,6 +3,8 @@ class Plan < ActiveRecord::Base
   attr_accessible :name, :location, :time, :latitude, :longitude, :sponsored, :tentative, :link
   has_and_belongs_to_many :users
   before_create :add_owner_as_participant
+  geocoded_by :location
+  after_validation :geocode
   
   private
   
