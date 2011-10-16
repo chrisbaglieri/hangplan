@@ -1,12 +1,14 @@
-<div class="plan" class="span-18">
-	<div class="divider span-6"><% if plan.time? %><%= format_date(plan.time) %><% else %>Sooner or later<% end %></div>
-	<div class="divider span-5">WHERE</div>
-	<div class="divider span-3">WHEN</div>
-	<div class="divider span-2">&nbsp;</div>
-	<div class="divider span-1 last">&nbsp;</div>
-	<div class="section span-6"><%= image_tag plan.owner.gravatar_url(:size => 24) %> <%= plan.name %></div>
-	<div class="section span-5"><% if plan.location? %><%= plan.location %><% else %>Somewhere I guess<% end %></div>
-	<div class="section span-3"><% if plan.time? %><%= format_time(plan.time) %><% else %>Sometime I suppose<% end %></div>
-	<div class="section span-2"><% if plan.participant?(current_user) %><%= link_to "OUT", plan_participants_path(plan), :method => :delete, :class => 'action-button' %><% else %><%= link_to "IN", plan_participants_path(plan), :method => :post, :class => 'action-button' %><% end %></div>
-	<div class="section span-1 last"><%= link_to image_tag("arrow-right.png"), plan %></div>
+<div class="plan span-18">
+	<ul class="span-18">
+		<li class="divider span-6"><% if plan.time? %><%= format_date(plan.time) %><% else %>Sooner or later<% end %></li>
+		<li class="divider span-5">WHERE</li>
+		<li class="divider span-3">WHEN</li>
+		<li class="divider span-2">&nbsp;</li>
+		<li class="divider span-1 last">&nbsp;</li>
+		<li class="section span-6"><%= image_tag plan.owner.gravatar_url(:size => 24) %><%= plan.name %></li>
+		<li class="section span-5"><% if plan.location? %><%= plan.location %><% else %>Somewhere I guess<% end %></li>
+		<li class="section span-3"><% if plan.time? %><%= format_time(plan.time) %><% else %>Sometime I suppose<% end %></li>
+		<li class="section span-2"><% if plan.participant?(current_user) %><%= link_to "OUT", plan_participants_path(plan), :method => :delete, :class => 'action-button' %><% else %><%= link_to "IN", plan_participants_path(plan), :method => :post, :class => 'action-button' %><% end %></li>
+		<li class="section span-1 last"><%= link_to image_tag("arrow-right.png"), plan %></li>
+	</ul>
 </div>
