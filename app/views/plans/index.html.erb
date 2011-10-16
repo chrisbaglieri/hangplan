@@ -3,5 +3,6 @@
     <%= p.name %><br/>
     <%= p.location %><br/>
     <%= p.time %>
+    <%= link_to "Participate", plan_participants_path(p), :method => :post %>
   </div>
 <% end %>
