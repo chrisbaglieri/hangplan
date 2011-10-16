@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
   devise :invitable, :database_authenticatable, :registerable, :recoverable, :rememberable, 
     :trackable, :validatable, :omniauthable
-  has_and_belongs_to_many :plans
+  has_many :participants
+  has_many :plans, :through => :participants
   has_many :subscriptions
   has_many :followed_users, :through => :subscriptions
   has_many :subscribers, :class_name => 'User', :finder_sql => proc { 

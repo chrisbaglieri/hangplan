@@ -2,7 +2,7 @@ class PlansController < ApplicationController
   load_and_authorize_resource
   
   def index
-    @plans = current_user.nearby_plans
+    @plans = Plan.all
     respond_with(@plans)
   end
   
