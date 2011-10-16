@@ -41,6 +41,27 @@ var hangplan = {};
     this.deviceReady = function(){        
         FB.init({ appId: "223798634351683", nativeInterface: PG.FB });
         hangplan.login();  
+<<<<<<< HEAD
+        /*
+        FB.init({ appId: "223798634351683", nativeInterface: PG.FB });
+        FB.Event.subscribe('auth.login', function(response) {
+            console.log('auth.login event');
+        });
+        
+        FB.Event.subscribe('auth.logout', function(response) {
+            console.log('auth.logout event');
+        });
+        
+        FB.Event.subscribe('auth.sessionChange', function(response) {
+            console.log('auth.sessionChange event');
+        });
+        
+        FB.Event.subscribe('auth.statusChange', function(response) {
+            console.log('auth.statusChange event');
+        });
+        */
+=======
+>>>>>>> bff94fd56f9c1aa94df6661fa5e20747324e09ae
     };
     
     this.login = function(){
@@ -50,6 +71,14 @@ var hangplan = {};
     		hangplan.user.extend(userData);
     		hangplan.load();
     	}else{
+<<<<<<< HEAD
+    		hangplan.view.container.pageTurner('reroot', 'homePage');
+    		hangplan.load();
+    		$('#btnLogin').live('touchstart', function(){
+    			FB.login(function(e) {
+                        hangplan.load();
+                    },
+=======
     		hangplan.view.container.pageTurner('reroot', 'loginPage');
     		
     		$('#btnLogin').live('touchstart', function(){ 			
@@ -65,6 +94,7 @@ var hangplan = {};
 						hangplan.load();
 					}
                 },
+>>>>>>> bff94fd56f9c1aa94df6661fa5e20747324e09ae
                     { perms: "email" }
                 );
     		});
