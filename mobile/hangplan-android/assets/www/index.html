@@ -16,9 +16,8 @@
     <script type="text/javascript" charset="utf-8" src="script/sha1.js"></script>
 	<script type="text/javascript" charset="utf-8" src="script/pg-plugin-fb-connect.js"></script>
 	<script type="text/javascript" charset="utf-8" src="script/facebook_js_sdk.js"></script>
-	<script type="text/javascript" charset="utf-8" src="script/ContactView"></script>
+	<script type="text/javascript" charset="utf-8" src="script/ContactView.js"></script>
     <script type="text/javascript" charset="utf-8" src="script/main.js"></script>
-    <script src="http://jsconsole.com/remote.js?A1AC884B-E92A-43B6-AB11-36A98252082E"></script>
 
     
     <div id="worker"><div>Loading...</div><img src="images/loading.gif" alt="Loading..."/></div>
@@ -32,6 +31,7 @@
 	    <div class="right">
 		    <a page="^">&nbsp;</a>
 		    <a page="/">&nbsp;</a>
+		    <a page="formPage"><img src="images/plus-button.png" /></a>
 	    </div>
 	</div>
 		
@@ -48,12 +48,35 @@
 		</div>
 		<div class="page" id="homePage">
 		    <div class="header" hide="home"></div>
-		    <div class="content">	
-		    	<a page="//form.html#formPage">+ Add</a>    	
+		    <div class="content"> 	
 		    	<ul id="calendarList">
 		    	</ul>    	
 		    </div>
 		</div>	
+		<div class="page" id="formPage">
+			<div class="header" hide="home"></div>
+			<div class="content">
+				<h1>
+				Add my plan
+				</h1>
+				<form method="post" action="" name="addPlanForm" id="addPlanForm">
+					<label for="What">What? 
+					</label>					
+					<input name="What" type="text"><br/><br/>
+					
+					<label for="When">When? 
+					</label>
+					<input name="When" type="text"><br/><br/>
+					
+					<label for="Where">Where? 
+					</label>
+					<input name="Where" type="text"><br/><br/>
+												
+					<a class="button right" type="submit" page="//index.html#homePage" >Create Plan</a>
+				</form>
+			</div>
+		</div>	
+		
 	    <script id="calItemTemplate" type="text/x-jquery-tmpl">
 			{{if typeof storedDate == "undefined"}}
 				<li class="calHeader">
@@ -70,8 +93,7 @@
 					<div class="line"></div>
 				{{/if}}
 			{{/if}}
-			<a page="//form.html#formPage">
-			<li>
+			<li class="calItem" data-id="${id}">
 				<div class="left">
 					<img class='avatar' src='images/user.png' alt="${user_id}'s logo"/>
 				</div>
@@ -84,7 +106,6 @@
 		    	</div>
 				<div class="clear"></div>
 			</li>
-			</a>
 		</script>
 </body>
 </html>
