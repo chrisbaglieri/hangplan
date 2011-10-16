@@ -8,6 +8,7 @@ class ParticipantsController < ApplicationController
       @participant.points = 1
     end
     @participant.save
+    flash[:notice] = t 'participants.message.create', :plan => @participant.plan.name
     respond_with(@participant.plan)
   end
 
@@ -18,6 +19,7 @@ class ParticipantsController < ApplicationController
 
   def destroy
     @participant.destroy
-    respond_with(@plan, participants_url)
+    flash[:notice] = t 'participants.message.destroy', :plan => @participant.plan.name
+    respond_with(@participant.plan)
   end
 end

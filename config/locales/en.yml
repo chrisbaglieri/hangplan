@@ -4,6 +4,10 @@
 en:
   plans:
     createhdr: Make a Plan
+  participants:
+    message:
+      create: You're in for %{plan}!
+      destroy: You're out for %{plan}!
   activerecord:
     attributes:
       plan:
