@@ -42,6 +42,6 @@ class PlansController < ApplicationController
   
   def destroy
     @plan.destroy
-    respond_with(@plan, :root)
+    respond_with(@plan, :location => :root)
   end
 end
