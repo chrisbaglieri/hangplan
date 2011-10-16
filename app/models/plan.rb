@@ -7,6 +7,10 @@ class Plan < ActiveRecord::Base
   geocoded_by :location
   after_validation :geocode
   
+  def participant(user)
+    Participant.find_by_plan_id_and_user_id(self.id, user)  
+  end
+  
   def participant?(user)
     self.users.include?(user)
   end
