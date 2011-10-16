@@ -1,118 +1,19 @@
-p {
-  margin: 0;
-}
-.left {
-  float: left;
-}
-.right {
-  float: right;
-}
-@font-face {
-  font-family: happykiller;
-  src: url(HappyKiller.ttf);
-}
-body {
-  margin: 0 auto;
-  padding: 0;
-  font-family: Helvetica Neue, sans-serif;
-  font-size: 12pt;
-  color: #777777;
-  background-color: #ffffff;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 100% 0%;
-}
-#container, .container {
-  height: 100%;
-  width: 100%;
-}
-#header {
-  background: none;
-  background-color: #b4d6f1;
-}
-#header h1 {
-  margin: 0 auto;
-  padding: 0;
-  line-height: 50px;
-}
-#header h1 img {
-  margin: 10px 0 0 0;
-}
-#worker {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.85);
-  border-radius: 20px;
-  font-size: 12pt;
-  z-index: 1000;
-  color: #fff;
-  display: none;
-}
-#worker div {
-  margin: 50px auto 10px auto;
-  width: 120px;
-  height: 18px;
-  overflow: hidden;
-}
-input, textarea {
-  color: #777777;
-  border: 1px solid #cccccc;
-  font-size: 12pt;
-}
-.page .content .button {
-  border-radius: 5px;
-  border: 1px solid #cccccc;
-  background-color: #eee;
-  padding: 8px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f2ac93), color-stop(1, #f26532));
-  text-decoration: none;
-  cursor: pointer;
-  color: #777777;
-  font-size: 12pt;
-  text-align: center;
-}
-.page .content .button:hover, .page .content .button.active {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f2ac93), color-stop(1, #f26532));
-  text-decoration: none;
-  color: #555555;
-}
-#calendarList {
-  padding: 0;
-  margin: 0;
-}
-#calendarList li {
-  width: 100%;
-  list-style: none;
-  padding: 5px;
-  margin: 0;
-}
-#calendarList li .avatar {
-  padding: 2px;
-  margin: 3px;
-  background-color: #cccccc;
-  border: 1px solid #cccccc;
-}
-#calendarList .calHeader {
-  background-color: #b4d6f1;
-  padding: 5px;
-}
-.clear:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-.line {
-  /* The dividing line: */
-
-  height: 1px;
-  background-color: #cccccc;
-  border-bottom: 1px solid #cccccc;
-  overflow: hidden;
-}
+p{margin:0;}
+.left{float:left;}
+.right{float:right;}
+@font-face{font-family:happykiller;src:url(HappyKiller.ttf);}body{margin:0 auto;padding:0;font-family:Helvetica Neue,sans-serif;font-size:1.15em;color:#777777;background-color:#ffffff;background-repeat:no-repeat;background-attachment:fixed;background-position:100% 0%;}
+strong{font-size:1.3em;}
+#container,.container{height:100%;width:100%;}
+#header{background:none;background-color:#b4d6f1;}#header h1{margin:0 auto;padding:0;line-height:50px;}#header h1 img{margin:10px 0 0 0;}
+#worker{position:absolute;width:150px;height:150px;top:0px;left:0px;overflow:hidden;text-align:center;background-color:rgba(0, 0, 0, 0.85);border-radius:20px;font-size:12pt;z-index:1000;color:#fff;display:none;}#worker div{margin:50px auto 10px auto;width:120px;height:18px;overflow:hidden;}
+input,textarea{color:#777777;border:1px solid #cccccc;font-size:12pt;}
+.page .content .button{border-radius:5px;border:1px solid #cccccc;background-color:#eee;padding:8px;background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #f2ac93), color-stop(1, #f26532));text-decoration:none;cursor:pointer;color:#777777;font-size:12pt;text-align:center;}
+.page .content .button:hover,.page .content .button.active{background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #f2ac93), color-stop(1, #f26532));text-decoration:none;color:#555555;}
+#calendarList{padding:0;margin:0;}
+#calendarList li{width:100%;list-style:none;padding:5px;margin:0;}
+#calendarList li .avatar{padding:3px;margin:5px;background-color:#cccccc;border:1px solid #cccccc;}
+#calendarList li .plan{padding:0 7px;}
+#calendarList .calHeader{background-color:#f26532;color:#ffffff;padding:5px;font-size:1.3em;}
+#calendarList .arrow{padding-top:8px;}
+.clear:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.line{height:0px;background-color:#cccccc;border-bottom:1px solid #cccccc;overflow:hidden;}
