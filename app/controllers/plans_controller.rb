@@ -3,11 +3,10 @@ class PlansController < ApplicationController
   
   def index
     plans = Plan.all
-    null_time_plans = plans.reject { |p| p.time != nil }
-    plans.delete_if { |p| p.time == nil }
-    plans.sort! { |x,y| x.time <=> y.time }
-    index = plans.index{|x| x.time == Time.now}
-    @plans = plans[index, plans.size-index]
+    non_null_plans = plans.select { |p| p.time != nil }
+    non_null_plans.sort! { |x,y| x.time <=> y.time }
+    null_time_plans = plans.select { |p| p.time.nil? }
+    @plans = non_null_plans.concat(null_time_plans)
     respond_to do |format|
       format.html
       format.json do
