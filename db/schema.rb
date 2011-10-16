@@ -11,7 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(:version => 20111015230456) do
+=======
 ActiveRecord::Schema.define(:version => 20111015223342) do
+>>>>>>> a010080d5689d1f2a844bc3e222acdbefa121ef9
 
   create_table "plans", :force => true do |t|
     t.string   "name"
@@ -79,6 +83,8 @@ ActiveRecord::Schema.define(:version => 20111015223342) do
     t.integer  "invitation_limit"
     t.integer  "invited_by_id"
     t.string   "invited_by_type"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

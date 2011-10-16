@@ -8,6 +8,7 @@ gem 'omniauth'
 gem 'pg'
 gem 'cancan'
 gem 'simple_form'
+gem 'geocoder'
 
 group :assets do
   gem 'sass-rails',   '~> 3.1.4'

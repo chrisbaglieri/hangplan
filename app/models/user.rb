@@ -6,9 +6,11 @@ class User < ActiveRecord::Base
   has_many :followed_users, :through => :subscriptions
   has_many :subscribers, :class_name => 'User', :finder_sql => proc { 
     "SELECT u.* FROM users u INNER JOIN subscriptions s ON s.user_id = u.id WHERE s.followed_user_id = #{id}" }
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :mobile_key
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :mobile_key, :latitude, :longitude, :location
   validates_uniqueness_of :email
   validates_presence_of :name
+  geocoded_by :location
+  after_validation :geocode
   
   before_create do |user|
     user.mobile_key = SecureRandom.hex(16)
@@ -31,8 +33,17 @@ class User < ActiveRecord::Base
     end
   end
 
-   def generate_mobile_key!
+  def generate_mobile_key!
     update_attribute :mobile_key, SecureRandom.hex(16)
+  end
+  
+  def nearby_plans(distance = 5)
+    all_plans = []
+    all_plans << self.plans.near([latitude, longitude], distance)
+    self.followed_users.each do |f|
+      all_plans << f.plans.near([self.latitude, self.longitude], distance)
+    end
+   all_plans.uniq
   end
   
 end
