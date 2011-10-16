@@ -2,8 +2,12 @@ class PlansController < ApplicationController
   load_and_authorize_resource
   
   def index
-    @plans = Plan.all
-    @plans.sort! { |x,y| x.time <=> y.time }
+    plans = Plan.all
+    null_time_plans = plans.reject { |p| p.time != nil }
+    plans.delete_if { |p| p.time == nil }
+    plans.sort! { |x,y| x.time <=> y.time }
+    index = plans.index{|x| x.time == Time.now}
+    @plans = plans[index, plans.size-index]
     respond_to do |format|
       format.html
       format.json do
