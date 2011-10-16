@@ -6,13 +6,18 @@ class PlansController < ApplicationController
     respond_to do |format|
       format.html
       format.json do
-        render :json => @plans.to_json( :include => { :owner => { :only => :email } })
+        render :json => @plans.to_json(:include => { :owner => { :methods => :gravatar_id } })
       end
     end
   end
   
   def show
-    respond_with(@plan)
+    respond_to do |format|
+      format.html
+      format.json do
+        render :json => @plan.to_json(:include => { :owner => { :methods => :gravatar_id } })
+      end
+    end
   end
   
   def new
