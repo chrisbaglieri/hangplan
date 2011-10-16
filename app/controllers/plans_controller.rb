@@ -3,6 +3,7 @@ class PlansController < ApplicationController
   
   def index
     @plans = current_user.nearby_plans
+    respond_to do |format|
       format.html
       format.json do
         render :json => @plans.to_json(:include => { :owner => { :methods => :gravatar_id } })
