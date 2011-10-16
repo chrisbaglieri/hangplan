@@ -16,6 +16,7 @@ Hangplan::Application.routes.draw do
   match "about" => 'pages#about', :via => :get
   match "contact" => 'pages#contact', :via => :get
   match 'profile' => 'users#show', :via => :get
+  match 'search' => 'search#index'
   
   resources :plans do
     resources :participants, :only => [:create]

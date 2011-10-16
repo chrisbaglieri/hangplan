@@ -40,11 +40,19 @@ class User < ActiveRecord::Base
   
   def nearby_plans(distance = 5)
     all_plans = []
-    all_plans.concat self.plans
+    all_plans.concat self.plans.near([self.latitude, self.longitude], distance)
     self.followed_users.each do |f|
       all_plans.concat f.plans.near([self.latitude, self.longitude], distance)
     end
    all_plans.uniq
+  end
+  
+  def friends_plans
+    friends_plans = []
+    self.followed_users.each do |f|
+      friends_plans.concat f.plans
+    end
+    friends_plans.uniq
   end
   
 end
