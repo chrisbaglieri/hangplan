@@ -14,3 +14,7 @@ en:
         name: What
         location: Where
         time: When
+  helpers:
+    submit:
+      plan:
+        create: Make a Plan
