@@ -16,6 +16,8 @@
 			    'backButtonSelector': 'a[page=".."]',
 			    'homeButtonSelector': 'a[page="/"]',
 				'topButtonSelector': 'a[page="^"]',
+				'addButtonSelector': 'a[page="formPage"]',
+				'menuButtonSelector': 'a[page="optionPage"]',
 			    'pageHeaderSelector': 'div.header',
 			    'pageTabSelector': 'div.tabs',
 			    'pageTemplateSelector': 'script[type="text/x-jquery-tmpl-page"]',
@@ -44,6 +46,8 @@
 			data.backButton = data.headerBar.find(data.backButtonSelector);
 			data.homeButton = data.headerBar.find(data.homeButtonSelector);
 			data.topButton = data.headerBar.find(data.topButtonSelector);
+			data.addButton = data.headerBar.find(data.addButtonSelector);
+			data.menuButton = data.headerBar.find(data.menuButtonSelector);
 			data.defaultHeaderTitle = data.headerTitle.html();
 			me.data(data);
 			
@@ -103,7 +107,7 @@
     				data.homeButton.hide();	
     			}else{
     				data.topButton.hide();
-    				if (internal.canBack(me))data.homeButton.show();	
+    				if (internal.canBack(me))data.homeButton.show();
     			}
 			});
 			
@@ -308,6 +312,9 @@
 			    }else{
 					data.headerTitle.html(pageHeader.html());
 			    }
+			    
+			    data.addButton.show();
+			    data.menuButton.show();
 			
 			    if (internal.canBack(obj)){
 					data.backButton.show();
@@ -320,7 +327,10 @@
 					var hidden = pageHeader.attr('hide');
 					if (hidden.indexOf('back') > -1)data.backButton.hide();
 					if (hidden.indexOf('home') > -1)data.homeButton.hide();	    
-					
+					if (hidden.indexOf('add') > -1){
+						data.addButton.hide();
+						data.menuButton.hide();
+					}
 			    }
 		    }
 		    		  

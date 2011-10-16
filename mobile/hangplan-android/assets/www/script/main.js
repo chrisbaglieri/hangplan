@@ -84,11 +84,26 @@ var hangplan = {};
         hangplan.updateCalendar();
 		$('#btnLogout').click(function(){ hangplan.logout(); });
 		
-		$('#calItem').live('click', function(){
+		$('.calItem').live('click', function(){
 			var id = $(this).attr('data-id');
 			console.log(id);
+			hangplan.updatePlan(id);
 			if (id)hangplan.view.container.pageTurner('navigate', 'detailsPage');  
 			
+		});
+		
+		$('#btnin').live('click', function(){
+			$(this).replaceWith('<h2 style="text-align: center; color: green;">Hooray!</h2>');
+			
+		});
+	};
+	
+	this.updatePlan = function(id){
+		//determine if/when to do a refresh
+		$('#detailPlan').html('');
+		
+		hangplan.ajax('GET', hangplan.secureServer + "plans/" + id +'.json', null, function(data){
+			$('#planTemplate').tmpl(data).appendTo($('#detailPlan'));
 		});
 	};
 	
@@ -96,7 +111,9 @@ var hangplan = {};
 		//determine if/when to do a refresh
 		$('#calendarList').html('');
 		
-		hangplan.ajax('GET', hangplan.secureServer+'plans.json', null, function(data){
+
+		hangplan.ajax('GET', hangplan.secureServer + 'plans.json', null, function(data){
+
 			$('#calItemTemplate').tmpl(data).appendTo($('#calendarList'));
 		});
 	};
@@ -139,14 +156,14 @@ var hangplan = {};
 		return dayName+", "+monthName+" "+this.fromISO(string).getDate();
 	}
 	
-	this.styleTime = function(string){
-		var h = this.fromISO(string).getHour();
-		var m = this.fromISO(string).getMinute();
-		if (h > 12){
-			return (h - 12 - 4)+" : " + m + " pm"
-		}
-		else{
-			return h + " : " + m + "am"
+
+	this.styledTime = function(string) {
+		var h = this.fromISO(string).getHours();
+		var m = this.fromISO(string).getMinutes();
+		if (h > 12) {
+			return (h-12-4)+":"+m+" pm";
+		} else {
+			return (h-4)+":"+m+" am";
 		}
 	}
 	
