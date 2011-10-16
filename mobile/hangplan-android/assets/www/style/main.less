@@ -5,6 +5,7 @@
 @textd: #555;
 @border: #ccc;
 @c2: #b4d6f1;
+@black: #000;
 
 p {
 	margin: 0;
@@ -16,6 +17,12 @@ p {
 
 .right {
 	float: right;
+}
+
+.box-shadow (@black: 70) {
+	-moz-box-shadow: 0px 3px 4px rgba(@black, @black, @black, .7);
+	-webkit-box-shadow: 0px 3px 4px rgba(@black, @black, @black,.7);
+	box-shadow: 0px 3px 4px rgba(@color, @black, @black, .7);	
 }
 
 @font-face {
@@ -42,6 +49,7 @@ body{
 } 
 
 #header{
+	.box_shadow;
 	background: none;
 	background-color: @c2;
 	h1{
