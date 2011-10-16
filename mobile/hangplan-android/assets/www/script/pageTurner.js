@@ -320,6 +320,7 @@
 					var hidden = pageHeader.attr('hide');
 					if (hidden.indexOf('back') > -1)data.backButton.hide();
 					if (hidden.indexOf('home') > -1)data.homeButton.hide();	    
+					
 			    }
 		    }
 		    		  

@@ -1,7 +1,1 @@
-<% @plans.each do |p| %>
-  <div>
-    <%= p.name %><br/>
-    <%= p.location %><br/>
-    <%= p.time %>
-  </div>
-<% end %>
+<%= render :partial => "plan", :collection => @plans %>
