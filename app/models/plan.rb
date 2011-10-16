@@ -7,6 +7,8 @@ class Plan < ActiveRecord::Base
   geocoded_by :location
   after_validation :geocode
   
+  scope :future, where('time IS NULL OR time > ?', Time.now).order('time asc')
+  
   def participant(user)
     Participant.find_by_plan_id_and_user_id(self.id, user)  
   end

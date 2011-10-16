@@ -2,7 +2,7 @@ class PlansController < ApplicationController
   load_and_authorize_resource
   
   def index
-    plans = Plan.all
+    plans = Plan.future
     non_null_plans = plans.select { |p| p.time != nil }
     non_null_plans.sort! { |x,y| x.time <=> y.time }
     null_time_plans = plans.select { |p| p.time.nil? }
