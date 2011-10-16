@@ -20,7 +20,9 @@ Hangplan::Application.routes.draw do
   resources :plans do
     resources :participants, :only => [:create]
   end
+  
   resources :participants, :only => [:update, :destroy]
   resources :subscriptions, :only => [:new, :create]
   resources :users, :only => [:show]
+  
 end
