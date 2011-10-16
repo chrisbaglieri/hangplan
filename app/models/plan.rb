@@ -11,6 +11,10 @@ class Plan < ActiveRecord::Base
     self.users.include?(user)
   end
   
+  def owner?(user)
+    self.owner == user
+  end
+  
   private
   
   def add_owner_as_participant
