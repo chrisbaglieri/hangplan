@@ -147,6 +147,15 @@ var hangplan = {};
 		}
 	}
 	
+	this.styledDay = function(string){
+		var weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+		var dayName = weekdays[this.fromISO(string).getDay()];
+		var months = [ "January", "February", "March", "April", "May", "June", 
+		               "July", "August", "September", "October", "November", "December" ];
+		var monthName = months[this.fromISO(string).getMonth()];
+		return dayName+", "+monthName+" "+this.fromISO(string).getDate();
+	}
+	
 	this.fromISO = function(string) {
 	    var regexp = "([0-9]{4})(-([0-9]{2})(-([0-9]{2})" +
 	        "(T([0-9]{2}):([0-9]{2})(:([0-9]{2})(\.([0-9]+))?)?" +
