@@ -2,6 +2,13 @@ html { background: #BBDAF1; }
 body { font-family: "Helvetica Neue", Helvetica, Arial, default; height: 100%; color: #444444; }
 body a { color: #0395cc; }
 body a:hover { color: #0395cc; }
+form label { display: block; font-size: 1.25em; color: #CCCCCC;  }
+form .input { margin-bottom: 10px; }
+form input { font-size: 1.5em; width: 98%; padding: 5px; }
+form .button { -moz-border-radius-bottomleft: 5px; -moz-border-radius-bottomright: 5px; -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; -webkit-border-bottom-left-radius: 5px; -webkit-border-bottom-right-radius: 5px; -webkit-border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; border: none; padding: 5px; margin: 0pt 1px; text-decoration: none; background-color: #d8d8d8; color: #36393d; font-size: 1.65em; font-weight: bold; margin: 10px 10px 20px 0pt; padding: 10px 15px; width: 150px; }
+form .button:hover { background-color: #666666; color: #eaeaea; }
+
+.container h2 { color: #f77b40; }
 
 #header { background: #BBDAF1; }
 #header #primary-navigation ul { margin: 15px 0pt 0pt 0pt; }
