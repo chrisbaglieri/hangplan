@@ -2,7 +2,9 @@ class PlansController < ApplicationController
   load_and_authorize_resource
   
   def index
-    @plans = current_user.nearby_plans
+    @plans = Plans.all
+    @plans.sort! { |x,y| x.time <=> y.time }
+    respond_to do |format|
       format.html
       format.json do
         render :json => @plans.to_json(:include => { :owner => { :methods => :gravatar_id } })
