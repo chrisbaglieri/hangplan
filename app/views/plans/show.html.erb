@@ -1,0 +1,8 @@
+<div class="plan" class="span-18">
+	<h2><%= @plan.name %></h2>
+	<h3>Details</h3>
+	<ul>
+		<li>Where: <% if @plan.location? %><%= @plan.location %><% else %>Somewhere I guess<% end %></li>
+		<li>When: <% if @plan.time? %><%= format_date(@plan.time) %><% else %>Sooner or later<% end %>, <% if @plan.time? %><%= format_time(@plan.time) %><% else %>Sometime I suppose<% end %></li>
+	</ul>
+</div>
