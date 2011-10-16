@@ -13,7 +13,9 @@ Hangplan::Application.routes.draw do
   root :to => "pages#home"
   match "team" => 'pages#team', :via => :get
   match "contact" => 'pages#contact', :via => :get
+  match 'profile' => 'users#show', :via => :get
   
   resources :plans
   resources :subscriptions, :only => [:new, :create]
+  resources :users, :only => [:show]
 end
