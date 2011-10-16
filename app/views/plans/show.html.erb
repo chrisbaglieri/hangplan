@@ -1,23 +1,24 @@
 <div class="plan">
-	<div align="left">
-		<% if @plan.owner?(current_user)%>
-		  <%= link_to "EDIT", edit_plan_path(@plan), :method => :get, :class => 'action-button' %> 
-		<% end %>
-		<% if @plan.participant?(current_user) %>
-		  <%= link_to "OUT", @plan.participant(current_user), :method => :delete, :class => 'action-button' %>
-		<% else %>
-		  <%= link_to "IN", plan_participants_path(@plan), :method => :post, :class => 'action-button' %> 
-		<% end %> 
 	<div class="span-9">
 		<h2><%= @plan.name %></h2>
+		<% if can? :update, @plan %>
+			<p>Actions: <%= link_to "EDIT", edit_plan_path(@plan), :class => 'action-button' %> <%= link_to "DELETE", plan_path(@plan), :method => :delete, :class => 'action-button' %></p>
+		<% end %>
 		<h3>Details</h3>
 		<ul>
 			<li>Where: <% if @plan.location? %><%= @plan.location %><% else %>Somewhere I guess<% end %></li>
 			<li>When: <% if @plan.time? %><%= format_date(@plan.time) %><% else %>Sooner or later<% end %>, <% if @plan.time? %><%= format_time(@plan.time) %><% else %>Sometime I suppose<% end %></li>
 		</ul>
 	</div>
-	<div class="plan" class="span-9">
+	<div class="span-9 last">
 		<h2>Participants</h2>
+		<p>Actions: 
+			<% if @plan.participant?(current_user) %>
+			  <%= link_to "OUT", @plan.participant(current_user), :method => :delete, :class => 'action-button' %>
+			<% else %>
+			  <%= link_to "IN", plan_participants_path(@plan), :method => :post, :class => 'action-button' %> 
+			<% end %>
+		</p>
 		<% if @plan.participants.blank? %>
 			<p>You're flying solo this time around</p>
 		<% else %>

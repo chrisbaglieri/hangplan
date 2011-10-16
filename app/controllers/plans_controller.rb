@@ -2,8 +2,11 @@ class PlansController < ApplicationController
   load_and_authorize_resource
   
   def index
-    @plans = Plan.all
-    @plans.sort! { |x,y| x.time <=> y.time }
+    plans = Plan.all
+    non_null_plans = plans.select { |p| p.time != nil }
+    non_null_plans.sort! { |x,y| x.time <=> y.time }
+    null_time_plans = plans.select { |p| p.time.nil? }
+    @plans = non_null_plans.concat(null_time_plans)
     respond_to do |format|
       format.html
       format.json do
@@ -42,6 +45,6 @@ class PlansController < ApplicationController
   
   def destroy
     @plan.destroy
-    respond_with(@plan, :root)
+    respond_with(@plan, :location => :root)
   end
 end
