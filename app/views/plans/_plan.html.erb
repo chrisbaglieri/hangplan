@@ -7,6 +7,6 @@
 	<div class="section span-6"><%= plan.name %></div>
 	<div class="section span-5"><% if plan.location? %><%= plan.location %><% else %>Somewhere I guess<% end %></div>
 	<div class="section span-4"><% if plan.time? %><%= format_time(plan.time) %><% else %>Sometime I suppose<% end %></div>
-	<div class="section span-1"><%= link_to "IN", root_path, :class => 'action-button' %></div>
+	<div class="section span-1"><%= link_to "IN", plan_participants_path(plan), :method => :post, :class => 'action-button' %></div>
 	<div class="section span-1 last"><%= link_to image_tag("arrow-right.png"), plan %></div>
 </div>
