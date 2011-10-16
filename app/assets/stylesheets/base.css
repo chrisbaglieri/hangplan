@@ -1,7 +1,7 @@
 html { background: #BBDAF1; }
 body { font-family: "Helvetica Neue", Helvetica, Arial, default; height: 100%; color: #444444; }
 body a { color: #0395cc; }
-body a:hover { color: #0395cc; }
+body a:hover { color: #0395cc; text-decoration: underline; }
 form label { display: block; font-size: 1.25em; color: #CCCCCC;  }
 form .input { margin-bottom: 10px; }
 form input { font-size: 1.5em; width: 98%; padding: 5px; }
