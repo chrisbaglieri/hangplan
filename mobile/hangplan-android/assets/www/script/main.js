@@ -7,28 +7,13 @@ var hangplan = {};
 	
     //Logged in user object
     this.user = {
-    	uid : '',
-    	tokenBase: '',
-    	display: '',
-    	following: [],
-    	getImage: function(size, name){
-    		if (!name)name = this.display;
-    		return hangplan.server + 'user/' + name + '/pic/' + size;
-    	},
-    	getToken: function(base){
-    		var tb = base?base:this.tokenBase;
-    		return SHA1(tb + (new Date()).getUTCDate().toString());
-    	},
-    	isFollowing: function(qrcode){
-    		for(var i = 0; i < hangplan.user.following.length; i++){
-    			if (hangplan.user.following[i].qrcode == qrcode)return true;
-    		}	
-    		return false;
-    	},
+    	email : '',
+    	token: '',
+    	name: '',
     	extend: function(data){
-    		this.uid = data.uid;
-    		this.tokenBase = data.tokenBase;
-    		this.display = data.display;	
+    		this.uid = data.email;
+    		this.token = data.token;
+    		this.name = data.name;	
     	},
     	clear: function(){
     		this.uid = '';
@@ -47,17 +32,18 @@ var hangplan = {};
 		});
     	
        	document.addEventListener('deviceready', hangplan.deviceReady, false);       
-       	//document.addEventListener("backbutton", hangplan.backbutton, false);
-        //document.addEventListener("menubutton", hangplan.menubutton, false);
+       	document.addEventListener("backbutton", hangplan.backbutton, false);
+        document.addEventListener("menubutton", hangplan.menubutton, false);
         
         if (window.location.hash == '#m')hangplan.deviceReady();
     };
     
-    this.deviceReady = function(){
+    this.deviceReady = function(){        
+        FB.init({ appId: "223798634351683", nativeInterface: PG.FB });
         hangplan.login();  
-        
-        /*FB.init({ appId: "223798634351683", nativeInterface: PG.FB });
-        console.log('bis');
+<<<<<<< HEAD
+        /*
+        FB.init({ appId: "223798634351683", nativeInterface: PG.FB });
         FB.Event.subscribe('auth.login', function(response) {
             console.log('auth.login event');
         });
@@ -72,7 +58,10 @@ var hangplan = {};
         
         FB.Event.subscribe('auth.statusChange', function(response) {
             console.log('auth.statusChange event');
-        });*/
+        });
+        */
+=======
+>>>>>>> bff94fd56f9c1aa94df6661fa5e20747324e09ae
     };
     
     this.login = function(){
@@ -82,17 +71,32 @@ var hangplan = {};
     		hangplan.user.extend(userData);
     		hangplan.load();
     	}else{
-    		hangplan.view.container.pageTurner('navigate', 'loginPage');
-    		
-    		$('#btnLogin').live('click', function(){
-    			hangplan.load();
-    			
-    			/*
-				FB.login(function(e) {
-                        console.log(e);
+<<<<<<< HEAD
+    		hangplan.view.container.pageTurner('reroot', 'homePage');
+    		hangplan.load();
+    		$('#btnLogin').live('touchstart', function(){
+    			FB.login(function(e) {
+                        hangplan.load();
                     },
+=======
+    		hangplan.view.container.pageTurner('reroot', 'loginPage');
+    		
+    		$('#btnLogin').live('touchstart', function(){ 			
+				FB.login(function(response) {
+					if (response.session) {
+						var url = hangplan.secureServer + '/user/facebook?key=' + response.session.access_token;
+						console.log(url);
+						/*hangplan.ajax('GET', hangplan.SecureServer + '', null, function(data){
+							//EXTEND USER & save
+							//hangplan.handleError(data.mobile_key);	
+							//hangplan.load();	
+						});*/
+						hangplan.load();
+					}
+                },
+>>>>>>> bff94fd56f9c1aa94df6661fa5e20747324e09ae
                     { perms: "email" }
-                );*/
+                );
     		});
     	}
     }
@@ -104,7 +108,7 @@ var hangplan = {};
     }
     
     this.load = function(){
-        hangplan.view.container.pageTurner('navigate', 'homePage');        
+        hangplan.view.container.pageTurner('reroot', 'homePage');        
         hangplan.updateCalendar();
 		$('#btnLogout').click(function(){ hangplan.logout(); });
 	};
