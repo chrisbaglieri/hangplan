@@ -3,11 +3,21 @@ class PlansController < ApplicationController
   
   def index
     @plans = Plan.all
-    respond_with(@plans)
+    respond_to do |format|
+      format.html
+      format.json do
+        render :json => @plans.to_json(:include => { :owner => { :methods => :gravatar_id } })
+      end
+    end
   end
   
   def show
-    respond_with(@plan)
+    respond_to do |format|
+      format.html
+      format.json do
+        render :json => @plan.to_json(:include => { :owner => { :methods => :gravatar_id } })
+      end
+    end
   end
   
   def new

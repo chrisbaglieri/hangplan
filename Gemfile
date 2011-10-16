@@ -9,6 +9,7 @@ gem 'pg'
 gem 'cancan'
 gem 'simple_form'
 gem 'geocoder'
+gem 'gravtastic'
 
 group :assets do
   gem 'sass-rails',   '~> 3.1.4'
