@@ -21,6 +21,13 @@
 	margin-bottom: 20px;
 }
 
+/*#addPlanForm a{
+	width: 100%;
+}*/
+#addPlanForm full{
+	width: 100%;
+}
+
 #addPlanForm .small{
 	color:#666666;
 	display:block;
