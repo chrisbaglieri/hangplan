@@ -3,7 +3,12 @@ class PlansController < ApplicationController
   
   def index
     @plans = Plan.all
-    respond_with(@plans)
+    respond_to do |format|
+      format.html
+      format.json do
+        render :json => @plans.to_json( :include => { :owner => { :only => :email } })
+      end
+    end
   end
   
   def show
