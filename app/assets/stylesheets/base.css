@@ -26,9 +26,10 @@ form .button:hover { background-color: #666666; color: #eaeaea; }
 #content .inner-container { -moz-border-radius-bottomleft: 5px; -moz-border-radius-bottomright: 5px; -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; }
 #content .inner-container { -webkit-border-bottom-left-radius: 20px; -webkit-border-bottom-right-radius: 20px; -webkit-border-top-left-radius: 20px; -webkit-border-top-right-radius: 20px; }
 #content .logo { padding-bottom: 25px; }
-#content .divider { background: #89c9ee; padding-bottom: 5px; color: white; font-weight: bold; }
-#content .section { padding: 5px 0pt 5px 5px; margin-bottom: 15px; }
+#content .divider { background: #89c9ee; padding: 0pt 0pt 5px 3px; color: white; font-weight: bold; }
+#content .section { margin-bottom: 5px; padding-top: 5px; }
 #content .plan a:hover { background: white; }
+#content .plan ul { display: inline; list-style-type: none; }
 #content .plan .action-button { -moz-border-radius-bottomleft: 2px; -moz-border-radius-bottomright: 2px; -moz-border-radius-topleft: 2px; -moz-border-radius-topright: 2px; -webkit-border-bottom-left-radius: 2px; -webkit-border-bottom-right-radius: 2px; -webkit-border-top-left-radius: 2px; -webkit-border-top-right-radius: 2px; border: none; text-decoration: none; background-color: #f77b40; color: white; padding: 3px 7px; text-align: center; }
 #content .plan .action-button:hover { background-color: #666666; color: #eaeaea;  }
 #content .plan img { float:left; padding-right: 5px; }
