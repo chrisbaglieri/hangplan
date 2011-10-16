@@ -1,7 +1,7 @@
 <div class="plan">
-	<div class="imOut" align="right">
-		<h4><% if @plan.participant?(current_user) %><%= link_to "OUT", participants_path(@plan), :method => :destroy, :class => 'action-button' %><% else %><%= link_to "IN", participants_path(@plan), :method => :post, :class => 'action-button' %> <% end %> </h4>
-	</div>
+	<div align="left">
+		<% if @plan.owner?(current_user)%><%= link_to "EDIT", edit_plan_path(@plan), :method => :get, :class => 'action-button' %> <% end %>
+		<% if @plan.participant?(current_user) %><%= link_to "OUT", participants_path(@plan), :method => :delete, :class => 'action-button' %><% else %><%= link_to "IN", participants_path(@plan), :method => :post, :class => 'action-button' %> <% end %> 
 	<div class="span-9">
 		<h2><%= @plan.name %></h2>
 		<h3>Details</h3>

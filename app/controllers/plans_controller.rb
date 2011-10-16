@@ -2,8 +2,7 @@ class PlansController < ApplicationController
   load_and_authorize_resource
   
   def index
-    @plans = Plan.all
-    respond_to do |format|
+    @plans = current_user.nearby_plans
       format.html
       format.json do
         render :json => @plans.to_json(:include => { :owner => { :methods => :gravatar_id } })
