@@ -93,9 +93,10 @@
 					<div class="line"></div>
 				{{/if}}
 			{{/if}}
+			
 			<li class="calItem" data-id="${id}">
 				<div class="left">
-					<img class='avatar' src='images/user.png' alt="${user_id}'s logo"/>
+					<img class='avatar' src='http://www.gravatar.com/avatar/${owner.gravatar_id}' alt="${user_id}'s logo"/>
 				</div>
 				<div class="plan left">
 		    		<strong>${name}</strong>
@@ -106,6 +107,7 @@
 		    	</div>
 				<div class="clear"></div>
 			</li>
+			
 		</script>
 </body>
 </html>

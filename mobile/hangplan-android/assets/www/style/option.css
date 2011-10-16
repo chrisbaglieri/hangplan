@@ -1,8 +1,21 @@
 #optionPage button{
+	width: 90%;
+	background-color:#f26532;
+}
+
+.page .content .button {
 	width: 100%;
+}
+
+#optionPage {
+	text-align: center;
 }
 
 #optionPage .friend{
 	height: 30px;
+}
+
+#optionPage .logout{
+	height: 50px;
 }
 

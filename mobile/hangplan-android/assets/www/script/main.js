@@ -96,8 +96,7 @@ var hangplan = {};
 		//determine if/when to do a refresh
 		$('#calendarList').html('');
 		
-		hangplan.ajax('GET', 'data.json', null, function(data){
-			data = JSON.parse(data);
+		hangplan.ajax('GET', hangplan.secureServer+'plans.json', null, function(data){
 			$('#calItemTemplate').tmpl(data).appendTo($('#calendarList'));
 		});
 	};
@@ -138,6 +137,17 @@ var hangplan = {};
 		               "July", "August", "September", "October", "November", "December" ];
 		var monthName = months[this.fromISO(string).getMonth()];
 		return dayName+", "+monthName+" "+this.fromISO(string).getDate();
+	}
+	
+	this.styleTime = function(string){
+		var h = this.fromISO(string).getHour();
+		var m = this.fromISO(string).getMinute();
+		if (h > 12){
+			return (h - 12 - 4)+" : " + m + " pm"
+		}
+		else{
+			return h + " : " + m + "am"
+		}
 	}
 	
 	this.fromISO = function(string) {
