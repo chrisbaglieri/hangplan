@@ -3,9 +3,16 @@
     <div class="span-20 inner-container">
       <div class="prepend-1 span-18 append-1">
 				<div class="span-18">
-					<div class="prepend-6 logo">
+					<div class="logo">
 						<%= link_to image_tag("hangplan-logo.png"), root_path %>
 					</div>
+					<% if 'plans' != params[:controller] || 'index' == params[:action] %>
+  					<div class="makeplan">
+  					  <%= link_to new_plan_path, :class => 'action-button' do %>
+  					    <%= image_tag 'plus.png' %> <%= t 'plans.createhdr' %>
+  					  <% end %>
+  					</div>
+  				<% end %>					
 					<hr />
 					<br />
 					<div>
