@@ -1,14 +1,12 @@
 <div class="container">
 	<div id="header" class="span-24">
-		<div id="main-header" class="span-20">
-        <h1>Hangplan : There Is Always Something To Do</h1>
-    </div>
-		<div id="login" class="span-4 last">
-		  <% if user_signed_in? %>
-				<%= current_user.email %> | <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
-		  <% else %>
-		    <%= link_to "Login", new_user_session_path %> | <%= link_to "Sign up", new_user_registration_path %>
-		  <% end %>
+		<div class="prepend-2 span-20 append-2">
+			<div id="primary-navigation" class="span-20">
+				<ul>
+	    	  <%= render 'shared/navigation_items' %>
+	    	  <%= render 'shared/login_items' %>
+	    	</ul>
+			</div>
 		</div>
 	</div>
 </div>

@@ -6,6 +6,7 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="style/pageTurner.css" />
     <link rel="stylesheet" type="text/css" href="style/main.css" />
+    <link rel="stylesheet" type="text/css" href="style/form.css" />
 </head>
 <body>
     <script type="text/javascript" charset="utf-8" src="script/phonegap-android.js"></script>
@@ -46,14 +47,40 @@
 		</div>
 		<div class="page" id="homePage">
 		    <div class="header" hide="home"></div>
-		    <div class="content">	    	
-		    	<ul id="calendarList">	    		
+		    <div class="content">	
+		    	<a page="//form.html#formPage">+ Add</a>    	
+		    	<ul id="calendarList">
 		    	</ul>    	
 		    </div>
 		</div>	
 	    <script id="calItemTemplate" type="text/x-jquery-tmpl">
+			{{if typeof storedDate == "undefined"}}
+				<li class="calHeader">
+					${hangplan.styledDay(time).toUpperCase()}
+				</li>
+				${(storedDate = hangplan.fromISO(time).getDate())?'':''}
+			{{else}}
+				{{if storedDate != hangplan.fromISO(time).getDate()}}
+					<li class="calHeader">
+						${hangplan.styledDay(time).toUpperCase()}
+					</li>
+					${(storedDate = hangplan.fromISO(time).getDate())?'':''}
+				{{else}}
+					<div class="line"></div>
+				{{/if}}
+			{{/if}}
 			<li>
-				<a page="details">${name} - ${time}</a>
+				<div class="left">
+					<img class='avatar' src='images/user.png' alt="${user_id}'s logo"/>
+				</div>
+				<div class="plan left">
+		    		<a page="details"><strong>${name}</strong></a>
+		    		<p>${location} - ${time}</p>
+		   		</div>
+		    	<div class="right">
+		    		<img class="arrow" src='images/arrow-right.png' alt="Move on"/>
+		    	</div>
+				<div class="clear"></div>
 			</li>
 		</script>
 </body>
