@@ -1,0 +1,7 @@
+<% @users.each do |u| %>
+  <p>
+    <%= u.name %>
+    <%= u.email %>
+    <%= link_to 'Subscribe', "#{subscriptions_path}?id=#{u.id}", :method => :post %>
+  </p>
+<% end %>

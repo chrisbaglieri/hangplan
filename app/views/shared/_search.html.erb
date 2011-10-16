@@ -1,0 +1,7 @@
+<% if user_signed_in? %>
+  <div id="search">
+    <%= form_tag search_path do %>
+      <%= search_field_tag :q, nil, :placeholder => 'Search' %>
+    <% end %>
+  </div>
+<% end %>
