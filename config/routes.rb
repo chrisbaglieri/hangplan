@@ -11,7 +11,7 @@ Hangplan::Application.routes.draw do
   end
 
   root :to => "pages#home"
-  match "team" => 'pages#team', :via => :get
+  match "about" => 'pages#about', :via => :get
   match "contact" => 'pages#contact', :via => :get
   
   resources :plans
