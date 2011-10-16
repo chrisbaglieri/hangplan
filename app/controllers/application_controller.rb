@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :detect_mobile_key
+  before_filter :set_time_zone
   
   respond_to :html, :json
   
@@ -15,5 +16,10 @@ class ApplicationController < ActionController::Base
       sign_in u
       logger.debug "signed in #{u.email}"
     end
+  end
+  
+  def set_time_zone
+    # TODO: Detect user's time zone, probably using the geocoder or something.
+    Time.zone = "Eastern Time (US & Canada)"
   end
 end
