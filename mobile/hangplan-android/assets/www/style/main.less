@@ -118,8 +118,13 @@ input, textarea{
 }
 
 #calendarList .calHeader {
-	background-color: @c2;
+	background-color: @c1;
+	color: @bg;
 	padding: 5px;
+}
+
+#calendarList .arrow {
+	padding-top: 8px;
 }
 
 .clear:after{
@@ -132,7 +137,7 @@ input, textarea{
 
 .line{
 	/* The dividing line: */
-	height:1px;
+	height:0px;
 	background-color:@border;
 	border-bottom:1px solid @border;
 	overflow:hidden;

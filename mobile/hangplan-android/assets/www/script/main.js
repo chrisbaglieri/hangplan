@@ -55,9 +55,8 @@ var hangplan = {};
     
     this.deviceReady = function(){
         hangplan.login();  
-        
-        /*FB.init({ appId: "223798634351683", nativeInterface: PG.FB });
-        console.log('bis');
+        /*
+        FB.init({ appId: "223798634351683", nativeInterface: PG.FB });
         FB.Event.subscribe('auth.login', function(response) {
             console.log('auth.login event');
         });
@@ -72,7 +71,8 @@ var hangplan = {};
         
         FB.Event.subscribe('auth.statusChange', function(response) {
             console.log('auth.statusChange event');
-        });*/
+        });
+        */
     };
     
     this.login = function(){
@@ -82,17 +82,14 @@ var hangplan = {};
     		hangplan.user.extend(userData);
     		hangplan.load();
     	}else{
-    		hangplan.view.container.pageTurner('navigate', 'loginPage');
-    		
-    		$('#btnLogin').live('click', function(){
-    			hangplan.load();
-    			
-    			/*
-				FB.login(function(e) {
-                        console.log(e);
+    		hangplan.view.container.pageTurner('reroot', 'homePage');
+    		hangplan.load();
+    		$('#btnLogin').live('touchstart', function(){
+    			FB.login(function(e) {
+                        hangplan.load();
                     },
                     { perms: "email" }
-                );*/
+                );
     		});
     	}
     }
@@ -104,7 +101,7 @@ var hangplan = {};
     }
     
     this.load = function(){
-        hangplan.view.container.pageTurner('navigate', 'homePage');        
+        hangplan.view.container.pageTurner('reroot', 'homePage');        
         hangplan.updateCalendar();
 		$('#btnLogout').click(function(){ hangplan.logout(); });
 	};
