@@ -24,14 +24,14 @@
 	<div id="header">
 		<div class="left">
 	    	<a page="..">&nbsp;</a>
+	    	<a page="optionPage">&nbsp;</a>
 	    </div>
 	    <h1>
 	    	<img src="images/hangplanlogo3.png" id="BtnLogin" alt="logo" />
 	    </h1>
 	    <div class="right">
-		    <a page="^">&nbsp;</a>
 		    <a page="/">&nbsp;</a>
-		    <a page="formPage"><img src="images/plus-button.png" /></a>
+		    <a page="formPage" class="topButton"><img src="images/plus-button.png" /></a>
 	    </div>
 	</div>
 		
@@ -39,11 +39,26 @@
     	<div class="page" id="root">
     	</div>
 		<div class="page" id="loginPage">
-		    <div class="header" hide="home"></div>
+		    <div class="header" hide="home add"></div>
 		    <div class="content">
 		    	<div class="messageBlock orange">
 		    		<img id="btnLogin" src="images/fb.png" alt="fb" />
 		    	</div>	 
+		    </div>
+		</div>
+		<div class="page" id="optionPage">
+			<div class="header" hide="home add"></div>
+			<div class="content">
+				<a class="button right full" type="submit" page="homePage" >Invite Friends</a>
+				<a class="button right full" type="submit" page="homePage" >Search Friends</a>
+				<a class="button right full redButton" type="submit" page="homePage" >Logout</a>
+			</div>
+		</div>	
+		<div class="page" id="detailsPage">
+		    <div class="header" hide="home add"></div>
+		    <div class="content">
+		    	<div id="detailPlan">
+		    	</div>   
 		    </div>
 		</div>
 		<div class="page" id="homePage">
@@ -54,25 +69,20 @@
 		    </div>
 		</div>	
 		<div class="page" id="formPage">
-			<div class="header" hide="home"></div>
+			<div class="header" hide="add"></div>
 			<div class="content">
-				<h1>
-				Add my plan
-				</h1>
 				<form method="post" action="" name="addPlanForm" id="addPlanForm">
-					<label for="What">What? 
-					</label>					
-					<input name="What" type="text"><br/><br/>
+					<div class="calHeader">Add my plan</div>
+					<label for="What">What? </label>					
+					<input name="What" type="text"></input>
 					
-					<label for="When">When? 
-					</label>
-					<input name="When" type="text"><br/><br/>
+					<label for="When">When? </label>
+					<input name="When" type="text"></input>
 					
-					<label for="Where">Where? 
-					</label>
-					<input name="Where" type="text"><br/><br/>
+					<label for="Where">Where? </label>
+					<input name="Where" type="text"></input>
 												
-					<a class="button right" type="submit" page="//index.html#homePage" >Create Plan</a>
+					<a class="button right full" type="submit" page="/homePage" >Create Plan</a>
 				</form>
 			</div>
 		</div>	
@@ -93,19 +103,51 @@
 					<div class="line"></div>
 				{{/if}}
 			{{/if}}
-			<li class="calItem" data-id="${id}">
+			<a page="detailsPage">
+			<li class="calItem {{if tentative}}tentative{{/if}}" data-id="${id}">
 				<div class="left">
-					<img class='avatar' src='images/user.png' alt="${user_id}'s logo"/>
+					<img class='avatar' src='http://www.gravatar.com/avatar/${owner.gravatar_id}' alt="${owner.name}'s logo"/>
 				</div>
 				<div class="plan left">
 		    		<strong>${name}</strong>
-		    		<p>${location} - ${time}</p>
+		    		<p>${location} - ${hangplan.styledTime(time)}</p>
 		   		</div>
 		    	<div class="right">
 		    		<img class="arrow" src='images/arrow-right.png' alt="Move on"/>
 		    	</div>
 				<div class="clear"></div>
 			</li>
+			</a>
+		</script>
+		
+		<script id="planTemplate" type="text/x-jquery-tmpl">
+				<div class="left">
+					<img class='avatar' src='http://www.gravatar.com/avatar/${owner.gravatar_id}' alt="${owner.name}'s logo"/>
+				</div>
+				<div class="plan left">
+		    		<p>Hey, <strong>${owner.name}</strong> is attending <strong>${name}</strong> on <strong>${hangplan.styledDay(time)}</strong></p>
+					<p>Place: <b>${location}</b> - Time: <b>${hangplan.styledTime(time)}</b></p>
+		   		</div>
+				<div class="clear"></div>
+				<a id="btnin" class="button right full" type="submit">I'm In</a>
+				<div class="clear"></div>
+				<div class="comments">
+					<div class="calBlueHeader">Comments</div>
+					<div class="left">
+						<img class='avatar small' src='http://www.gravatar.com/avatar/70db0c5c3c69165a8de0e6da76dcca82'/>
+					</div>
+					<div class="left">
+		    			<strong>Rocky</strong> says: This is cool!
+		   			</div>
+					<div class="clear"></div>
+					<div class="left">
+						<img class='avatar small' src='http://www.gravatar.com/avatar/bccf1b7363d57205854ce1fed6cef20f'/>
+					</div>
+					<div class="left">
+		    			<strong>Quoc</strong> says: I'll be there!
+		   			</div>
+					<div class="clear"></div>
+				</div>
 		</script>
 </body>
 </html>
