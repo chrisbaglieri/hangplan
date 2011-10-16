@@ -2,6 +2,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+    can [:read], Plan
     if user
       can [:manage], Participant
       can [:read, :create], Plan
