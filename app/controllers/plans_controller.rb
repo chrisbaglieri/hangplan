@@ -7,7 +7,7 @@ class PlansController < ApplicationController
     respond_to do |format|
       format.html
       format.json do
-        render :json => @plans.to_json(:include => { :owner => { :methods => :gravatar_id } })
+        render :json => @plans.to_json(:include => { :owner => { :methods => :gravatar_id, :except => :mobile_key } })
       end
     end
   end
@@ -16,7 +16,7 @@ class PlansController < ApplicationController
     respond_to do |format|
       format.html
       format.json do
-        render :json => @plan.to_json(:include => { :owner => { :methods => :gravatar_id } })
+        render :json => @plan.to_json(:include => { :owner => { :methods => :gravatar_id, :except => :mobile_key } })
       end
     end
   end
