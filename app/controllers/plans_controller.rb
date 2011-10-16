@@ -2,7 +2,7 @@ class PlansController < ApplicationController
   load_and_authorize_resource
   
   def index
-    @plans = Plans.all
+    @plans = Plan.all
     @plans.sort! { |x,y| x.time <=> y.time }
     respond_to do |format|
       format.html
