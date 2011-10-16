@@ -2,8 +2,11 @@
 	<%= f.input :name %>
 	<%= f.input :location %>
 	<%= f.input :link %>
-	<%= f.input :time %>
+	<div id="time_entry">
+	  <%= f.input :time %>
+	</div>
 	<%= f.input :sponsored %>
 	<%= f.input :tentative %>
 	<%= f.button :submit %>
 <% end %>
+
