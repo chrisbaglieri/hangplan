@@ -1,4 +1,4 @@
-package com.rearden;
+package com.hangplan.hangplan;
 
 import org.json.JSONArray;
 import org.json.JSONException;
