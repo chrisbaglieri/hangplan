@@ -56,6 +56,9 @@ html, body{
 #header a[page="/"]{
     background-image: url(../images/home.png);
 }
+#header a[page="optionPage"]{
+    background-image: url(../images/menu.png);
+}
 #header a[page="^"]{
 	background-image: url(../images/top.png);
 }
@@ -106,7 +109,6 @@ a[page]{
     cursor: pointer;
 }
 .page .content{
-    margin: 10px 10px 10px 0;
     padding: 0 0 10px 0;
 }
 .page .header{
