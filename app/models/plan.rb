@@ -7,6 +7,10 @@ class Plan < ActiveRecord::Base
   geocoded_by :location
   after_validation :geocode
   
+  def participant?(user)
+    self.users.include?(user)
+  end
+  
   private
   
   def add_owner_as_participant
