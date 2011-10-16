@@ -38,7 +38,7 @@ class User < ActiveRecord::Base
     update_attribute :mobile_key, SecureRandom.hex(16)
   end
   
-  def nearby_plans(distance = 5)
+  def nearby_plans(distance = 25)
     all_plans = []
     all_plans.concat self.plans.near([self.latitude, self.longitude], distance)
     self.followed_users.each do |f|
