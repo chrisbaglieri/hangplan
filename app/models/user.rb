@@ -39,9 +39,9 @@ class User < ActiveRecord::Base
   
   def nearby_plans(distance = 5)
     all_plans = []
-    all_plans << current_user.plans.near([latitude, longitude], distance)
-    current_user.followed_users.each do |f|
-      all_plans << f.plans.near([current_user.latitude, current_user.longitude], distance)
+    all_plans << self.plans.near([latitude, longitude], distance)
+    self.followed_users.each do |f|
+      all_plans << f.plans.near([self.latitude, self.longitude], distance)
     end
    all_plans.uniq
   end
