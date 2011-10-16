@@ -31,6 +31,7 @@ var hangplan = {};
 			hangplan.handleError(err);
 		});
     	
+    	
     	if (window.location.hash != '#m'){
 	       	document.addEventListener('deviceready', hangplan.deviceReady, false);       
 	       	document.addEventListener("backbutton", hangplan.backbutton, false);
@@ -52,7 +53,8 @@ var hangplan = {};
     		hangplan.user.extend(userData);
     		hangplan.load();
     	}else{
-    		hangplan.view.container.pageTurner('reroot', 'loginPage');    		
+    		hangplan.view.container.pageTurner('reroot', 'homePage'); 
+    		hangplan.load();   		
     		$('#btnLogin').live('click', function(){ 			
 				/*FB.login(function(response) {
 					if (response.session) {
