@@ -8,6 +8,14 @@
 					</div>
 					<hr />
 					<br />
+					<div>
+			      <% if flash[:error] -%>
+			        <p class='error'><%=h flash[:error] %></p><br />
+			      <% end -%>
+			      <% if flash[:notice] -%>
+			        <p class='notice'><%=h flash[:notice] %></p><br />
+			      <% end -%>
+			    </div>
 				</div>
 				<div class="span-18">
         	<%= yield %>
