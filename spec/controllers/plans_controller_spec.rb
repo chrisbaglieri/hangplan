@@ -67,12 +67,18 @@ describe PlansController do
       response.should render_template('edit')
     end
     
-    it 'rejects unauthorized edits' do
-# TODO: CanCan failing un-gracefully.
-#      plan = Factory(:plan)  # :owner => Factory(:user)
-#      get :edit, :id => plan.id
-#      response.should be_redirect
-#      response.should redirect_to(plans_path)
+    it 'rejects unauthorized edits (html)' do
+      plan = Factory(:plan)  # :owner => Factory(:user)
+      get :edit, :id => plan.id
+      response.should be_redirect
+      response.should redirect_to(plans_path)
+    end
+    
+    it 'rejects unauthorized edits (json)' do
+      plan = Factory(:plan)
+      get :edit, :id => plan.id, :format => :json
+      response.code.should eq('403')
+      response.body.should include('not authorized')
     end
   end
 end

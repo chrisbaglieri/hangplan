@@ -52,11 +52,15 @@ class PlansController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound do
     msg = 'That plan could not be found. It may have been deleted.'
     respond_to do |format|
-      format.html do
-        flash[:error] = msg
-        redirect_to plans_path
-      end
+      format.html { flash[:error] = msg; redirect_to plans_path }
       format.json { render :status => 404, :text => msg }
     end
+  end
+  
+  rescue_from CanCan::AccessDenied do |exception|
+    respond_to do |format|
+      format.html { flash[:error] = exception.to_s; redirect_to plans_path }
+      format.json { render :status => 403, :text => exception.to_s }
+    end    
   end
 end
