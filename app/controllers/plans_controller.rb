@@ -16,6 +16,7 @@ class PlansController < ApplicationController
   end
   
   def show
+    logger.debug @plan.to_json
     respond_to do |format|
       format.html
       format.json do
@@ -46,5 +47,16 @@ class PlansController < ApplicationController
   def destroy
     @plan.destroy
     respond_with(@plan, :location => :root)
+  end
+  
+  rescue_from ActiveRecord::RecordNotFound do
+    msg = 'That plan could not be found. It may have been deleted.'
+    respond_to do |format|
+      format.html do
+        flash[:error] = msg
+        redirect_to plans_path
+      end
+      format.json { render :status => 404, :text => msg }
+    end
   end
 end

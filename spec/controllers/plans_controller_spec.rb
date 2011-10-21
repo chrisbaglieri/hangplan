@@ -20,7 +20,7 @@ describe PlansController do
   end
   
   describe 'GET show' do
-    it 'renders with a valid id' do
+    it 'shows a plan with a valid id (html)' do
       plan = Factory(:plan)
       get :show, :id => plan.id
       assigns(:plan).should eq(plan)
@@ -28,11 +28,24 @@ describe PlansController do
       response.should render_template('show')
     end
     
-    it 'redirects with an invalid id' do
-# TODO: Currently fails.
-#      get :show, :id => 23
-#      response.should be_redirect
-#      response.should redirect_to(plans_path)
+    it 'handles an invalid id (html)' do
+      get :show, :id => 23
+      flash[:error].should_not be_blank
+      response.should redirect_to(plans_path)
+    end
+    
+    it 'shows a plan with a valid id (json)' do
+      plan = Factory(:plan)
+      get :show, :id => plan.id, :format => :json
+      assigns(:plan).should eq(plan)
+      response.should be_success
+      response.body.should include(plan.name)
+    end
+    
+    it 'handles an invalid id (json)' do
+      get :show, :id => 23, :format => :json
+      response.code.should eq('404')
+      response.body.should_not be_blank
     end
   end
   
