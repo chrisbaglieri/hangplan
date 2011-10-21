@@ -3,9 +3,11 @@ class Plan < ActiveRecord::Base
   attr_accessible :name, :location, :time, :latitude, :longitude, :sponsored, :tentative, :link
   has_many :participants, :dependent => :destroy
   has_many :users, :through => :participants
-  before_create :add_owner_as_participant
   geocoded_by :location
+
+  validates_presence_of :owner
   after_validation :geocode
+  before_create :add_owner_as_participant
   
   scope :future, where('time IS NULL OR time > ?', Time.now).order('time asc')
   
