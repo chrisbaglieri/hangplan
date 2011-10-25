@@ -13,11 +13,7 @@
 	<div class="span-9 last">
 		<h2>Participants</h2>
 		<p>Actions: 
-			<% if @plan.participant?(current_user) %>
-			  <%= link_to "OUT", @plan.participant(current_user), :method => :delete, :class => 'action-button' %>
-			<% else %>
-			  <%= link_to "IN", plan_participants_path(@plan), :method => :post, :class => 'action-button' %> 
-			<% end %>
+			<%= link_to "IN", plan_participants_path(@plan), :method => :post, :class => 'action-button' %> 
 		</p>
 		<% if @plan.participants.blank? %>
 			<p>You're flying solo this time around</p>

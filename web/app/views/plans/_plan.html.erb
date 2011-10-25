@@ -9,11 +9,7 @@
 		<li class="section span-5"><% if plan.location? %><%= plan.location %><% else %>Somewhere I guess<% end %></li>
 		<li class="section span-3"><% if plan.time? %><%= format_time(plan.time) %><% else %>Sometime I suppose<% end %></li>
 		<li class="section span-2">	  
-		  <% if plan.participant?(current_user) %>
-		    <%= link_to "OUT", plan.participant(current_user), :method => :delete, :class => 'action-button' %>
-		  <% else %>
-		    <%= link_to "IN", plan_participants_path(plan), :method => :post, :class => 'action-button' %>
-		  <% end %>
+		  <%= link_to "IN", plan_participants_path(plan), :method => :post, :class => 'action-button' %>
 		</li>
 		<li class="section span-1 last"><%= link_to image_tag("arrow-right.png"), plan %></li>
 	</ul>

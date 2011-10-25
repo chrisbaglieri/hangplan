@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   geocoded_by :location
   has_many :participants
   has_many :plans, :through => :participants
-  attr_accessible :name, :latitude, :longitude, :location, :email, :remember_me
+  attr_accessible :name, :password, :password_confirmation, :latitude, :longitude, :location, :email, :remember_me
   validates_uniqueness_of :email
   validates_presence_of :name
   after_validation :geocode

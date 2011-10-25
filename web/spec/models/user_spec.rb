@@ -10,7 +10,6 @@ describe User do
   it { should validate_presence_of(:email) }
   it { should validate_uniqueness_of(:email) }
   it { should validate_presence_of(:name) }
-  it { should_not allow_mass_assignment_of(:password) }
   
   describe "plan owner" do
     it "should automatically be added to the plans they own" do
