@@ -23,7 +23,6 @@ Hangplan::Application.routes.draw do
   end
   
   resources :participants, :only => [:update, :destroy]
-  resources :subscriptions, :only => [:new, :create]
   resources :users, :only => [:show]
   
 end
