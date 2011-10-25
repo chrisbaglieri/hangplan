@@ -6,7 +6,7 @@ class Ability
       can [:read], User
       can [:read, :create], Plan
       can [:update, :destroy], Plan, :owner => user
-      can [:manage], Participant
+      can [:manage], Participant, :user => user
     end
   end
 end
