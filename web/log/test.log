@@ -1,0 +1,697 @@
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 52ms (Views: 51.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#team as HTML
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#contact as HTML
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 80ms (Views: 79.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#team as HTML
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#contact as HTML
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 80ms (Views: 79.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#team as HTML
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#contact as HTML
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (40.5ms)
+Completed 200 OK in 94ms (Views: 93.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#team as HTML
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#contact as HTML
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (38.8ms)
+Completed 200 OK in 79ms (Views: 78.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#team as HTML
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#contact as HTML
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (39.9ms)
+Completed 200 OK in 81ms (Views: 80.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#team as HTML
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#contact as HTML
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (38.8ms)
+Completed 200 OK in 81ms (Views: 80.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#team as HTML
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#contact as HTML
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (40.7ms)
+Completed 200 OK in 81ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#team as HTML
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#contact as HTML
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (41.2ms)
+Completed 200 OK in 82ms (Views: 81.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#team as HTML
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#contact as HTML
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 81ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#team as HTML
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#contact as HTML
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (1.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '1st@email.com' LIMIT 1[0m
+  [1m[35mSQL (4.7ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "location", "name", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"  [["created_at", Sat, 15 Oct 2011 17:05:59 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "1st@email.com"], ["encrypted_password", "$2a$04$TJ/i6ldBW6WkkdzR.enXiuz8We2e6UX2DPISKiZJFF.DBMpXrDfaa"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["location", nil], ["name", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Sat, 15 Oct 2011 17:05:59 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "plans" ("created_at", "latitude", "link", "location", "longitude", "name", "sponsored", "tentative", "time", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["created_at", Sat, 15 Oct 2011 17:05:59 UTC +00:00], ["latitude", nil], ["link", nil], ["location", "Foo"], ["longitude", nil], ["name", "Foo"], ["sponsored", false], ["tentative", false], ["time", Sat, 15 Oct 2011 17:05:58 UTC +00:00], ["updated_at", Sat, 15 Oct 2011 17:05:59 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  INSERT INTO "plans_users" ("user_id", "user_id") VALUES (1, 1)
+PGError: ERROR:  column "user_id" specified more than once
+LINE 1: INSERT INTO "plans_users" ("user_id", "user_id") VALUES (1, ...
+                                              ^
+: INSERT INTO "plans_users" ("user_id", "user_id") VALUES (1, 1)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 82ms (Views: 81.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#team as HTML
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#contact as HTML
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (1.3ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '1st@email.com' LIMIT 1[0m
+  [1m[35mSQL (4.4ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "location", "name", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"  [["created_at", Sat, 15 Oct 2011 17:08:39 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "1st@email.com"], ["encrypted_password", "$2a$04$DJixusQ80wc4BxTubqelGOU9vJPO348SIV1K5NR1ex4ekO635A2/W"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["location", nil], ["name", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Sat, 15 Oct 2011 17:08:39 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "plans" ("created_at", "latitude", "link", "location", "longitude", "name", "sponsored", "tentative", "time", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["created_at", Sat, 15 Oct 2011 17:08:39 UTC +00:00], ["latitude", nil], ["link", nil], ["location", "Foo"], ["longitude", nil], ["name", "Foo"], ["sponsored", false], ["tentative", false], ["time", Sat, 15 Oct 2011 17:08:38 UTC +00:00], ["updated_at", Sat, 15 Oct 2011 17:08:39 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.5ms)[0m  INSERT INTO "plans_users" ("plan_id", "user_id") VALUES (1, 1)
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "plans" INNER JOIN "plans_users" ON "plans"."id" = "plans_users"."plan_id" WHERE "plans_users"."user_id" = 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 80ms (Views: 79.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#team as HTML
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  Processing by PagesController#contact as HTML
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (1.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '1st@email.com' LIMIT 1[0m
+  [1m[35mSQL (4.3ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "location", "name", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"  [["created_at", Sat, 15 Oct 2011 17:09:40 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "1st@email.com"], ["encrypted_password", "$2a$04$8zBPyLeCfzP7SnazrEvPpOJNQQPsdlQW9Z7q5VyzMq5sq/kUjrP/e"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["location", nil], ["name", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Sat, 15 Oct 2011 17:09:40 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "plans" ("created_at", "latitude", "link", "location", "longitude", "name", "sponsored", "tentative", "time", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["created_at", Sat, 15 Oct 2011 17:09:40 UTC +00:00], ["latitude", nil], ["link", nil], ["location", "Foo"], ["longitude", nil], ["name", "Foo"], ["sponsored", false], ["tentative", false], ["time", Sat, 15 Oct 2011 17:09:39 UTC +00:00], ["updated_at", Sat, 15 Oct 2011 17:09:40 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.5ms)[0m  INSERT INTO "plans_users" ("plan_id", "user_id") VALUES (1, 1)
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "plans" INNER JOIN "plans_users" ON "plans"."id" = "plans_users"."plan_id" WHERE "plans_users"."user_id" = 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 56ms (Views: 55.5ms | ActiveRecord: 0.0ms)
+  Processing by PagesController#team as HTML
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by PagesController#contact as HTML
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '1st@email.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = '1st@email.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+Binary data inserted for `string` type on column `mobile_key`
+  [1m[36mSQL (4.2ms)[0m  [1mINSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "location", "mobile_key", "name", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 15 Oct 2011 17:52:06 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "1st@email.com"], ["encrypted_password", "$2a$04$5hl/4O89DTV9eNRTfYgrCePuE1c8ufMzCfsXESzaf9eKQoc1ZLuQW"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["location", nil], ["mobile_key", "c1ce45c46269f4c1497013e731b35359"], ["name", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Sat, 15 Oct 2011 17:52:06 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "plans" ("created_at", "latitude", "link", "location", "longitude", "name", "sponsored", "tentative", "time", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 15 Oct 2011 17:52:06 UTC +00:00], ["latitude", nil], ["link", nil], ["location", "Foo"], ["longitude", nil], ["name", "Foo"], ["sponsored", false], ["tentative", false], ["time", Sat, 15 Oct 2011 17:52:05 UTC +00:00], ["updated_at", Sat, 15 Oct 2011 17:52:06 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "plans_users" ("plan_id", "user_id") VALUES (1, 1)[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "plans" INNER JOIN "plans_users" ON "plans"."id" = "plans_users"."plan_id" WHERE "plans_users"."user_id" = 1[0m
+  Processing by PagesController#home as HTML
+Completed 500 Internal Server Error in 1ms
+  Processing by PagesController#team as HTML
+Completed 200 OK in 107ms (Views: 106.7ms | ActiveRecord: 0.0ms)
+  Processing by PagesController#contact as HTML
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = '1st@email.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '1st@email.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+Binary data inserted for `string` type on column `mobile_key`
+  [1m[35mSQL (5.4ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "invitation_accepted_at", "invitation_limit", "invitation_sent_at", "invitation_token", "invited_by_id", "invited_by_type", "last_sign_in_at", "last_sign_in_ip", "location", "mobile_key", "name", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sun, 16 Oct 2011 00:39:57 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "1st@email.com"], ["encrypted_password", "$2a$04$F8VBzWs1Nm.r4lEJGoAGQuplz2Sd2dhAx.LFgsar1JzTInUS7Fwv."], ["invitation_accepted_at", nil], ["invitation_limit", nil], ["invitation_sent_at", nil], ["invitation_token", nil], ["invited_by_id", nil], ["invited_by_type", nil], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["location", nil], ["mobile_key", "a7aa1c8c728c9167a305a477c76e5648"], ["name", "Johnny Cash"], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Sun, 16 Oct 2011 00:39:57 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "plans" ("created_at", "latitude", "link", "location", "longitude", "name", "sponsored", "tentative", "time", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 16 Oct 2011 00:39:58 UTC +00:00], ["latitude", nil], ["link", nil], ["location", "Foo"], ["longitude", nil], ["name", "Foo"], ["sponsored", false], ["tentative", false], ["time", Sun, 16 Oct 2011 00:39:56 UTC +00:00], ["updated_at", Sun, 16 Oct 2011 00:39:58 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  INSERT INTO "plans_users" ("plan_id", "user_id") VALUES (1, 1)
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "plans" INNER JOIN "plans_users" ON "plans"."id" = "plans_users"."plan_id" WHERE "plans_users"."user_id" = 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "participants" WHERE ("participants"."user_id" IS NULL AND "participants"."plan_id" IS NULL) LIMIT 1
+  [1m[36mSQL (51.1ms)[0m  [1mINSERT INTO "participants" ("created_at", "plan_id", "points", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sun, 16 Oct 2011 05:16:29 UTC +00:00], ["plan_id", nil], ["points", 0], ["updated_at", Sun, 16 Oct 2011 05:16:29 UTC +00:00], ["user_id", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "participants" [0m
+  Processing by ParticipantsController#create as HTML
+  Parameters: {"participant"=>{}}
+Completed 500 Internal Server Error in 4ms
+  Processing by ParticipantsController#create as HTML
+  Parameters: {"participant"=>{}}
+Completed 500 Internal Server Error in 3ms
+  Processing by ParticipantsController#create as HTML
+  Parameters: {"participant"=>{}}
+Completed 500 Internal Server Error in 3ms
+  Processing by ParticipantsController#create as HTML
+  Parameters: {"participant"=>{}}
+Completed 500 Internal Server Error in 3ms
+  Processing by ParticipantsController#create as HTML
+  Parameters: {"participant"=>{}}
+Completed 500 Internal Server Error in 3ms
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "participants" WHERE ("participants"."user_id" IS NULL AND "participants"."plan_id" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "participants" ("created_at", "plan_id", "points", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Sun, 16 Oct 2011 05:16:29 UTC +00:00], ["plan_id", nil], ["points", 0], ["updated_at", Sun, 16 Oct 2011 05:16:29 UTC +00:00], ["user_id", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Processing by ParticipantsController#update as HTML
+  Parameters: {"participant"=>{"these"=>"params"}, "id"=>"1"}
+  [1m[35mParticipant Load (0.2ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 5ms
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "participants" WHERE ("participants"."user_id" IS NULL AND "participants"."plan_id" IS NULL) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "participants" ("created_at", "plan_id", "points", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sun, 16 Oct 2011 05:16:29 UTC +00:00], ["plan_id", nil], ["points", 0], ["updated_at", Sun, 16 Oct 2011 05:16:29 UTC +00:00], ["user_id", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  Processing by ParticipantsController#update as HTML
+  Parameters: {"participant"=>{}, "id"=>"1"}
+  [1m[36mParticipant Load (0.1ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 5ms
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "participants" WHERE ("participants"."user_id" IS NULL AND "participants"."plan_id" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "participants" ("created_at", "plan_id", "points", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Sun, 16 Oct 2011 05:16:29 UTC +00:00], ["plan_id", nil], ["points", 0], ["updated_at", Sun, 16 Oct 2011 05:16:29 UTC +00:00], ["user_id", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Processing by ParticipantsController#update as HTML
+  Parameters: {"participant"=>{}, "id"=>"1"}
+  [1m[35mParticipant Load (0.1ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 5ms
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "participants" WHERE ("participants"."user_id" IS NULL AND "participants"."plan_id" IS NULL) LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "participants" ("created_at", "plan_id", "points", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sun, 16 Oct 2011 05:16:29 UTC +00:00], ["plan_id", nil], ["points", 0], ["updated_at", Sun, 16 Oct 2011 05:16:29 UTC +00:00], ["user_id", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  Processing by ParticipantsController#update as HTML
+  Parameters: {"participant"=>{}, "id"=>"1"}
+  [1m[36mParticipant Load (0.1ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 5ms
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "participants" WHERE ("participants"."user_id" IS NULL AND "participants"."plan_id" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "participants" ("created_at", "plan_id", "points", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", Sun, 16 Oct 2011 05:16:29 UTC +00:00], ["plan_id", nil], ["points", 0], ["updated_at", Sun, 16 Oct 2011 05:16:29 UTC +00:00], ["user_id", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Processing by ParticipantsController#update as HTML
+  Parameters: {"participant"=>{}, "id"=>"1"}
+  [1m[35mParticipant Load (0.1ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 5ms
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "participants" WHERE ("participants"."user_id" IS NULL AND "participants"."plan_id" IS NULL) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "participants" ("created_at", "plan_id", "points", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sun, 16 Oct 2011 05:16:29 UTC +00:00], ["plan_id", nil], ["points", 0], ["updated_at", Sun, 16 Oct 2011 05:16:29 UTC +00:00], ["user_id", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "participants" [0m
+  Processing by ParticipantsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mParticipant Load (0.1ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 5ms
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "participants" WHERE ("participants"."user_id" IS NULL AND "participants"."plan_id" IS NULL) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "participants" ("created_at", "plan_id", "points", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sun, 16 Oct 2011 05:16:29 UTC +00:00], ["plan_id", nil], ["points", 0], ["updated_at", Sun, 16 Oct 2011 05:16:29 UTC +00:00], ["user_id", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  Processing by ParticipantsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParticipant Load (0.1ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 5ms
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = '1st@email.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '1st@email.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+Binary data inserted for `string` type on column `mobile_key`
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "invitation_accepted_at", "invitation_limit", "invitation_sent_at", "invitation_token", "invited_by_id", "invited_by_type", "last_sign_in_at", "last_sign_in_ip", "latitude", "location", "longitude", "mobile_key", "name", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sun, 16 Oct 2011 05:16:29 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "1st@email.com"], ["encrypted_password", "$2a$04$IBHIvT26nT3s/20D/3AkOuiMLemhZsPfnA/pZE1QMqIAvnMpcG.Yu"], ["invitation_accepted_at", nil], ["invitation_limit", nil], ["invitation_sent_at", nil], ["invitation_token", nil], ["invited_by_id", nil], ["invited_by_type", nil], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["latitude", nil], ["location", nil], ["longitude", nil], ["mobile_key", "67683073cce0194aba0099edc9076105"], ["name", "Johnny Cash"], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Sun, 16 Oct 2011 05:16:29 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "plans" ("created_at", "latitude", "link", "location", "longitude", "name", "sponsored", "tentative", "time", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 16 Oct 2011 05:16:30 UTC +00:00], ["latitude", 46.2399948], ["link", nil], ["location", "Foo"], ["longitude", 8.842393], ["name", "Foo"], ["sponsored", false], ["tentative", false], ["time", Sun, 16 Oct 2011 05:16:27 UTC +00:00], ["updated_at", Sun, 16 Oct 2011 05:16:30 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "participants" WHERE ("participants"."user_id" = 1 AND "participants"."plan_id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "participants" ("created_at", "plan_id", "points", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sun, 16 Oct 2011 05:16:30 UTC +00:00], ["plan_id", 1], ["points", 0], ["updated_at", Sun, 16 Oct 2011 05:16:30 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "plans" INNER JOIN "participants" ON "plans"."id" = "participants"."plan_id" WHERE "participants"."user_id" = 1[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = '1st@email.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '1st@email.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+Binary data inserted for `string` type on column `mobile_key`
+  [1m[35mSQL (7.3ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "invitation_accepted_at", "invitation_limit", "invitation_sent_at", "invitation_token", "invited_by_id", "invited_by_type", "last_sign_in_at", "last_sign_in_ip", "latitude", "location", "longitude", "mobile_key", "name", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sun, 16 Oct 2011 05:18:03 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "1st@email.com"], ["encrypted_password", "$2a$04$AwHd3O.vGpATO//s9aqTbeJ19ALVwTUMN4mqfOxVw0jNtLwql2SPe"], ["invitation_accepted_at", nil], ["invitation_limit", nil], ["invitation_sent_at", nil], ["invitation_token", nil], ["invited_by_id", nil], ["invited_by_type", nil], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["latitude", nil], ["location", nil], ["longitude", nil], ["mobile_key", "0bc995335d9a9bd02bf34975543811d8"], ["name", "Johnny Cash"], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Sun, 16 Oct 2011 05:18:03 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "plans" ("created_at", "latitude", "link", "location", "longitude", "name", "sponsored", "tentative", "time", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 16 Oct 2011 05:18:03 UTC +00:00], ["latitude", 46.2399948], ["link", nil], ["location", "Foo"], ["longitude", 8.842393], ["name", "Foo"], ["sponsored", false], ["tentative", false], ["time", Sun, 16 Oct 2011 05:18:01 UTC +00:00], ["updated_at", Sun, 16 Oct 2011 05:18:03 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "participants" WHERE ("participants"."user_id" = 1 AND "participants"."plan_id" = 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "participants" ("created_at", "plan_id", "points", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sun, 16 Oct 2011 05:18:03 UTC +00:00], ["plan_id", 1], ["points", 0], ["updated_at", Sun, 16 Oct 2011 05:18:03 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "plans" INNER JOIN "participants" ON "plans"."id" = "participants"."plan_id" WHERE "participants"."user_id" = 1[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = '1st@email.com' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '1st@email.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+Binary data inserted for `string` type on column `mobile_key`
+  [1m[35mSQL (5.6ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "invitation_accepted_at", "invitation_limit", "invitation_sent_at", "invitation_token", "invited_by_id", "invited_by_type", "last_sign_in_at", "last_sign_in_ip", "latitude", "location", "longitude", "mobile_key", "name", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sun, 16 Oct 2011 05:19:40 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "1st@email.com"], ["encrypted_password", "$2a$04$NzqJEtg2d7Jn5Lfj149syukeFUDbBAgx0/mIirBrLM1ALVlNUk0QG"], ["invitation_accepted_at", nil], ["invitation_limit", nil], ["invitation_sent_at", nil], ["invitation_token", nil], ["invited_by_id", nil], ["invited_by_type", nil], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["latitude", nil], ["location", nil], ["longitude", nil], ["mobile_key", "7ff3475a04bf1cbdfc0942563a60ad4f"], ["name", "Johnny Cash"], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Sun, 16 Oct 2011 05:19:40 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "plans" ("created_at", "latitude", "link", "location", "longitude", "name", "sponsored", "tentative", "time", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 16 Oct 2011 05:19:41 UTC +00:00], ["latitude", 46.2399948], ["link", nil], ["location", "Foo"], ["longitude", 8.842393], ["name", "Foo"], ["sponsored", false], ["tentative", false], ["time", Sun, 16 Oct 2011 05:19:39 UTC +00:00], ["updated_at", Sun, 16 Oct 2011 05:19:41 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "participants" WHERE ("participants"."user_id" = 1 AND "participants"."plan_id" = 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "participants" ("created_at", "plan_id", "points", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sun, 16 Oct 2011 05:19:41 UTC +00:00], ["plan_id", 1], ["points", 0], ["updated_at", Sun, 16 Oct 2011 05:19:41 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "plans" INNER JOIN "participants" ON "plans"."id" = "participants"."plan_id" WHERE "participants"."user_id" = 1[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = '1st@email.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '1st@email.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+Binary data inserted for `string` type on column `mobile_key`
+  [1m[35mSQL (6.7ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "invitation_accepted_at", "invitation_limit", "invitation_sent_at", "invitation_token", "invited_by_id", "invited_by_type", "last_sign_in_at", "last_sign_in_ip", "latitude", "location", "longitude", "mobile_key", "name", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sun, 16 Oct 2011 05:20:54 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "1st@email.com"], ["encrypted_password", "$2a$04$A5ZiGJ1WzZL2c.b2OWk9P.CAVhuKh7e6dpdZBeaYLKgiULiPrreKK"], ["invitation_accepted_at", nil], ["invitation_limit", nil], ["invitation_sent_at", nil], ["invitation_token", nil], ["invited_by_id", nil], ["invited_by_type", nil], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["latitude", nil], ["location", nil], ["longitude", nil], ["mobile_key", "8fc8abccd6419efe1de89cd60481dec1"], ["name", "Johnny Cash"], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Sun, 16 Oct 2011 05:20:54 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "plans" ("created_at", "latitude", "link", "location", "longitude", "name", "sponsored", "tentative", "time", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 16 Oct 2011 05:20:54 UTC +00:00], ["latitude", 46.2399948], ["link", nil], ["location", "Foo"], ["longitude", 8.842393], ["name", "Foo"], ["sponsored", false], ["tentative", false], ["time", Sun, 16 Oct 2011 05:20:52 UTC +00:00], ["updated_at", Sun, 16 Oct 2011 05:20:54 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "participants" WHERE ("participants"."user_id" = 1 AND "participants"."plan_id" = 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "participants" ("created_at", "plan_id", "points", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sun, 16 Oct 2011 05:20:54 UTC +00:00], ["plan_id", 1], ["points", 0], ["updated_at", Sun, 16 Oct 2011 05:20:54 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "plans" INNER JOIN "participants" ON "plans"."id" = "participants"."plan_id" WHERE "participants"."user_id" = 1[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = '1st@email.com' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '1st@email.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+Binary data inserted for `string` type on column `mobile_key`
+  [1m[35mSQL (5.7ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "invitation_accepted_at", "invitation_limit", "invitation_sent_at", "invitation_token", "invited_by_id", "invited_by_type", "last_sign_in_at", "last_sign_in_ip", "latitude", "location", "longitude", "mobile_key", "name", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sun, 16 Oct 2011 05:23:14 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "1st@email.com"], ["encrypted_password", "$2a$04$T3E8lwALt9SEvW6ldDulEuzTOZsf6wOEb/KI8BY5bKxjMJcbft1b6"], ["invitation_accepted_at", nil], ["invitation_limit", nil], ["invitation_sent_at", nil], ["invitation_token", nil], ["invited_by_id", nil], ["invited_by_type", nil], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["latitude", nil], ["location", nil], ["longitude", nil], ["mobile_key", "f1ff02014436b6fd8b5aa92dbc55ddf8"], ["name", "Johnny Cash"], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Sun, 16 Oct 2011 05:23:14 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "plans" ("created_at", "latitude", "link", "location", "longitude", "name", "sponsored", "tentative", "time", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 16 Oct 2011 05:23:15 UTC +00:00], ["latitude", 46.2399948], ["link", nil], ["location", "Foo"], ["longitude", 8.842393], ["name", "Foo"], ["sponsored", false], ["tentative", false], ["time", Sun, 16 Oct 2011 05:23:13 UTC +00:00], ["updated_at", Sun, 16 Oct 2011 05:23:15 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "participants" WHERE ("participants"."user_id" = 1 AND "participants"."plan_id" = 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "participants" ("created_at", "plan_id", "points", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sun, 16 Oct 2011 05:23:15 UTC +00:00], ["plan_id", 1], ["points", 0], ["updated_at", Sun, 16 Oct 2011 05:23:15 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "plans" INNER JOIN "participants" ON "plans"."id" = "participants"."plan_id" WHERE "participants"."user_id" = 1[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = '1st@email.com' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '1st@email.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+Binary data inserted for `string` type on column `mobile_key`
+  [1m[35mSQL (5.7ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "invitation_accepted_at", "invitation_limit", "invitation_sent_at", "invitation_token", "invited_by_id", "invited_by_type", "last_sign_in_at", "last_sign_in_ip", "latitude", "location", "longitude", "mobile_key", "name", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sun, 16 Oct 2011 05:25:16 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "1st@email.com"], ["encrypted_password", "$2a$04$.9YzZp3AzAJBuEER8jugQeHLIxJCA/NOj1y9/qWktncYJJ1bB9y/C"], ["invitation_accepted_at", nil], ["invitation_limit", nil], ["invitation_sent_at", nil], ["invitation_token", nil], ["invited_by_id", nil], ["invited_by_type", nil], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["latitude", nil], ["location", nil], ["longitude", nil], ["mobile_key", "06fd32cb56eeb45146cc40fc7055e958"], ["name", "Johnny Cash"], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Sun, 16 Oct 2011 05:25:16 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "plans" ("created_at", "latitude", "link", "location", "longitude", "name", "sponsored", "tentative", "time", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 16 Oct 2011 05:25:17 UTC +00:00], ["latitude", 46.2399948], ["link", nil], ["location", "Foo"], ["longitude", 8.842393], ["name", "Foo"], ["sponsored", false], ["tentative", false], ["time", Sun, 16 Oct 2011 05:25:15 UTC +00:00], ["updated_at", Sun, 16 Oct 2011 05:25:17 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "participants" WHERE ("participants"."user_id" = 1 AND "participants"."plan_id" = 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "participants" ("created_at", "plan_id", "points", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sun, 16 Oct 2011 05:25:17 UTC +00:00], ["plan_id", 1], ["points", 0], ["updated_at", Sun, 16 Oct 2011 05:25:17 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "plans" INNER JOIN "participants" ON "plans"."id" = "participants"."plan_id" WHERE "participants"."user_id" = 1[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = '1st@email.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = '1st@email.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+Binary data inserted for `string` type on column `mobile_key`
+  [1m[35mSQL (8.1ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "invitation_accepted_at", "invitation_limit", "invitation_sent_at", "invitation_token", "invited_by_id", "invited_by_type", "last_sign_in_at", "last_sign_in_ip", "latitude", "location", "longitude", "mobile_key", "name", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sun, 16 Oct 2011 05:28:49 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "1st@email.com"], ["encrypted_password", "$2a$04$AXPlcE1Mt1R9QWNMLanVI.ZHJRxGQrc1L8M.mQOUtSJMbVImAXX9O"], ["invitation_accepted_at", nil], ["invitation_limit", nil], ["invitation_sent_at", nil], ["invitation_token", nil], ["invited_by_id", nil], ["invited_by_type", nil], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["latitude", nil], ["location", nil], ["longitude", nil], ["mobile_key", "90c144643ccc3eaa9820d238e7ffc60c"], ["name", "Johnny Cash"], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Sun, 16 Oct 2011 05:28:49 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "plans" ("created_at", "latitude", "link", "location", "longitude", "name", "sponsored", "tentative", "time", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 16 Oct 2011 05:28:50 UTC +00:00], ["latitude", 46.2399948], ["link", nil], ["location", "Foo"], ["longitude", 8.842393], ["name", "Foo"], ["sponsored", false], ["tentative", false], ["time", Sun, 16 Oct 2011 05:28:48 UTC +00:00], ["updated_at", Sun, 16 Oct 2011 05:28:50 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "participants" WHERE ("participants"."user_id" = 1 AND "participants"."plan_id" = 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "participants" ("created_at", "plan_id", "points", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sun, 16 Oct 2011 05:28:50 UTC +00:00], ["plan_id", 1], ["points", 0], ["updated_at", Sun, 16 Oct 2011 05:28:50 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "plans" INNER JOIN "participants" ON "plans"."id" = "participants"."plan_id" WHERE "participants"."user_id" = 1[0m
