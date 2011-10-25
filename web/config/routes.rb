@@ -21,4 +21,6 @@ Hangplan::Application.routes.draw do
     resources :participants, :only => [:create, :update, :destroy]
   end
   
+  resources :users, :only => [:show]
+  
 end
