@@ -10,17 +10,16 @@ class PlansController < ApplicationController
     respond_to do |format|
       format.html
       format.json do
-        render :json => @plans.to_json(:include => { :owner => { :methods => :gravatar_id, :except => :mobile_key } })
+        render :json => @plans.to_json(:include => { :owner => { :methods => :gravatar_id } })
       end
     end
   end
   
   def show
-    logger.debug @plan.to_json
     respond_to do |format|
       format.html
       format.json do
-        render :json => @plan.to_json(:include => { :owner => { :methods => :gravatar_id, :except => :mobile_key } })
+        render :json => @plan.to_json(:include => { :owner => { :methods => :gravatar_id } })
       end
     end
   end
@@ -53,14 +52,7 @@ class PlansController < ApplicationController
     msg = 'That plan could not be found. It may have been deleted.'
     respond_to do |format|
       format.html { flash[:error] = msg; redirect_to plans_path }
-      format.json { render :status => 404, :text => msg }
+      format.json { render :status => :not_found, :text => msg }
     end
-  end
-  
-  rescue_from CanCan::AccessDenied do |exception|
-    respond_to do |format|
-      format.html { flash[:error] = exception.to_s; redirect_to plans_path }
-      format.json { render :status => 403, :text => exception.to_s }
-    end    
   end
 end
