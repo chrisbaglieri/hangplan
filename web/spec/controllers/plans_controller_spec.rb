@@ -88,15 +88,14 @@ describe PlansController do
     it 'rejects unauthorized edits (html)' do
       plan = Factory(:plan)  # :owner => Factory(:user)
       get :edit, :id => plan.id
-      flash[:error].should_not be_blank
-      response.should redirect_to(plans_path)
+      response.code.should eq('403')
     end
     
     it 'rejects unauthorized edits (json)' do
       plan = Factory(:plan)
       get :edit, :id => plan.id, :format => :json
       response.code.should eq('403')
-      response.body.should include('not authorized')
+      response.body.should include('Access denied')
     end
   end
   
@@ -104,8 +103,7 @@ describe PlansController do
     it 'rejects unauthorized updates (html)' do
       plan = Factory(:plan)
       put :update, :id => plan.id
-      flash[:error].should_not be_blank
-      response.should redirect_to(plans_path)
+      response.code.should eq('403')
     end
     
     it 'updates a plan (html)' do
@@ -123,8 +121,7 @@ describe PlansController do
     it 'rejects unauthorized deletes (html)' do
       plan = Factory(:plan)
       delete :destroy, :id => plan.id
-      flash[:error].should_not be_blank
-      response.should redirect_to(plans_path)
+      response.code.should eq('403')
     end
     
     it 'deletes a plan I own (html)' do

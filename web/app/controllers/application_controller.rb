@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   
   rescue_from CanCan::AccessDenied do |exception|
     respond_to do |format|
-      format.html { render :file => "#{Rails.root}/public/403.html", :status => 403 }
+      format.html { render :file => "#{Rails.root}/public/403.html", :status => :forbidden }
       format.json { render :json => "Access denied", :status => :forbidden }
     end
   end
