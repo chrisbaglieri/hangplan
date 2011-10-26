@@ -53,7 +53,7 @@ class PlansController < ApplicationController
     msg = 'That plan could not be found. It may have been deleted.'
     respond_to do |format|
       format.html { flash[:error] = msg; redirect_to plans_path }
-      format.json { render :status => :not_found, :text => msg }
+      format.json { :json => msg, render :status => :not_found }
     end
   end
 end

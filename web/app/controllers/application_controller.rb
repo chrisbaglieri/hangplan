@@ -1,4 +1,8 @@
+require "application_responder"
+
 class ApplicationController < ActionController::Base
+  self.responder = ApplicationResponder
+
   protect_from_forgery
   before_filter :set_time_zone  
   respond_to :html, :json
