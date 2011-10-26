@@ -1,9 +1,10 @@
 class ParticipantsController < ApplicationController
-  load_and_authorize_resource
+  load_and_authorize_resource :participant
+  load_and_authorize_resource :plan, :through => :participant
 
   def create
     @participant.user = current_user
-    @participant.plan = Plan.find_by_id(params[:plan_id])
+    @participant.plan = @plan
     if @participant.plan.tentative
       @participant.points = 1
     end
