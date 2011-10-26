@@ -4,6 +4,8 @@
 en:
   plans:
     createhdr: Make a Plan
+    message:
+      destroy: Plan has been deleted.
   participants:
     message:
       create: You're in for %{plan}!

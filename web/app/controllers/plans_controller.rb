@@ -45,6 +45,7 @@ class PlansController < ApplicationController
   
   def destroy
     @plan.destroy
+    flash[:notice] = t('plans.message.destroy')
     respond_with(@plan, :location => :root)
   end
   
