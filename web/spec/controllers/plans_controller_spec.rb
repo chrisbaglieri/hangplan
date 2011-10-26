@@ -30,7 +30,7 @@ describe PlansController do
     
     it 'handles an invalid id (html)' do
       get :show, :id => 23
-      flash[:error].should_not be_blank
+      flash[:alert].should_not be_blank
       response.should redirect_to(plans_path)
     end
     

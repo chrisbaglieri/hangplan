@@ -45,15 +45,14 @@ class PlansController < ApplicationController
   
   def destroy
     @plan.destroy
-    flash[:notice] = t('plans.message.destroy')
     respond_with(@plan, :location => :root)
   end
   
   rescue_from ActiveRecord::RecordNotFound do
-    msg = 'That plan could not be found. It may have been deleted.'
+    msg = "Well that's sad, it looks like the plan you're looking for is no longer happening."
     respond_to do |format|
-      format.html { flash[:error] = msg; redirect_to plans_path }
-      format.json { :json => msg, render :status => :not_found }
+      format.html { flash[:alert] = msg; redirect_to plans_path }
+      format.json { render :json => msg, :status => :not_found }
     end
   end
 end
