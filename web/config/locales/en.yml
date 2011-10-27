@@ -10,6 +10,7 @@ en:
     message:
       create: You're in for %{plan}!
       destroy: You're out for %{plan}!
+      notfound: Oops, couldn't find that plan.
   activerecord:
     attributes:
       plan:

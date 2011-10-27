@@ -18,9 +18,10 @@ Hangplan::Application.routes.draw do
   match 'search' => 'search#index'
   
   resources :plans do
-    resources :participants, :only => [:create, :update, :destroy]
+    resources :participants, :only => [:create]
   end
-  
+
+  resources :participants, :only => [:update, :destroy]
   resources :users, :only => [:show]
   
 end
