@@ -1,31 +1,27 @@
-<div class="span-10">
-	<p class="big-fancy">Hangplan is the easiest way to plan get togethers with friends and discover what they are doing this week.</p>
-	<div class="prepend-2 span-8">
-		<%= link_to "Join. Then Hang!", new_user_registration_path, :class => 'big-action-button' %>
+<div class="row">
+	<div class="span8">
+		<h1 class="fancy">Hangplan is the simple, fun way to plan get togethers with friends and discover what they're doing this week. <%= link_to "Learn More", faq_path %>.</h1>
+		<p><%= link_to "Join. Then Hang!", new_user_registration_path, :class => "btn large" %></p>
+		<br /><hr /><br />
+		<h2>Two Ways To Use Hangplan</h2>
+		<br />
+		<div class="row">
+			<div class="span1"><%= image_tag("number1.png") %></div>
+			<div class="span7">
+				<h3>Plan Something</h3>
+				<p>Doing something fun and want to let your friends know all at once? Make a plan and send notifications to the contacts in your phonebook instantly.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span1"><%= image_tag("number2.png") %></div>
+			<div class="span7">
+				<h3>Join A Plan</h3>
+				<p>Like the happy hour Jane's going to Thursday night? Want to join Nick at the movies this Saturday? View their schedules in one simple interface and become an active part of them.'</p>
+			</div>
+		</div>
+		<br /><hr /><br />
 	</div>
-</div>
-<div class="span-8 last">
-	<%= image_tag("screenshot1.png") %>
-	<br />
-	<br />
-	<br />
-</div>
-<hr />
-<div class="prepend-4 span-14">
-	<br />
-	<h2>Two Ways To Use Hangplan</h2>
-</div>
-<div class="span-8 append-1">
-	<p class="prepend-2 big-fancy">Plan Something</p>
-	<p class="small-fancy">Want to set something up with your friends beforehand and only want to invite a select few? Plan an event and send notifications to the contacts in your phonebook instantly.</p>
-</div>
-<div class="span-9 last">
-	<p class="prepend-2 big-fancy">Join A Plan</p>
-	<p class="small-fancy">Like the happy hour Jane's going to Thursday night? Want to join Nick at the movies this Saturday? View their schedules in one simple interface and become a active part of it.</p>
-</div>
-<div class="prepend-3 span-15">
-	<br />
-	<iframe width="420" height="315" src="http://www.youtube.com/embed/gbSUlMhNV9U?rel=0" frameborder="0" allowfullscreen></iframe>
-	<br />
-	<br />
+	<div class="span5 offset1">
+		<%= image_tag("iphone-mockup.png") %>
+	</div>
 </div>

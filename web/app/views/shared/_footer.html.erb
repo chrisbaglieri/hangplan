@@ -1,12 +1,18 @@
 <div class="container">
-	<div class="prepend-2 span-20 append-2">
-		<div id="primary-navigation" class="span-24">
-			<ul>
-    	  <li><%= link_to 'About', about_path %></li>
-				<li><%= link_to 'Contact', contact_path %></li>
-				<li><%= link_to 'Twitter', "http://twitter.com/hangplan", :target => '_blank'%></li>
-				<li><%= link_to 'Facebook', "http://facebook.com/hangplan", :target => '_blank' %></li>
-    	</ul>
+	<div class="content">
+		<hr />
+		<div class="row">
+			<div class="span14">
+				<div class="primary-navigation">
+					<ul>
+		    	  <li><%= link_to 'ABOUT', about_path %></li> |
+						<li><%= link_to 'CONTACT', contact_path %></li> |
+						<li><%= link_to 'BLOG', 'http://blog.hangplan.com' %></li> |
+						<li><%= link_to 'TWITTER', "http://twitter.com/hangplan", :target => '_blank'%></li> |
+						<li><%= link_to 'FACEBOOK', "http://facebook.com/hangplan", :target => '_blank' %></li>
+		    	</ul>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

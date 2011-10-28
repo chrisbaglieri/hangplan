@@ -1,13 +1,13 @@
 <div class="container">
-	<div id="header" class="span-24">
-		<div class="prepend-2 span-20 append-2">
-			<div id="primary-navigation" class="span-20">
-				<ul>
-	    	  <%= render 'shared/navigation_items' %>
-	    	  <%= render 'shared/login_items' %>
-          <%= render 'shared/search' %>
-	    	</ul>
+	<div class="content">
+		<div class="row">
+			<div class="span6">
+				<%= link_to image_tag("hangplan-logo.png"), root_path %>
+			</div>
+			<div class="span8">
+				<%= render :partial => "shared/primary_navigation" %>
 			</div>
 		</div>
+		<hr />
 	</div>
 </div>
