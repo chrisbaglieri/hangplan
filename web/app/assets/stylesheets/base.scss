@@ -41,6 +41,7 @@ h1 {
 h2 { @include fancy-font; color: $sub-header-color; }
 h3 { color: $emphasized-link-color; text-transform: uppercase; }
 .emphasized-link { @include emphasized-link }
+.fancy { @include fancy-font; }
 
 
 /* HEADER */
@@ -51,7 +52,7 @@ h3 { color: $emphasized-link-color; text-transform: uppercase; }
 
 
 /* MAIN */
-
+.story { font-size: 24px; line-height: 36px; padding-bottom: 20px; }
 
 
 /* FOOTER */
