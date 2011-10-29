@@ -1,0 +1,62 @@
+$background-color: #cce7ec;
+$font-color: #9a8c7e;
+$sub-header-color: #00a1b1;
+$emphasized-link-color: #f15c22;
+
+@mixin flat-navigation {
+	ul { 
+		margin: 15px 0pt 0pt 0pt;
+		li {
+			display: inline; list-style-type: none; padding: 0pt 5px 0pt 5px;
+			a { text-decoration: none; }
+		}
+	}
+}
+
+@mixin emphasized-link {
+	text-transform: uppercase; 
+	color: $emphasized-link-color; 
+	font-weight: bold;
+	text-decoration: underline;
+	&:hover { color: $emphasized-link-color; }
+}
+
+@mixin fancy-font { 
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+
+/* GLOBAL */
+html { background: $background-color; }
+body { background: $background-color; font-family: "Helvetica Neue", Helvetica, Arial, default; height: 100%; color: $font-color; }
+.container { background: white; width: 820px; }
+.content { background-color: white; padding: 40px; margin: 0 -40px -40px; }
+h1 { 
+	@include fancy-font; color: $font-color; 
+	a { 
+		color: $emphasized-link-color; 
+		&:hover { color: $emphasized-link-color; }
+	} 
+}
+h2 { @include fancy-font; color: $sub-header-color; }
+h3 { color: $emphasized-link-color; text-transform: uppercase; }
+.emphasized-link { @include emphasized-link }
+.fancy { @include fancy-font; }
+
+
+/* HEADER */
+#header {
+	.content { background: image-url("header-stripe.png") repeat-x top #FFFFFF; }
+	.primary-navigation { @include flat-navigation; float: right; }
+}
+
+
+/* MAIN */
+.story { font-size: 24px; line-height: 36px; padding-bottom: 20px; }
+
+
+/* FOOTER */
+#footer {
+	text-align: center;
+	.primary-navigation { @include flat-navigation; }
+}
