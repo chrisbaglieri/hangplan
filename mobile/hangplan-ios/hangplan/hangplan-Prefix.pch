@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'hangplan' target in the 'hangplan' project
-//
-
-#ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-#endif
