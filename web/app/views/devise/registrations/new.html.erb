@@ -1,18 +1,13 @@
 <h2>Sign up</h2>
-
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="inputs">
-    <%= f.input :email, :required => true, :autofocus => true %>
-    <%= f.input :password, :required => true %>
-    <%= f.input :password_confirmation, :required => true %>
-    <%= f.input :name, :required => true %>
-  </div>
-
-  <div class="actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
+<%= twitter_bootstrap_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+	<%= f.inputs do %>
+		<%= f.text_field :name, :required => true %>
+		<%= f.email_field :email, :required => true, :placeholder => 'me@example.com' %>
+  	<%= f.password_field :password, :required => true %>
+		<%= f.password_field :password_confirmation, 'Confirmation', :required => true %>
+	<% end %>
+	<%= f.actions do %>
+  	<%= f.submit "Sign up" %>
+	<% end %>
 <% end %>
-
 <%= render :partial => "devise/shared/links" %>

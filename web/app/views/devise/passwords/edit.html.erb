@@ -1,19 +1,12 @@
 <h2>Change your password</h2>
-
-<%= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
-  <%= f.error_notification %>
-
-  <%= f.input :reset_password_token, :as => :hidden %>
-  <%= f.full_error :reset_password_token %>
-
-  <div class="inputs">
-    <%= f.input :password, :label => "New password", :required => true %>
-    <%= f.input :password_confirmation, :label => "Confirm your new password", :required => true %>
-  </div>
-
-  <div class="actions">
-    <%= f.button :submit, "Change my password" %>
-  </div>
+<%= twitter_bootstrap_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
+	<%= f.inputs do %>
+		<%= f.text_field :reset_password_token, :as => :hidden %>
+		<%= f.password_field :password, :required => true, :placeholder => 'New password' %>
+		<%= f.password_field :password_confirmation, :required => true, :placeholder => 'Confirm new password' %>
+	<% end %>
+	<%= f.actions do %>
+		<%= f.submit "Change my password" %>
+	<% end %>
 <% end %>
-
 <%= render :partial => "devise/shared/links" %>

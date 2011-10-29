@@ -1,12 +1,14 @@
-<%= simple_form_for @plan do |f| %>
-	<%= f.input :name %>
-	<%= f.input :location %>
-	<%= f.input :link %>
-	<div id="time_entry">
-	  <%= f.input :time %>
-	</div>
-	<%= f.input :sponsored %>
-	<%= f.input :tentative %>
-	<%= f.button :submit %>
+<%= twitter_bootstrap_form_for @plan do |f| %>
+	<%= f.inputs do %>
+		<%= f.text_field :name, :required => true %>
+		<%= f.text_field :location %>
+		<div id="time_entry"><%= f.text_field :time %></div>
+		<%= f.text_field :link %>
+		<%= f.toggles 'Tentative' do %><%= f.check_box :tentative %><% end %>
+	<% end %>
+	<%= f.actions do %>
+  	<%= f.submit "Sign in" %>
+		<%= button_tag  'Cancel', :type => 'reset', :class => 'btn' %>
+	<% end %>
 <% end %>
 
