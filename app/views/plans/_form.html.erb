@@ -2,7 +2,7 @@
 	<%= f.inputs do %>
 		<%= f.text_field :name, :required => true %>
 		<%= f.text_field :location %>
-		<div id="time_entry"><%= f.text_field :time %></div>
+		<div id="time_entry"><%= f.text_field :date %></div>
 		<%= f.text_field :link %>
 		<%= f.toggles 'Tentative' do %><%= f.check_box :tentative %><% end %>
 	<% end %>
