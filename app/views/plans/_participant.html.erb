@@ -7,7 +7,7 @@
 			<%= participant.user.name %>
 			<br />
 			<% if participant.user == current_user %>
-				<%= link_to "I'm Out", participant_path(participant), :method => :delete, :class => ['btn', 'small', 'danger'] %>
+				<%= link_to "I'm Out", participant_path(participant), :method => :delete, :class => ['btn', 'supersmall', 'danger'] %>
 			<% end %>
 		</p>
 	</div>

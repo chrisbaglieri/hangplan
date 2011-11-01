@@ -42,6 +42,7 @@ h2 { @include fancy-font; color: $sub-header-color; }
 h3 { color: $emphasized-link-color; text-transform: uppercase; }
 .emphasized-link { @include emphasized-link }
 .fancy { @include fancy-font; }
+.btn.supersmall { font-size: 11px; padding: 2px 9px; margin-top: 4px; }
 
 
 /* HEADER */
