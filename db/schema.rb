@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111025021428) do
+ActiveRecord::Schema.define(:version => 20111101022632) do
 
   create_table "participants", :force => true do |t|
     t.integer  "user_id"
@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(:version => 20111025021428) do
   create_table "plans", :force => true do |t|
     t.string   "name"
     t.string   "location"
-    t.datetime "time"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.float    "latitude"
@@ -36,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20111025021428) do
     t.boolean  "tentative",  :default => false
     t.string   "link"
     t.integer  "user_id"
+    t.date     "date"
   end
 
   add_index "plans", ["user_id"], :name => "index_plans_on_user_id"
