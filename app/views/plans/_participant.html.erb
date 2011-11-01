@@ -1,3 +1,14 @@
-<div class="participant">
-	<p><%= participant.user.email %></p>
+<div class="row participant">
+	<div class="span1">
+		<%= image_tag participant.user.gravatar_url(:size => 45) %>
+	</div>
+	<div class="span4">
+		<p>
+			<%= participant.user.name %>
+			<br />
+			<% if participant.user == current_user %>
+				<%= link_to "I'm Out", participant_path(participant), :method => :delete, :class => ['btn', 'small', 'danger'] %>
+			<% end %>
+		</p>
+	</div>
 </div>
