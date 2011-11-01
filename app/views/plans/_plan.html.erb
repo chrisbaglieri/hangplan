@@ -7,7 +7,6 @@
 		<li class="divider span-1 last">&nbsp;</li>
 		<li class="section span-6"><%= image_tag plan.owner.gravatar_url(:size => 24) %><%= plan.name %></li>
 		<li class="section span-5"><% if plan.location? %><%= plan.location %><% else %>Somewhere I guess<% end %></li>
-		<li class="section span-3"><% if plan.time? %><%= format_time(plan.time) %><% else %>Sometime I suppose<% end %></li>
 		<li class="section span-2">	  
 		  <%= link_to "IN", plan_participants_path(plan), :method => :post, :class => 'action-button' %>
 		</li>
