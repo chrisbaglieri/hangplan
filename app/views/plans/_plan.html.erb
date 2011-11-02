@@ -1,20 +1,24 @@
-<div class="plan">
-	<div class="divider span6"><% if plan.date? %><%= format_date(plan.date) %><% else %>Sooner or later<% end %></div>
-	<div class="divider span3">Where</div>
-	<div class="divider span3">When</div>
-	<div class="divider span2">Actions</div>
-	<div class="span6">
-		<%= image_tag plan.owner.gravatar_url(:size => 45) %>
-		<div class="owner"><%= plan.owner.name %></div>
-		<span class="name"><%= plan.name %></span>
+<div class="row plan">
+	<div class="row">
+		<div class="divider span6"><% if plan.date? %><%= format_date(plan.date) %><% else %>Sooner or later<% end %></div>
+		<div class="divider span3">Where</div>
+		<div class="divider span3">When</div>
+		<div class="divider span2">Actions</div>
 	</div>
-	<div class="metadata span3"><%= plan.location %></div>
-	<div class="metadata span3">1:00 pm - 3:30 pm</div>
-	<div class="metadata span2">
-		<% if plan.participant? current_user %>
-			<%= link_to "I'm In", plan_participants_path(plan), :method => :post, :class => ['btn', 'supersmall', 'disabled'] %>
-		<% else %>
-			<%= link_to "I'm In", plan_participants_path(plan), :method => :post, :class => ['btn', 'supersmall'] %>
-		<% end %>
+	<div class="row">
+		<div class="span6">
+			<%= image_tag plan.owner.gravatar_url(:size => 45) %>
+			<div class="owner"><%= plan.owner.name %></div>
+			<span class="name"><%= link_to plan.name, plan %></span>
+		</div>
+		<div class="metadata span3"><%= plan.location %></div>
+		<div class="metadata span3">1:00 pm - 3:30 pm</div>
+		<div class="metadata span2">
+			<% if plan.participant? current_user %>
+				<%= link_to "I'm In", plan_participants_path(plan), :method => :post, :class => ['btn', 'supersmall', 'disabled'] %>
+			<% else %>
+				<%= link_to "I'm In", plan_participants_path(plan), :method => :post, :class => ['btn', 'supersmall'] %>
+			<% end %>
+		</div>
 	</div>
 </div>

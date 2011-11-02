@@ -3,5 +3,7 @@
 		<%= link_to "MAKE A PLAN", new_plan_path %>
 		<br /><br />
 	</div>
-	<%= render :partial => "plan", :collection => @plans %>
+	<div class="span14">
+		<%= render :partial => "plan", :collection => @plans %>
+	</div>
 </div>
