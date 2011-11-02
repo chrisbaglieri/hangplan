@@ -43,7 +43,7 @@ h1 {
 h2 { @include fancy-font; color: $sub-header-color; }
 h3 { color: $emphasized-link-color; text-transform: uppercase; }
 .container { background: white; width: 820px; }
-.content { background-color: white; padding: 40px; margin: 0 -40px -40px; }
+.content { background-color: white; padding: 40px; margin: 0 -40px -55px; }
 .emphasized-link { @include emphasized-link }
 .fancy { @include fancy-font; }
 .btn.supersmall { font-size: 11px; padding: 2px 9px; margin-top: 4px; }
@@ -63,6 +63,7 @@ h3 { color: $emphasized-link-color; text-transform: uppercase; }
 		.participant { padding-bottom: 10px; }
 	}
 	#plans {
+		.main-actions { text-align: right; }
 		.plan { 
 			.divider { background: $plan-grid-divider; color: white; text-transform: uppercase; text-align: center; padding: 3px 0pt; margin-bottom: 10px; }
 			img { float: left; padding-right: 10px; }
