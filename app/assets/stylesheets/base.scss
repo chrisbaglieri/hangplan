@@ -2,6 +2,7 @@ $background-color: #cce7ec;
 $font-color: #9a8c7e;
 $sub-header-color: #00a1b1;
 $emphasized-link-color: #f15c22;
+$plan-grid-divider: #00a1b1;
 
 @mixin flat-navigation {
 	ul { 
@@ -55,7 +56,19 @@ h3 { color: $emphasized-link-color; text-transform: uppercase; }
 /* MAIN */
 #main {
 	.story { font-size: 24px; line-height: 36px; padding-bottom: 20px; }
-	.participant { padding-bottom: 10px; }
+	#plan { 
+		.participant { padding-bottom: 10px; }
+	}
+	#plans {
+		.plan { 
+			.divider { background: $plan-grid-divider; color: white; text-transform: uppercase; text-align: center; padding: 3px 0pt; margin-bottom: 10px; }
+			img { float: left; padding-right: 10px; }
+			.name { color: $emphasized-link-color; font-weight: bold; font-size: 18px; }
+			.owner { padding: 2px 0pt 3px 0pt; }
+			.metadata { text-align: center; padding-top: 10px; }
+		}
+	}
+	
 }
 
 
