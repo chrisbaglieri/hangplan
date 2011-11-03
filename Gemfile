@@ -11,6 +11,7 @@ gem 'gravtastic'
 gem 'responders'
 gem 'twitter_bootstrap_form_for'
 gem 'squeel'
+gem 'kaminari'
 
 group :assets do
   gem 'sass-rails',   '~> 3.1.4'
