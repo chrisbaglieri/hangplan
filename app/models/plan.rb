@@ -11,6 +11,11 @@ class Plan < ActiveRecord::Base
   before_create :add_owner_as_participant
   before_save :merge_date_fields
   
+  scope :after, lambda { |date| where("start_at >= ?", date) }
+  scope :before, lambda { |date| where("start_at <= ?", date) }
+  scope :confirmed, where(:tentative => false)
+  scope :unconfirmed, where(:tentative => true)
+  
   def participant?(user)
     self.users.include?(user)
   end

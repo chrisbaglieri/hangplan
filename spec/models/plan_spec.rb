@@ -25,4 +25,36 @@ describe Plan do
       plan.owner?(@user).should == true
     end
   end
+  
+  it "should be able to fetch confirmed plans" do
+    Factory(:plan, :owner => @user)
+    Plan.confirmed.each do |plan|
+      plan.tentative.should == false
+    end
+  end
+  
+  it "should be able to fetch unconfirmed plans" do
+    Factory(:plan, :owner => @user, :tentative => true)
+    Plan.unconfirmed.each do |plan|
+      plan.tentative.should == true
+    end
+  end
+  
+  it "should be able to fetch plans before a date" do
+    Factory(:plan, :owner => @user, :start_at => 2.weeks.ago)
+    Factory(:plan, :owner => @user, :start_at => 2.weeks.from_now)
+    today = DateTime.now
+    Plan.before(today).each do |plan|
+      plan.start_at.should <= today
+    end
+  end
+  
+  it "should be able to fetch plans after a date" do
+    Factory(:plan, :owner => @user, :start_at => 2.weeks.ago)
+    Factory(:plan, :owner => @user, :start_at => 2.weeks.from_now)
+    today = DateTime.now
+    Plan.after(today).each do |plan|
+      plan.start_at.should >= today
+    end
+  end
 end

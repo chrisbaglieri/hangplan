@@ -5,21 +5,10 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     
     if @user.persisted?
       flash[:notice] = I18n.t 'devise.omniauth_callbacks.success', :kind => "Facebook"
-      respond_to do |format|
-        format.html { sign_in_and_redirect @user, :event => :authentication }
-        format.json do
-          @user.generate_mobile_key!
-          render :json => @user
-        end
-      end
+      sign_in_and_redirect @user, :event => :authentication
     else
       session['devise.facebook_data'] = env['omniauth.auth']
-      respond_to do |format|
-        format.html { redirect_to new_user_registration_url }
-        format.json do
-          render :status => 401 
-        end
-     end
+      redirect_to new_user_registration_url
     end
   end
   

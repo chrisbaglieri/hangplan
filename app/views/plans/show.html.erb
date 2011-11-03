@@ -1,25 +1,27 @@
-<div class="row">
-	<div class="span9"><h2><%= @plan.name %></h2><hr /></div>
-	<div class="span5"><h2>Participants</h2><hr /></div>
-</div>
-<div class="row">
-	<div class="span9">
-		<% if can? :update, @plan %>
-			<p>
-				<%= link_to "Edit", edit_plan_path(@plan), :class => ['btn', 'small'] %>
-				<%= link_to "Delete", plan_path(@plan), :method => :delete, :class => ['btn', 'danger', 'small'], :confirm => "Are you sure you wish to delete this plan?" %>
-			</p>
-		<% end %>
-		<h3>Details</h3>
-		<ul>
-			<li>Where: <% if @plan.location? %><%= @plan.location %><% else %>Somewhere I guess<% end %></li>
-			<li>When: <%= format_plan_start(@plan) %> </li>
-		</ul>
+<div id="plan">
+	<div class="row">
+		<div class="span9"><h2><%= @plan.name %></h2><hr /></div>
+		<div class="span5"><h2>Participants</h2><hr /></div>
 	</div>
-	<div class="span5">
-		<% unless @plan.participant? current_user %>
-			<p><%= link_to "I'm In", plan_participants_path(@plan), :method => :post, :class => ['btn', 'small', 'success'] %></p>
-		<% end %>
-		<%= render :partial => "participant", :collection => @plan.participants %>
+	<div class="row">
+		<div class="span9">
+			<% if can? :update, @plan %>
+				<p>
+					<%= link_to "Edit", edit_plan_path(@plan), :class => ['btn', 'small'] %>
+					<%= link_to "Delete", plan_path(@plan), :method => :delete, :class => ['btn', 'danger', 'small'], :confirm => "Are you sure you wish to delete this plan?" %>
+				</p>
+			<% end %>
+			<h3>Details</h3>
+			<ul>
+				<li>Where: <% if @plan.location? %><%= @plan.location %><% else %>Somewhere I guess<% end %></li>
+				<li>When: <%= format_plan_start(@plan) %> </li>
+			</ul>
+		</div>
+		<div class="span5">
+			<% unless @plan.participant? current_user %>
+				<p><%= link_to "I'm In", plan_participants_path(@plan), :method => :post, :class => ['btn', 'small', 'success'] %></p>
+			<% end %>
+			<%= render :partial => "participant", :collection => @plan.participants %>
+		</div>
 	</div>
 </div>

@@ -6,6 +6,10 @@ en:
     createhdr: Make a Plan
     message:
       destroy: Plan has been deleted.
+    when: 
+      when: Whenever
+      today: Today
+      tomorrow: Tomorrow
   participants:
     message:
       create: You're in for %{plan}!
