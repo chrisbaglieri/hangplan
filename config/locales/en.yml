@@ -16,8 +16,14 @@ en:
       plan:
         name: What
         location: Where
-        time: When
+        start_at: When
   helpers:
     submit:
       plan:
         create: Make a Plan
+  date:
+    formats:
+      default: "%m/%d/%Y"
+  time:
+    formats:
+      default: "%I:%M%P"

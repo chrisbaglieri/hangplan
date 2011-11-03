@@ -1,3 +1,11 @@
-// Place all the styles related to the Plans controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+input#plan_start_date_s {
+  width: 8em;
+  // Todo: Replace with our own image.
+  background-image: url('http://static.ak.fbcdn.net/rsrc.php/v1/yA/r/saFg5U_7LMd.png');
+  background-repeat: no-repeat;
+  background-position: 95%;
+}
+
+select#plan_start_time_s {
+  width: 8em;
+}

@@ -2,10 +2,19 @@
 	<%= f.inputs do %>
 		<%= f.text_field :name, :required => true %>
 		<%= f.text_field :location %>
-		<div id="time_entry"><%= f.text_field :date %></div>
+		
+		<div class="clearfix" id="plan_start_at_input">
+		  <%= f.label :start_at %>
+		  <div class="input">
+        <%= text_field :plan, :start_date_s %>
+        <%= select :plan, :start_time_s, time_choices %>
+      </div>
+    </div>
+
 		<%= f.text_field :link %>
 		<%= f.toggles 'Tentative' do %><%= f.check_box :tentative %><% end %>
 	<% end %>
+
 	<%= f.actions do %>
   	<%= f.submit "Create" %>
 		<%= button_tag  'Cancel', :type => 'reset', :class => 'btn' %>

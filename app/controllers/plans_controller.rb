@@ -3,9 +3,9 @@ class PlansController < ApplicationController
   
   def index
     plans = Plan.all
-    non_null_plans = plans.select { |p| p.date != nil }
+    non_null_plans = plans.select { |p| p.start_at != nil }
     non_null_plans.sort! { |x,y| x.date <=> y.date }
-    null_time_plans = plans.select { |p| p.date.nil? }
+    null_time_plans = plans.select { |p| p.start_at.nil? }
     @plans = non_null_plans.concat(null_time_plans)
     respond_to do |format|
       format.html

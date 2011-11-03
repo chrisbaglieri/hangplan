@@ -1,6 +1,6 @@
 <div class="plan span-18">
 	<ul class="span-18">
-		<li class="divider span-6"><% if plan.date? %><%= format_date(plan.date) %><% else %>Sooner or later<% end %></li>
+		<li class="divider span-6"><%= format_plan_start(plan) %></li>
 		<li class="divider span-5">WHERE</li>
 		<li class="divider span-3">WHEN</li>
 		<li class="divider span-2">&nbsp;</li>
