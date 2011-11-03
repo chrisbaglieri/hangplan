@@ -25,4 +25,26 @@ describe Plan do
       plan.owner?(@user).should == true
     end
   end
+  
+  it "should be able to fetch confirmed plans" do
+    Factory(:plan, :owner => @user)
+    Plan.confirmed.each do |plan|
+      plan.tentative.should == false
+    end
+  end
+  
+  it "should be able to fetch unconfirmed plans" do
+    Factory(:plan, :owner => @user, :tentative => true)
+    Plan.unconfirmed.each do |plan|
+      plan.tentative.should == true
+    end
+  end
+  
+  it "should be able to fetch upcoming plans" do
+    Factory(:plan, :owner => @user, :date => 2.weeks.ago)
+    Factory(:plan, :owner => @user, :date => 2.weeks.from_now)
+    Plan.upcoming(1.week.ago).each do |plan|
+      plan.date.should >= 1.week.ago.to_datetime
+    end
+  end
 end
