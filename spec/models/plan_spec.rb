@@ -40,11 +40,21 @@ describe Plan do
     end
   end
   
-  it "should be able to fetch upcoming plans" do
+  it "should be able to fetch plans before a date" do
     Factory(:plan, :owner => @user, :date => 2.weeks.ago)
     Factory(:plan, :owner => @user, :date => 2.weeks.from_now)
-    Plan.upcoming(1.week.ago).each do |plan|
-      plan.date.should >= 1.week.ago.to_datetime
+    today = DateTime.now
+    Plan.before(today).each do |plan|
+      plan.date.should <= today
+    end
+  end
+  
+  it "should be able to fetch plans after a date" do
+    Factory(:plan, :owner => @user, :date => 2.weeks.ago)
+    Factory(:plan, :owner => @user, :date => 2.weeks.from_now)
+    today = DateTime.now
+    Plan.after(today).each do |plan|
+      plan.date.should >= today
     end
   end
 end

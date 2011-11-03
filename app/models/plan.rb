@@ -8,7 +8,8 @@ class Plan < ActiveRecord::Base
   after_validation :geocode
   before_create :add_owner_as_participant
   
-  scope :upcoming, lambda { |date| where("date > ?", date) }
+  scope :after, lambda { |date| where("date >= ?", date) }
+  scope :before, lambda { |date| where("date <= ?", date) }
   scope :confirmed, where(:tentative => false)
   scope :unconfirmed, where(:tentative => true)
   
