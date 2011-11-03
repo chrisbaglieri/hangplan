@@ -5,12 +5,12 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'devise_invitable'
 gem 'omniauth'
-gem 'pg'
 gem 'cancan'
 gem 'geocoder'
 gem 'gravtastic'
 gem 'responders'
 gem 'twitter_bootstrap_form_for'
+gem 'squeel'
 
 group :assets do
   gem 'sass-rails',   '~> 3.1.4'
