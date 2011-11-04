@@ -41,8 +41,8 @@ describe Plan do
   end
   
   it "should be able to fetch plans before a date" do
-    Factory(:plan, :owner => @user, :start_at => 2.weeks.ago)
-    Factory(:plan, :owner => @user, :start_at => 2.weeks.from_now)
+    Factory(:plan, :owner => @user, :start_date_s => 2.weeks.ago.strftime('%m/%d/%Y'))
+    Factory(:plan, :owner => @user, :start_date_s => 2.weeks.from_now.strftime('%m/%d/%Y'))
     today = DateTime.now
     Plan.starts_before(today).each do |plan|
       plan.start_at.should <= today
@@ -50,8 +50,8 @@ describe Plan do
   end
   
   it "should be able to fetch plans after a date" do
-    Factory(:plan, :owner => @user, :start_at => 2.weeks.ago)
-    Factory(:plan, :owner => @user, :start_at => 2.weeks.from_now)
+    Factory(:plan, :owner => @user, :start_date_s => 2.weeks.ago.strftime('%m/%d/%Y'))
+    Factory(:plan, :owner => @user, :start_date_s => 2.weeks.from_now.strftime('%m/%d/%Y'))
     today = DateTime.now
     Plan.starts_after(today).each do |plan|
       plan.start_at.should >= today
