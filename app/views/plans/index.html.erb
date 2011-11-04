@@ -1,7 +1,9 @@
 <div id="plans" class="row">
-	<div class="span14 main-actions">
-		<%= link_to "MAKE A PLAN", new_plan_path %>
-		<br /><br />
+	<div class="span12">
+		<%= render :partial => "filter", :object => @filter %>
+	</div>
+	<div class="span2">
+		<%= link_to "Make A Plan", new_plan_path, :class => ['btn', 'small', 'primary'] %>
 	</div>
 	<div class="span14">
 		<%= render :partial => "plan", :collection => @plans %>
