@@ -3,7 +3,10 @@
 
 en:
   plans:
-    createhdr: Make a Plan
+    new:
+      header: Make a Plan
+    edit:
+      header: Update a Plan
     message:
       destroy: Plan has been deleted.
     when: 
