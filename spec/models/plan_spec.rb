@@ -44,7 +44,7 @@ describe Plan do
     Factory(:plan, :owner => @user, :start_at => 2.weeks.ago)
     Factory(:plan, :owner => @user, :start_at => 2.weeks.from_now)
     today = DateTime.now
-    Plan.before(today).each do |plan|
+    Plan.starts_before(today).each do |plan|
       plan.start_at.should <= today
     end
   end
@@ -53,7 +53,7 @@ describe Plan do
     Factory(:plan, :owner => @user, :start_at => 2.weeks.ago)
     Factory(:plan, :owner => @user, :start_at => 2.weeks.from_now)
     today = DateTime.now
-    Plan.after(today).each do |plan|
+    Plan.starts_after(today).each do |plan|
       plan.start_at.should >= today
     end
   end

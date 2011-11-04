@@ -2,11 +2,17 @@ class PlansController < ApplicationController
   load_and_authorize_resource
   
   def index
-    plans = Plan.all
-    non_null_plans = plans.select { |p| p.start_at != nil }
-    non_null_plans.sort! { |x,y| x.start_at <=> y.start_at }
-    null_time_plans = plans.select { |p| p.start_at.nil? }
-    @plans = non_null_plans.concat(null_time_plans)
+    filter ||= params[:filter] 
+    case filter
+    when "tenative"
+      @plans = Plan.unconfirmed
+    when "1week"
+      @plans = Plan.starts_after(1.week.ago)
+    when "2week"
+      @plans = Plan.starts_after(2.weeks.ago)
+    else # 1month
+      @plans = Plan.starts_after(1.month.ago)
+    end
     respond_to do |format|
       format.html
       format.json do
