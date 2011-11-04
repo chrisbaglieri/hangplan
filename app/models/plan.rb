@@ -3,13 +3,13 @@ class Plan < ActiveRecord::Base
   has_many :participants, :dependent => :destroy
   has_many :users, :through => :participants
   attr_accessible :name, :location, :date, :latitude, :longitude, :sponsored, 
-    :tentative, :link, :start_date_s, :start_time_s
+    :tentative, :link, :start_date_s, :start_time_s, :end_time_s
   geocoded_by :location
   validates_presence_of :name, :owner
-  validate :check_date_parse_errors
+  validate :validate_start_at
+  validate :validate_end_at
   after_validation :geocode
   before_create :add_owner_as_participant
-  before_save :merge_date_fields
   
   scope :after, lambda { |date| where("start_at >= ?", date) }
   scope :before, lambda { |date| where("start_at <= ?", date) }
@@ -42,19 +42,29 @@ class Plan < ActiveRecord::Base
     @start_time_s = s
   end
   
+  def end_time_s
+    @end_time_s ||= self.end_at.strftime('%H:%M') if self.end_at
+    @end_time_s
+  end
+  
+  def end_time_s=(s)
+    @end_time_s = s
+  end
+  
   private
   
   def add_owner_as_participant
     users << owner
   end
   
-  def check_date_parse_errors
-    unless @start_date_s.blank?    
-      self.start_at = Date.strptime(@start_date_s, '%m/%d/%Y')
-      if @start_time_s.blank?
-        logger.debug('wtf')
-        self.start_at = self.start_at.beginning_of_day
-      else
+  def validate_start_at
+    if @start_date_s.blank?
+      self.start_at = nil
+    else
+      self.start_at = Date.strptime(@start_date_s, '%m/%d/%Y').beginning_of_day
+      unless @start_time_s.blank?
+        # Parse and change the date manually because strftime doesn't 
+        # do time zones or daylight savings.
         h, m = @start_time_s.split(':')
         self.start_at = self.start_at.change(:hour => h.to_i, :min => m.to_i)
       end
@@ -63,6 +73,18 @@ class Plan < ActiveRecord::Base
     errors.add(:start_date_s, "is invalid")
   end
   
-  def merge_date_fields
+  def validate_end_at
+    # end_at = start date + end time
+    if @end_time_s.blank?
+      self.end_at = nil
+    else
+      # Parse and change the date manually because strftime doesn't 
+      # do time zones or daylight savings.
+      d = Date.strptime(@start_date_s, '%m/%d/%Y').beginning_of_day
+      h, m = @end_time_s.split(':')
+      self.end_at = d.change(:hour => h.to_i, :min => m.to_i)
+    end
+  rescue ArgumentError
+    errors.add(:start_date_s, "is invalid")
   end
 end

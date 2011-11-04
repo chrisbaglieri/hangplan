@@ -7,7 +7,7 @@ en:
     message:
       destroy: Plan has been deleted.
     when: 
-      when: Whenever
+      ever: Whenever
       today: Today
       tomorrow: Tomorrow
   participants:

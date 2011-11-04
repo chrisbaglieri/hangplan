@@ -6,6 +6,7 @@ input#plan_start_date_s {
   background-position: 95%;
 }
 
-select#plan_start_time_s {
+select#plan_start_time_s, 
+select#plan_end_time_s {
   width: 8em;
 }

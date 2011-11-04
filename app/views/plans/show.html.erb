@@ -14,7 +14,7 @@
 			<h3>Details</h3>
 			<ul>
 				<li>Where: <% if @plan.location? %><%= @plan.location %><% else %>Somewhere I guess<% end %></li>
-				<li>When: <%= format_plan_start(@plan) %> </li>
+				<li>When: <%= format_plan_date_and_times(@plan) %> </li>
 			</ul>
 		</div>
 		<div class="span5">

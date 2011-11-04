@@ -6,8 +6,10 @@
 		<div class="clearfix" id="plan_start_at_input">
 		  <%= f.label :start_at %>
 		  <div class="input">
-        <%= text_field :plan, :start_date_s %>
+        <%= text_field :plan, :start_date_s, :placeholder => t('plans.when.ever') %>
         <%= select :plan, :start_time_s, time_choices %>
+        <span width="100%">to</span>
+        <%= select :plan, :end_time_s, time_choices(true) %>
       </div>
     </div>
 
