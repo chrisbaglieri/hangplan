@@ -13,7 +13,7 @@ module PlansHelper
   def time_choices(allow_nil = false)
     @time_choices ||= generate_time_choices
     if allow_nil
-      @time_choices.unshift [ t('plans.when.ever'), '' ]
+      [[ t('plans.when.ever'), '' ]] + @time_choices 
     else
       @time_choices
     end
@@ -49,7 +49,7 @@ module PlansHelper
     choices = []  # [ ['whenever', ''] ]
     (0..23).each do |h|
       ['00', '30'].each do |m|
-        choices << [ "#{h == 0 ? 12 : h<13 ? h : h-12}:#{m}#{h<12 ? 'am' : 'pm'}", "#{h}:#{m}" ]
+        choices << [ "#{h == 0 ? 12 : h<13 ? h : h-12}:#{m}#{h<12 ? 'am' : 'pm'}", "#{'%02d'%h}:#{m}" ]
       end
     end
     choices
