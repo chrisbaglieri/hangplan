@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
+  include Amistad::FriendModel
   include Gravtastic
   gravtastic
-  devise :invitable, :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :omniauthable
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :omniauthable
   geocoded_by :location
   has_many :participants
   has_many :plans, :through => :participants
