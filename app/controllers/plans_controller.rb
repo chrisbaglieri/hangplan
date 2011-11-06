@@ -2,19 +2,9 @@ class PlansController < ApplicationController
   load_and_authorize_resource
   
   def index
-    @filter ||= params[:filter] 
-    case @filter
-    when "tentative"
-      @plans = Plan.unconfirmed
-    when "1week" # out a week
-      @plans = Plan.on_or_after(DateTime.now).on_or_before(1.week.from_now)
-    when "2weeks" # out two weeks
-      @plans = Plan.on_or_after(DateTime.now).on_or_before(2.weeks.from_now)
-    when "1month" # out a month
-      @plans = Plan.on_or_after(DateTime.now).on_or_before(1.month.from_now)
-    else # all future
-      @plans = Plan.on_or_after(DateTime.now)
-    end
+    users = current_user.friends
+    users << current_user
+    @plans = Plan.where{{ user_id.in => users }}.page params[:page]
     respond_to do |format|
       format.html
       format.json do

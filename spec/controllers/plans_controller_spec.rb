@@ -9,47 +9,22 @@ describe PlansController do
   end
   
   describe 'GET index' do
-    
-    it 'renders in HTML format without filters' do
-      plan = Factory(:plan, :start_date_s => 1.day.from_now.strftime('%m/%d/%Y'))
+    it 'renders in HTML format without page' do
+      plan = Factory(:plan, :start_date_s => 1.day.from_now.strftime('%m/%d/%Y'), :owner => @user)
       get :index
       assigns(:plans).should eq([plan])
       response.should be_success
       response.should render_template('index')
     end
 
-    it 'renders in HTML format with 1 month out filter' do
-      plan = Factory(:plan, :start_date_s => 2.weeks.from_now.strftime('%m/%d/%Y'))
-      get :index, :filter => '1month'
+    it 'renders in HTML format on page two' do
+      (1..20).each { Factory(:plan, :start_date_s => 2.weeks.from_now.strftime('%m/%d/%Y'), :owner => @user) }
+      plan = Factory(:plan, :start_date_s => 2.weeks.from_now.strftime('%m/%d/%Y'), :owner => @user)
+      get :index, :page => '2'
       assigns(:plans).should eq([plan])
       response.should be_success
       response.should render_template('index')
-    end
-    
-    it 'renders in HTML format with 2 weeks out filter' do
-      plan = Factory(:plan, :start_date_s => 1.week.from_now.strftime('%m/%d/%Y'))
-      get :index, :filter => '2weeks'
-      assigns(:plans).should eq([plan])
-      response.should be_success
-      response.should render_template('index')
-    end
-    
-    it 'renders in HTML format' do
-      plan = Factory(:plan, :start_date_s => 2.days.from_now.strftime('%m/%d/%Y'))
-      get :index, :filter => '1week'
-      assigns(:plans).should eq([plan])
-      response.should be_success
-      response.should render_template('index')
-    end
-    
-    it 'renders in HTML format' do
-      plan = Factory(:plan, :tentative => true)
-      get :index, :filter => 'tentative'
-      assigns(:plans).should eq([plan])
-      response.should be_success
-      response.should render_template('index')
-    end
-    
+    end    
   end
   
   describe 'GET show' do
