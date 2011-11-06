@@ -1,6 +1,0 @@
-<ul class="pills">
-	<% if filter == '1month' %><li class="active"><% else %><li><% end %><%= link_to "1 Month Out", plans_path + '?filter=1month' %></li>
-  <% if filter == '2weeks' %><li class="active"><% else %><li><% end %><%= link_to "2 Weeks Out", plans_path + '?filter=2weeks' %></li>
-  <% if filter == '1week' %><li class="active"><% else %><li><% end %><%= link_to "1 Week Out", plans_path + '?filter=1week' %></li>
-  <% if filter == 'tentative' %><li class="active"><% else %><li><% end %><%= link_to "Tentative Only", plans_path + '?filter=tentative' %></li>
-</ul>
