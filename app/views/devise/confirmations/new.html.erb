@@ -1,4 +1,4 @@
-<h2>Resend Confirmation Instructions</h2>
+<h1>Resend Confirmation Instructions</h1>
 <%= twitter_bootstrap_form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f| %>
   <%= f.inputs do %>
     <%= f.email_field :email, :required => true, :placeholder => 'me@example.com' %>
