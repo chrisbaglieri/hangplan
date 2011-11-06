@@ -13,8 +13,11 @@ Hangplan::Application.routes.draw do
     resources :participants, :only => [:create]
   end
   resources :participants, :only => [:update, :destroy]
-  resources :friendships, :only => [:create, :destroy] do
-    put 'approve', :on => :member
+  resources :friends, :controller => 'friendships', :only => [:index, :create] do
+    collection do
+      put 'approve'
+      delete 'remove'
+    end
   end
   
   # devise-specific routes

@@ -9,7 +9,7 @@ class Ability
       can [:update, :destroy], Plan, :owner => user
       can [:manage], Participant, :user => user
       can [:read], :notifications
-      can [:manage, :approve], Friendship
+      can [:read, :create, :approve, :block, :remove], Friendship
     end
   end
 end
