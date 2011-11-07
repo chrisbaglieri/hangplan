@@ -11,6 +11,7 @@ class Plan < ActiveRecord::Base
   after_validation :geocode
   before_create :add_owner_as_participant
   
+  default_scope :order => :start_at
   scope :on_or_after, lambda { |date| where("start_at >= ?", date) }
   scope :on_or_before, lambda { |date| where("start_at <= ?", date) }
   scope :confirmed, where(:tentative => false)
