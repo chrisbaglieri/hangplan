@@ -1,2 +1,33 @@
+<div id="user">
+  <div class="row">
+    <div class="span14">
+      <% unless @user == current_user || current_user.connected_with?(@user) %>
+        <%= link_to "Add Friend", friends_path, :method => :post, :class => ['btn', 'small'] %>
+      <% end %>
+      <% if can? :update, @user %>
+        <%= link_to "Edit Account", edit_user_registration_path, :class => ['btn', 'small'] %>
+      <% end %>
+      <h2><%= @user.name %></h2>
+      <%= @user.location %>
+      <hr/>
+    </div>
+  </div>
+</div>
 
+<div id="friends" class="row">
+  <div class="span14">
+    <h3>Friends</h3>
+    <ul>
+    <% @user.friends.each do |friend| %>
+      <li><%= friend.name %></li>
+    <% end %>
+    </ul>
+  </div>
+</div>
 
+<div id="plans" class="row">
+  <div class="span14">
+    <h3>Plans</h3>
+    <%= render :partial => @user.plans %>
+  </div>
+</div>
