@@ -10,6 +10,10 @@ class Ability
       can [:manage], Participant, :user => user
       can [:read], :notifications
       can [:read, :create, :approve, :block, :remove], Friendship
+
+      can [:read], Comment
+      can [:manage], Comment, :user_id => user.id
+      can [:destroy], Comment, :plan => { :user_id => user.id } 
     end
   end
 end

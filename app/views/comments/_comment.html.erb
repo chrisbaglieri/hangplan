@@ -1,0 +1,14 @@
+<div class="row comment">
+  <div class="span14">
+    <%= image_tag comment.user.gravatar_url(:size => 45), :class => 'user-icon' %>
+    <span class="user"><%= link_to comment.user.name, comment.user %></span>
+    <span class="created_at"><%= time_ago_in_words(comment.created_at) %> ago:</span>
+    <% if can? :destroy, comment %>
+      <span>
+        <%= link_to "Delete", comment, :method => :delete, :class => ['btn', 'danger', 'supersmall'], 
+          :confirm => t('comments.confirm.destroy') %>
+      </span>
+    <% end %>
+    <div class="message"><%= comment.message %></div>
+  </div>
+</div>

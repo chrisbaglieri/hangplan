@@ -10,3 +10,19 @@ select#plan_start_time_s,
 select#plan_end_time_s {
   width: 8em;
 }
+
+#main #plan #new-comment textarea {
+  height: 80px;
+  size: 5;
+}
+
+#main .comment {
+  padding-bottom: 10px;
+  img.user-icon {
+    float: left;
+    padding-right: 10px;
+  }
+  .created_at {
+    font-size: 11px;
+  }
+}

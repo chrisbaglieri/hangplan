@@ -8,7 +8,7 @@
 	<div class="row">
 		<div class="span6">
 			<%= image_tag plan.owner.gravatar_url(:size => 45) %>
-			<div class="owner"><%= plan.owner.name %></div>
+			<div class="owner"><%= link_to plan.owner.name, plan.owner %></div>
 			<span class="name"><%= link_to plan.name, plan %></span>
 		</div>
 		<div class="metadata span3"><%= plan.location %></div>
