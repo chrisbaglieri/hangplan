@@ -1,0 +1,5 @@
+<div class="friend-request row">
+	<div class="span1"><%= image_tag user.gravatar_url(:size => 45) %></div>
+	<div class="span3"><p><%= user.name %></p></div>
+	<div class="span1 confirm"><p><%= link_to 'Confirm', :root, :method => :put %></p></div>
+</div>
