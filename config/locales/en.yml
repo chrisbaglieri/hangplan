@@ -2,6 +2,12 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  comments:
+    new:
+      header: Say Something!
+      placeholder: Preferably something witty, profound, or at least useful. 
+    confirm:
+      destroy: Are you sure you wish to delete this comment?
   plans:
     new:
       header: Make a Plan

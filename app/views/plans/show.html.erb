@@ -24,4 +24,15 @@
 			<%= render :partial => "participant", :collection => @plan.participants %>
 		</div>
 	</div>
+	<div id="new-comment" class="row">
+	  <div class="span14">
+	      <%= render :partial => 'comments/form' %>
+	  </div>
+	</div>
+	<div id="comments" class="row">
+	  <div class="span14">
+	     <h3>Comments</h3>
+	     <%= render @plan.comments %>
+	  </div>
+	</div>
 </div>

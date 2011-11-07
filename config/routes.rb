@@ -21,13 +21,16 @@ Hangplan::Application.routes.draw do
   resources :users, :only => [:show]
   resources :plans do
     resources :participants, :only => [:create]
+    resources :comments, :only => [:create] 
   end
   resources :participants, :only => [:update, :destroy]
+  resources :comments, :only => [:destroy]
   resources :friends, :controller => 'friendships', :only => [:index, :create] do
     collection do
       put 'approve'
       delete 'remove'
     end
   end
+
   
 end

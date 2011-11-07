@@ -1,0 +1,9 @@
+<%= twitter_bootstrap_form_for [@plan, Comment.new] do |f| %>
+  <h3><%= t 'comments.new.header' %></h3>
+  <%= f.inputs do %>
+    <%= f.text_area :message, :class => 'span8', :placeholder => t('comments.new.placeholder') %>
+  <% end %>
+  <%= f.actions do %>
+    <%= f.submit "Post Comment" %>
+  <% end %>
+<% end %>

@@ -2,6 +2,7 @@ class Plan < ActiveRecord::Base
   belongs_to :owner, :class_name => "User", :foreign_key => :user_id
   has_many :participants, :dependent => :destroy
   has_many :users, :through => :participants
+  has_many :comments, :dependent => :destroy
   attr_accessible :name, :location, :date, :latitude, :longitude, :sponsored, 
     :tentative, :link, :start_date_s, :start_time_s, :end_time_s
   geocoded_by :location
