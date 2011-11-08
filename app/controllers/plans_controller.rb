@@ -12,10 +12,7 @@ class PlansController < ApplicationController
   end
   
   def show
-    @comment = Comment.new
-    @comment.plan = @plan
-    logger.debug(@comment.inspect)
-    
+    @comment = @plan.comments.build
     respond_to do |format|
       format.html
       format.json do
