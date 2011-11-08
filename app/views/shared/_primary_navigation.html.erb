@@ -1,7 +1,7 @@
 <div class="primary-navigation">
 	<ul>
 		<% if user_signed_in? %>
-			<li><%= link_to "PROFILE", user_path(current_user) %></li> |
+			<li><%= link_to "PROFILE", user_path(current_user) %> (<%= current_user.name %>)</li> |
 			<li><%= link_to "NOTIFICATIONS", notifications_path %></li> |
 			<li><%= link_to "LOG OUT", destroy_user_session_path, :method => :delete %></li>
 		<% else %>
