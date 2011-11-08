@@ -3,10 +3,11 @@ class Plan < ActiveRecord::Base
   has_many :participants, :dependent => :destroy
   has_many :users, :through => :participants
   has_many :comments, :dependent => :destroy
-  attr_accessible :name, :location, :date, :latitude, :longitude, :sponsored, 
-    :tentative, :link, :start_date_s, :start_time_s, :end_time_s
+  attr_accessible :name, :location, :date, :sponsored, :tentative, :link, 
+    :start_date_s, :start_time_s, :end_time_s, :privacy, :description
   geocoded_by :location
   validates_presence_of :name, :owner
+  validates_inclusion_of :privacy, :in => %w( public private )
   validate :validate_start_at
   validate :validate_end_at
   after_validation :geocode
@@ -18,12 +19,28 @@ class Plan < ActiveRecord::Base
   scope :confirmed, where(:tentative => false)
   scope :unconfirmed, where(:tentative => true)
   
+  # This scope is complex enough already that it can't be easily combined with
+  # others, but it does work well enough with the default ordering and pagination.
+  scope :visible, lambda { |user|
+    Plan.select("DISTINCT plans.*").joins{participants.outer}.where{
+      (user_id == user.id) |  # owned by me
+      (participants.user_id == user.id) |   # participated by me
+      ((privacy == 'public') & (user_id.in user.friends.collect(&:id)))  # owned by my friend and public
+    }
+  } 
+  
   def participant?(user)
     self.users.include?(user)
   end
   
   def owner?(user)
     self.owner == user
+  end
+  
+  def visible?(user)
+    self.owner?(user) ||
+    self.participant?(user) ||
+    (self.privacy == 'public' && self.owner.friend_with?(user))
   end
   
   def start_date_s

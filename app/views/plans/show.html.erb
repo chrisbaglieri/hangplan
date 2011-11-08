@@ -15,11 +15,15 @@
 			<ul>
 				<li>Where: <% if @plan.location? %><%= @plan.location %><% else %>Somewhere I guess<% end %></li>
 				<li>When: <%= format_plan_date_and_times(@plan) %> </li>
+				<% unless @plan.description.blank? %>
+				  <li>Description: <%= @plan.description %></li>
+				<% end %>
+				<li>Privacy: <%= @plan.privacy %></li>
 			</ul>
 		</div>
 		<div class="span5">
 			<% unless @plan.participant? current_user %>
-				<p><%= link_to "I'm In", plan_participants_path(@plan), :method => :post, :class => ['btn', 'small', 'success'] %></p>
+				<p><%= link_to "I'm In", plan_participants_path(@plan), :method => :post, :class => ['btn', 'small', 'primary'] %></p>
 			<% end %>
 			<%= render :partial => "participant", :collection => @plan.participants %>
 		</div>

@@ -10,8 +10,6 @@ describe Plan do
   it { should allow_mass_assignment_of(:name) }
   it { should allow_mass_assignment_of(:location) }
   it { should allow_mass_assignment_of(:date) }
-  it { should allow_mass_assignment_of(:latitude) }
-  it { should allow_mass_assignment_of(:longitude) }
   it { should allow_mass_assignment_of(:sponsored) }
   it { should allow_mass_assignment_of(:tentative) }
   it { should allow_mass_assignment_of(:link) }
@@ -121,4 +119,57 @@ describe Plan do
     end
   end
   
+  it "should be visible if the user owns it" do
+    plan = Factory(:plan, :owner => @user, :privacy => 'private')
+    plan.should be_visible(@user)
+    plan.should_not be_visible(Factory(:user))
+  end
+
+  it "should be visible if the user is participating" do
+    plan = Factory(:plan, :privacy => 'private')
+    plan.users << @user
+    plan.save!
+    plan.should be_visible(@user)
+    plan.should_not be_visible(Factory(:user))
+  end
+  
+  it "should be visible if public and the user is a friend" do
+    plan = Factory(:plan)
+    @user.invite(plan.owner)
+    plan.owner.approve(@user)
+    plan.owner.should be_friend_with(@user)
+    plan.should be_visible(@user)
+    plan.should_not be_visible(Factory(:user))
+  end
+  
+  it "should query visibility using plan ownership" do
+    p1 = Factory(:plan, :owner => @user, :privacy => 'private')
+    p2 = Factory(:plan)
+    Plan.visible(@user).should include(p1)
+    Plan.visible(@user).should_not include(p2)
+    Plan.visible(Factory(:user)).should be_empty
+  end
+  
+  it "should query visibility using participation" do
+    p1 = Factory(:plan)
+    p1.users << @user
+    p1.save!
+    p2 = Factory(:plan)
+    Plan.visible(@user).should include(p1)
+    Plan.visible(@user).should_not include(p2)
+    Plan.visible(Factory(:user)).should be_empty
+  end
+  
+  it "should query visibility using friendship" do
+    friend = Factory(:user)
+    @user.invite friend
+    friend.approve @user
+    friend.should be_friend_with(@user)
+    
+    p1 = Factory(:plan, :owner => friend, :privacy => 'public')
+    p2 = Factory(:plan)
+    Plan.visible(@user).should include(p1)
+    Plan.visible(@user).should_not include(p2)
+    Plan.visible(Factory(:user)).should be_empty
+  end
 end

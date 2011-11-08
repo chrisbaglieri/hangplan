@@ -1,19 +1,25 @@
-input#plan_start_date_s {
-  width: 8em;
-  // Todo: Replace with our own image.
-  background-image: url('datepick.png');
-  background-repeat: no-repeat;
-  background-position: 95%;
-}
 
-select#plan_start_time_s, 
-select#plan_end_time_s {
-  width: 8em;
+#main fieldset {
+  input#plan_start_date_s {
+    width: 8em;
+    // Todo: Replace with our own image.
+    background-image: url('datepick.png');
+    background-repeat: no-repeat;
+    background-position: 95%;
+  }
+  
+  select#plan_start_time_s, 
+  select#plan_end_time_s {
+    width: 8em;
+  }
+  
+  textarea#plan_description {
+    height: 80px;
+  }
 }
 
 #main #plan #new-comment textarea {
   height: 80px;
-  size: 5;
 }
 
 #main .comment {

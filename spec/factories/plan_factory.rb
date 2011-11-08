@@ -5,4 +5,5 @@ Factory.define :plan do |plan|
   plan.start_time_s DateTime.now.strftime('%H:%M')
   plan.tentative false
   plan.association :owner, :factory => :user
+  plan.privacy 'public'
 end

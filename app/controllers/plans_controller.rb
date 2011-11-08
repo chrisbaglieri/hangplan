@@ -2,9 +2,7 @@ class PlansController < ApplicationController
   load_and_authorize_resource
   
   def index
-    users = current_user.friends
-    users << current_user
-    @plans = Plan.where{{ user_id.in => users }}.page params[:page]
+    @plans = Plan.visible(current_user).page params[:page]
     respond_to do |format|
       format.html
       format.json do

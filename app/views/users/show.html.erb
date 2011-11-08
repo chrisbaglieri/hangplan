@@ -29,6 +29,6 @@
 <div id="plans" class="row">
   <div class="span14">
     <h3>Plans</h3>
-    <%= render :partial => @user.plans %>
+    <%= render :partial => @user.plans.select { |p| p.visible?(current_user) } %>
   </div>
 </div>

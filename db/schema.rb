@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111107022721) do
+ActiveRecord::Schema.define(:version => 20111108143409) do
 
   create_table "comments", :force => true do |t|
     t.integer  "plan_id"
@@ -50,12 +50,14 @@ ActiveRecord::Schema.define(:version => 20111107022721) do
     t.datetime "updated_at"
     t.float    "latitude"
     t.float    "longitude"
-    t.boolean  "sponsored",  :default => false
-    t.boolean  "tentative",  :default => false
+    t.boolean  "sponsored",   :default => false
+    t.boolean  "tentative",   :default => false
     t.string   "link"
     t.integer  "user_id"
     t.datetime "start_at"
     t.datetime "end_at"
+    t.string   "privacy",     :default => "friends", :null => false
+    t.text     "description"
   end
 
   add_index "plans", ["start_at"], :name => "index_plans_on_start_at"

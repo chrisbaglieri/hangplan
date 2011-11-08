@@ -14,7 +14,13 @@
     </div>
 
 		<%= f.text_field :link %>
+		<%= f.text_area :description %>
 		<%= f.toggles 'Tentative' do %><%= f.check_box :tentative %><% end %>
+		<%= f.toggles t('activerecord.attributes.plan.privacy') do %>
+		  <%= f.radio_button :privacy, 'Public', :public %>
+		  <%= f.radio_button :privacy, 'Private', :private %>
+		<% end %> 
+		
 	<% end %>
 
 	<%= f.actions do %>
