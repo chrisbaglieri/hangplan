@@ -17,11 +17,12 @@
 <div id="friends" class="row">
   <div class="span14">
     <h3>Friends</h3>
-    <ul>
     <% @user.friends.each do |friend| %>
-      <li><%= friend.name %></li>
+      <div class="friend">
+        <%= image_tag friend.icon_url %>
+        <%= link_to friend.name, friend %>
+      </div>
     <% end %>
-    </ul>
   </div>
 </div>
 

@@ -8,6 +8,10 @@ en:
       placeholder: Preferably something witty, profound, or at least useful. 
     confirm:
       destroy: Are you sure you wish to delete this comment?
+  friendships:
+    new:
+      
+      
   plans:
     new:
       header: Make a Plan
@@ -32,6 +36,9 @@ en:
         start_at: When
   helpers:
     submit:
+      friendship:
+        create: Add Friend
+        approve: Confirm
       plan:
         create: Make a Plan
   date:
