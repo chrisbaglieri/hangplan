@@ -5,6 +5,7 @@ class PlansController < ApplicationController
     users = current_user.friends
     users << current_user
     @plans = Plan.where{{ user_id.in => users }}.page params[:page]
+    @plans.reject! { |plan| plan.owner != current_user and plan.invite_only }
     respond_to do |format|
       format.html
       format.json do
@@ -14,10 +15,7 @@ class PlansController < ApplicationController
   end
   
   def show
-    @comment = Comment.new
-    @comment.plan = @plan
-    logger.debug(@comment.inspect)
-    
+    @comment = @plan.comments.build
     respond_to do |format|
       format.html
       format.json do
