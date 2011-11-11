@@ -68,7 +68,7 @@ describe PlansController do
   
   describe 'POST create' do
     it 'creates a tentative plan (html)' do
-      post :create, :plan => { :name => 'Hanging out', :location => 'Tavern', :tentative => 1 }
+      post :create, :plan => { :name => 'Hanging out', :location => 'Tavern', :tentative => 1, :privacy => 'public' }
       assigns(:plan).should be_persisted
       assigns(:plan).name.should eq('Hanging out')
       assigns(:plan).location.should eq('Tavern')

@@ -15,7 +15,7 @@ class PlansController < ApplicationController
   end
   
   def show
-    @comment = @plan.comments.build
+    @comment = Comment.new
     respond_to do |format|
       format.html
       format.json do

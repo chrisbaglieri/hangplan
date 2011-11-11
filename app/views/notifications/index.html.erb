@@ -3,6 +3,7 @@
 		<h1>Your Notifications</h1>
 		<%= render :partial => "notification", :collection => @notifications %>
 	</div>
+<<<<<<< HEAD
 	<div class="span5">
 		<h1>Friend Requests</h1>
 		<% unless @pending_friend_requests.blank? %>
@@ -10,5 +11,23 @@
 		<% else %>
 			None
 		<% end %>
+=======
+	<div class="span14"><hr /></div>
+	<div id="friend-requests" class="span14">
+		<h2>Friend Requests</h2>
+		<h3>Pending Requests</h3>
+		  <% current_user.pending_invited_by.each do |u| %>
+		    <p>
+		      <%= link_to u.name, u %>
+		      <%= link_to t('helpers.submit.friendship.approve'), 
+		        approve_friends_path(:friendship => { :user_id => u.id, :friend_id => current_user.id }), 
+		        :method => :put, :class => ['btn', 'supersmall', 'primary'] %>
+		    </p>
+		  <% end %>
+		<h3>Your Requests</h3>
+      <% current_user.pending_invited.each do |u| %>
+        <p><%= link_to u.name, u %></p>
+      <% end %>
+>>>>>>> ec4a648435ebf450b5de7aa558fb024cae57db3a
 	</div>	
 </div>

@@ -19,4 +19,9 @@ class User < ActiveRecord::Base
       user = User.create!(:email => data['email'], :name => data['name'], :password => SecureRandom.hex(8))
     end
   end
+  
+  def icon_url
+    # TODO: Get rid of gravatar.
+    self.gravatar_url(:size => 45)
+  end
 end
