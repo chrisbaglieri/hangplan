@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
     end
   end
   
-  def icon_url
+  def profile_image_url
     # TODO: Get rid of gravatar.
     self.gravatar_url(:size => 45)
   end

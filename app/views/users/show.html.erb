@@ -19,7 +19,7 @@
     <h3>Friends</h3>
     <% @user.friends.each do |friend| %>
       <div class="friend">
-        <%= image_tag friend.icon_url %>
+        <%= image_tag friend.profile_image_url %>
         <%= link_to friend.name, friend %>
       </div>
     <% end %>

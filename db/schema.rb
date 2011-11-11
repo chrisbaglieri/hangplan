@@ -56,7 +56,8 @@ ActiveRecord::Schema.define(:version => 20111108143409) do
     t.integer  "user_id"
     t.datetime "start_at"
     t.datetime "end_at"
-    t.string   "privacy",     :default => "friends", :null => false
+    t.boolean  "private"
+    t.string   "privacy",     :default => "public", :null => false
     t.text     "description"
   end
 
