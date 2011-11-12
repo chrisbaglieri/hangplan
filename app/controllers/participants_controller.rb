@@ -4,7 +4,6 @@ class ParticipantsController < ApplicationController
 
   def create
     @participant.user = current_user
-    @participant.plan = @plan
     if @participant.plan.tentative
       @participant.points = 1
     end

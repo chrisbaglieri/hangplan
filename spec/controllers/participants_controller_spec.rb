@@ -6,6 +6,8 @@ describe ParticipantsController do
   before(:each) do
     @plan ||= Factory.create(:plan)
     @user ||= Factory.create(:user)
+    @plan.owner.invite @user
+    @user.approve @plan.owner
     sign_in @user
   end
   

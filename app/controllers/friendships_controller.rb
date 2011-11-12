@@ -45,7 +45,7 @@ class FriendshipsController < ApplicationController
   def load_friend
     friendship = Friendship.new(params[:friendship])
     @friend = User.find(friendship.user)
-    raise ActiveRecord::RecordNotFound unless friend
+    raise ActiveRecord::RecordNotFound unless @friend
     @friend
   end
   

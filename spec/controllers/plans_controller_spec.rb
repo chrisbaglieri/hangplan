@@ -29,7 +29,7 @@ describe PlansController do
   
   describe 'GET show' do
     it 'shows a plan with a valid id (html)' do
-      plan = Factory(:plan)
+      plan = Factory(:plan, :owner => @user)
       get :show, :id => plan.id
       assigns(:plan).should eq(plan)
       response.should be_success
@@ -43,7 +43,7 @@ describe PlansController do
     end
     
     it 'shows a plan with a valid id (json)' do
-      plan = Factory(:plan)
+      plan = Factory(:plan, :owner => @user)
       get :show, :id => plan.id, :format => :json
       assigns(:plan).should eq(plan)
       response.should be_success

@@ -152,6 +152,8 @@ describe Plan do
   
   it "should query visibility using participation" do
     p1 = Factory(:plan)
+    p1.owner.invite @user
+    @user.approve p1.owner
     p1.users << @user
     p1.save!
     p2 = Factory(:plan)
