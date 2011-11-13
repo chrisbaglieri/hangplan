@@ -15,6 +15,8 @@ describe Plan do
   it { should have_many(:users) }
   it { should validate_presence_of(:name) }
   it { should validate_presence_of(:owner) }
+  it { should allow_value("public").for(:privacy) }
+  it { should allow_value("private").for(:privacy) }
   
   describe "plan owner" do
     it "should be able to determine if a plan is theirs" do
