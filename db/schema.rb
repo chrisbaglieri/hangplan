@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111107022721) do
+ActiveRecord::Schema.define(:version => 20111113211511) do
 
   create_table "comments", :force => true do |t|
     t.integer  "plan_id"
@@ -31,6 +31,18 @@ ActiveRecord::Schema.define(:version => 20111107022721) do
   end
 
   add_index "friendships", ["user_id", "friend_id"], :name => "index_friendships_on_user_id_and_friend_id", :unique => true
+
+  create_table "identities", :force => true do |t|
+    t.string   "source"
+    t.string   "identity"
+    t.string   "access_token"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "identities", ["source"], :name => "index_identities_on_source"
+  add_index "identities", ["user_id"], :name => "index_identities_on_user_id"
 
   create_table "participants", :force => true do |t|
     t.integer  "user_id"

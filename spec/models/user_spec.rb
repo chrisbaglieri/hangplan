@@ -5,6 +5,7 @@ describe User do
     @user = Factory(:user)
   end
   
+  it { should have_many(:identities) }
   it { should have_many(:participants) }
   it { have_many(:plans).through(:participants) }
   it { should validate_presence_of(:email) }

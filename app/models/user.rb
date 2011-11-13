@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   gravtastic
   geocoded_by :location
   
+  has_many :identities
   has_many :participants
   has_many :plans, :through => :participants
   validates_uniqueness_of :email
