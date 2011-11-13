@@ -10,7 +10,6 @@ describe Plan do
   it { should allow_mass_assignment_of(:name) }
   it { should allow_mass_assignment_of(:location) }
   it { should allow_mass_assignment_of(:date) }
-  it { should allow_mass_assignment_of(:sponsored) }
   it { should allow_mass_assignment_of(:tentative) }
   it { should allow_mass_assignment_of(:link) }
   it { should have_many(:users) }

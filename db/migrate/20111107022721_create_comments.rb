@@ -4,10 +4,8 @@ class CreateComments < ActiveRecord::Migration
       t.integer :plan_id
       t.integer :user_id
       t.text :message
-
       t.timestamps
     end
-    
     add_index :comments, :plan_id
   end
 end

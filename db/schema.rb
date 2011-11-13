@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111108143409) do
+ActiveRecord::Schema.define(:version => 20111107022721) do
 
   create_table "comments", :force => true do |t|
     t.integer  "plan_id"
@@ -44,39 +44,30 @@ ActiveRecord::Schema.define(:version => 20111108143409) do
   add_index "participants", ["user_id"], :name => "index_participants_on_user_id"
 
   create_table "plans", :force => true do |t|
-    t.string   "name"
+    t.string   "name",                              :null => false
+    t.text     "description"
     t.string   "location"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.float    "latitude"
     t.float    "longitude"
-    t.boolean  "sponsored",   :default => false
-    t.boolean  "tentative",   :default => false
     t.string   "link"
-    t.integer  "user_id"
+    t.string   "privacy",     :default => "public", :null => false
+    t.string   "string",      :default => "public", :null => false
     t.datetime "start_at"
     t.datetime "end_at"
-    t.boolean  "private"
-    t.string   "privacy",     :default => "public", :null => false
-    t.text     "description"
-  end
-
-  add_index "plans", ["start_at"], :name => "index_plans_on_start_at"
-  add_index "plans", ["user_id"], :name => "index_plans_on_user_id"
-
-  create_table "sessions", :force => true do |t|
-    t.string   "session_id", :null => false
-    t.text     "data"
+    t.boolean  "tentative",   :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
-  add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
-  add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
+  add_index "plans", ["name"], :name => "index_plans_on_name"
+  add_index "plans", ["user_id"], :name => "index_plans_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "location"
+    t.float    "latitude"
+    t.float    "longitude"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "email",                                 :default => "", :null => false
@@ -89,8 +80,6 @@ ActiveRecord::Schema.define(:version => 20111108143409) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.float    "latitude"
-    t.float    "longitude"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
