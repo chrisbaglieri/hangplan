@@ -8,5 +8,4 @@ describe Identity do
   it { should allow_mass_assignment_of(:source) }
   it { should allow_mass_assignment_of(:identifier) }
   it { should allow_mass_assignment_of(:access_token) }
-  it { should allow_value("facebook").for(:source) }
 end
