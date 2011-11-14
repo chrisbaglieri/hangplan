@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(:version => 20111113211511) do
 
   create_table "identities", :force => true do |t|
     t.string   "source"
-    t.string   "identity"
+    t.string   "identifier"
     t.string   "access_token"
     t.integer  "user_id"
     t.datetime "created_at"
