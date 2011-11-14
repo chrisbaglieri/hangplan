@@ -11,6 +11,7 @@ gem 'twitter_bootstrap_form_for'
 gem 'squeel'
 gem 'kaminari'
 gem 'amistad'
+gem 'fb_graph'
 
 group :assets do
   gem 'sass-rails',   '~> 3.1.4'
