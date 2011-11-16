@@ -30,4 +30,7 @@ Hangplan::Application.routes.draw do
     end
   end
   
+  resource :facebook, :only => [:new] do
+    get :callback, :to => :create
+  end
 end

@@ -31,5 +31,20 @@ class Facebook < Identity
     def authenticate(redirect_uri = nil)
       FbGraph::Auth.new config[:client_id], config[:client_secret], :redirect_uri => redirect_uri
     end
+    
+    def find_or_create_user(fb_user)
+      user = User.where(:email => fb_user.email).first
+      unless user
+        user = User.new
+        user.name = [fb_user.firstname, fb_user.lastname].reject(&:empty?).join(' ')
+        user.email = fb_user.email
+        user.location = fb_user.location
+        user.password = (0...50).map{ ('a'..'z').to_a[rand(26)] }.join
+        user.password_confirmation = user.password
+        user.save
+      end
+      user
+    end
+    
   end
 end
