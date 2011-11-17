@@ -46,6 +46,10 @@ class Plan < ActiveRecord::Base
     self.privacy == 'public'
   end
   
+  def tentative?
+    self.tentative or self.start_at == nil
+  end
+  
   def start_date_s
     @start_date_s ||= self.start_at.strftime('%m/%d/%Y') if self.start_at
     @start_date_s
