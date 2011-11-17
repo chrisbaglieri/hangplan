@@ -42,6 +42,10 @@ class Plan < ActiveRecord::Base
     (self.privacy == 'public' && self.owner.friend_with?(user))
   end
   
+  def public?
+    self.privacy == 'public'
+  end
+  
   def start_date_s
     @start_date_s ||= self.start_at.strftime('%m/%d/%Y') if self.start_at
     @start_date_s
