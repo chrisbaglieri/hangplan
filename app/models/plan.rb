@@ -24,7 +24,7 @@ class Plan < ActiveRecord::Base
     users = user.friends
     users << user
     plans = Plan.where{{ user_id.in => users }}
-    plans.reject! { |plan| plan.owner != user and plan.privacy == 'private' }
+    plans.reject! { |plan| plan.owner != user and not plan.public? }
     plans
   }
   
@@ -39,7 +39,7 @@ class Plan < ActiveRecord::Base
   def visible?(user)
     self.owner?(user) ||
     self.participant?(user) ||
-    (self.privacy == 'public' && self.owner.friend_with?(user))
+    (self.public? && self.owner.friend_with?(user))
   end
   
   def public?
