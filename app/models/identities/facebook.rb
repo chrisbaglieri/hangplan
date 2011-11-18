@@ -10,6 +10,34 @@ class Facebook < Identity
     @profile ||= FbGraph::User.me(self.access_token).fetch
   end
   
+  def events
+    self.profile.events
+  end
+  
+  def friends
+    self.profile.friends
+  end
+  
+  def update_status(message, plan)
+    self.profile.feed!(
+      :message => message,
+      :link => Rails.application.routes.url_helpers.plan_url(plan, :host => "www.hangplan.com"),
+      :name => "#{plan.name}",
+      :description => plan.description
+    )
+  end
+  
+  def create_event(plan)
+    args = Hash.new
+    args[:name] = plan.name
+    args[:description] = plan.description unless plan.description.blank?
+    args[:location] = plan.location unless plan.location.blank?
+    args[:privacy] = plan.public? ? 'OPEN' : 'CLOSED' if plan.privacy
+    args[:start_time] = plan.start_at.to_i if plan.start_at
+    args[:end_time] = plan.end_at.to_i if plan.end_at
+    self.profile.event!(args)
+  end
+  
   class << self
     extend ActiveSupport::Memoizable
 
