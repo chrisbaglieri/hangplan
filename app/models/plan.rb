@@ -77,6 +77,18 @@ class Plan < ActiveRecord::Base
     @end_time_s = s
   end
   
+  def self.build_from_event(event)
+    plan = Plan.new
+    plan.name = event.name if event.name
+    plan.description = event.description if event.description
+    plan.start_date_s = event.start_time.strftime('%m/%d/%Y') if event.start_time
+    plan.start_time_s = event.start_time.strftime('%m/%d/%Y') if event.start_time
+    plan.end_time_s = event.end_time.strftime('%m/%d/%Y') if event.end_time
+    plan.location = event.location if event.location
+    plan.privacy = event.privacy == 'OPEN' ? 'public' : 'private'
+    plan
+  end
+  
   private
   
   def add_owner_as_participant
