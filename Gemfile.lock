@@ -29,6 +29,7 @@ GEM
       activesupport (= 3.1.1)
     activesupport (3.1.1)
       multi_json (~> 1.0)
+    addressable (2.2.6)
     amistad (0.7.5)
     arel (2.2.1)
     attr_required (0.0.3)
@@ -69,6 +70,10 @@ GEM
     json (1.6.1)
     kaminari (0.12.4)
       rails (>= 3.0.0)
+    launchy (2.0.5)
+      addressable (~> 2.2.6)
+    letter_opener (0.0.2)
+      launchy
     mail (2.3.0)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -173,6 +178,7 @@ DEPENDENCIES
   gravtastic
   jquery-rails
   kaminari
+  letter_opener
   pg
   rails (= 3.1.1)
   responders
